@@ -1,10 +1,4 @@
-/*
- * projectName: JUC
- * fileName: Test.java
- * packageName: Interview
- * date: 2020-11-03
- * copyright(c) 2017-2020 xxx公司
- */
+
 package JUC.com.Interview;
 
 import JUC.com.dao.User;
