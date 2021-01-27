@@ -1,0 +1,143 @@
+2020-11-24 23:48:42
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.231-b11 mixed mode):
+
+"nioEventLoopGroup-3-1" #15 prio=10 os_prio=2 tid=0x000000001a0ca000 nid=0x53a4 runnable [0x000000001a94e000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	- locked <0x00000000e1581738> (a io.netty.channel.nio.SelectedSelectionKeySet)
+	- locked <0x00000000e157dca8> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x00000000e157db58> (a sun.nio.ch.WindowsSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:753)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:409)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+"nioEventLoopGroup-2-1" #14 prio=10 os_prio=2 tid=0x000000001a05d000 nid=0x2c5c runnable [0x000000001a84f000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	- locked <0x00000000e155fa48> (a io.netty.channel.nio.SelectedSelectionKeySet)
+	- locked <0x00000000e1168a30> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x00000000e1166508> (a sun.nio.ch.WindowsSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:753)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:409)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+"ObjectCleanerThread" #13 prio=1 os_prio=-2 tid=0x000000001a0c0800 nid=0x11808 in Object.wait() [0x000000001a74f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000000e1bb4590> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	- locked <0x00000000e1bb4590> (a java.lang.ref.ReferenceQueue$Lock)
+	at io.netty.util.internal.ObjectCleaner$1.run(ObjectCleaner.java:52)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+"Service Thread" #11 daemon prio=9 os_prio=0 tid=0x000000001902d000 nid=0x834c runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C1 CompilerThread3" #10 daemon prio=9 os_prio=2 tid=0x0000000018fe0800 nid=0x151c4 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread2" #9 daemon prio=9 os_prio=2 tid=0x0000000018fd0800 nid=0x6bd4 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread1" #8 daemon prio=9 os_prio=2 tid=0x0000000018fca800 nid=0x139ac waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #7 daemon prio=9 os_prio=2 tid=0x0000000018fc7800 nid=0x14f9c waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Ctrl-Break" #6 daemon prio=5 os_prio=0 tid=0x0000000018fa5800 nid=0x51c0 runnable [0x000000001982f000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	- locked <0x00000000e0bb0c68> (a java.io.InputStreamReader)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.readLine(BufferedReader.java:324)
+	- locked <0x00000000e0bb0c68> (a java.io.InputStreamReader)
+	at java.io.BufferedReader.readLine(BufferedReader.java:389)
+	at com.intellij.rt.execution.application.AppMainV2$1.run(AppMainV2.java:61)
+
+"Attach Listener" #5 daemon prio=5 os_prio=2 tid=0x0000000018f5f800 nid=0x6204 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=2 tid=0x0000000018f08800 nid=0x95a0 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" #3 daemon prio=8 os_prio=1 tid=0x0000000018ef0800 nid=0x1d14 in Object.wait() [0x00000000194cf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000000e0a08ed8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	- locked <0x00000000e0a08ed8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+"Reference Handler" #2 daemon prio=10 os_prio=2 tid=0x0000000003438800 nid=0xe728 in Object.wait() [0x00000000193cf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000000e0a06c00> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	- locked <0x00000000e0a06c00> (a java.lang.ref.Reference$Lock)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+"main" #1 prio=5 os_prio=0 tid=0x0000000003342800 nid=0xef9c in Object.wait() [0x000000000323e000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000000e170b5f8> (a io.netty.channel.AbstractChannel$CloseFuture)
+	at java.lang.Object.wait(Object.java:502)
+	at io.netty.util.concurrent.DefaultPromise.await(DefaultPromise.java:232)
+	- locked <0x00000000e170b5f8> (a io.netty.channel.AbstractChannel$CloseFuture)
+	at io.netty.channel.DefaultChannelPromise.await(DefaultChannelPromise.java:131)
+	at io.netty.channel.DefaultChannelPromise.await(DefaultChannelPromise.java:30)
+	at io.netty.util.concurrent.DefaultPromise.sync(DefaultPromise.java:333)
+	at io.netty.channel.DefaultChannelPromise.sync(DefaultChannelPromise.java:119)
+	at io.netty.channel.DefaultChannelPromise.sync(DefaultChannelPromise.java:30)
+	at com.atguigu.netty.dubborpc.netty.NettyServer.startServer0(NettyServer.java:50)
+	at com.atguigu.netty.dubborpc.netty.NettyServer.startServer(NettyServer.java:19)
+	at com.atguigu.netty.dubborpc.provider.ServerBootstrap.main(ServerBootstrap.java:10)
+
+"VM Thread" os_prio=2 tid=0x00000000170fa000 nid=0x2078 runnable 
+
+"GC task thread#0 (ParallelGC)" os_prio=0 tid=0x0000000003358800 nid=0x3d10 runnable 
+
+"GC task thread#1 (ParallelGC)" os_prio=0 tid=0x000000000335a000 nid=0x101a8 runnable 
+
+"GC task thread#2 (ParallelGC)" os_prio=0 tid=0x000000000335b800 nid=0x4324 runnable 
+
+"GC task thread#3 (ParallelGC)" os_prio=0 tid=0x000000000335d000 nid=0x7a34 runnable 
+
+"GC task thread#4 (ParallelGC)" os_prio=0 tid=0x000000000335f800 nid=0x158f4 runnable 
+
+"GC task thread#5 (ParallelGC)" os_prio=0 tid=0x0000000003361800 nid=0x43c8 runnable 
+
+"GC task thread#6 (ParallelGC)" os_prio=0 tid=0x0000000003364800 nid=0x11248 runnable 
+
+"GC task thread#7 (ParallelGC)" os_prio=0 tid=0x0000000003366000 nid=0x40fc runnable 
+
+"VM Periodic Task Thread" os_prio=2 tid=0x0000000019080000 nid=0xe404 waiting on condition 
+
+JNI global references: 318
+
