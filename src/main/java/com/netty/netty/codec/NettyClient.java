@@ -1,6 +1,5 @@
 package com.netty.netty.codec;
 
-import JUC.com.netty.netty.codec.NettyClientHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;

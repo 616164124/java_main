@@ -1,14 +1,13 @@
 package com.thread.day008;
 
 /** 观察者模式未完 */
-import JUC.com.thread.day008.Obsever;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Subject {
 
-  private List<JUC.com.thread.day008.Obsever> obsever = new ArrayList<>();
+  private List<Obsever> obsever = new ArrayList<>();
   private int state;
 
   public int getState() {
@@ -23,7 +22,7 @@ public class Subject {
     notifyAllObsever();
   }
 
-  public void attach(JUC.com.thread.day008.Obsever obsevers) {
+  public void attach(Obsever obsevers) {
     obsever.add(obsevers);
   }
 

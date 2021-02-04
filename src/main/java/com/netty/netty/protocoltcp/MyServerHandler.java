@@ -1,8 +1,6 @@
 package com.netty.netty.protocoltcp;
 
-import JUC.com.netty.netty.protocoltcp.MessageProtocol;
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
+
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
@@ -11,7 +9,7 @@ import java.util.UUID;
 
 
 //处理业务的handler
-public class MyServerHandler extends SimpleChannelInboundHandler<JUC.com.netty.netty.protocoltcp.MessageProtocol>{
+public class MyServerHandler extends SimpleChannelInboundHandler<MessageProtocol>{
     private int count;
 
     @Override
@@ -21,7 +19,7 @@ public class MyServerHandler extends SimpleChannelInboundHandler<JUC.com.netty.n
     }
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, JUC.com.netty.netty.protocoltcp.MessageProtocol msg) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, MessageProtocol msg) throws Exception {
 
         //接收到数据，并处理
         int len = msg.getLen();
@@ -42,7 +40,7 @@ public class MyServerHandler extends SimpleChannelInboundHandler<JUC.com.netty.n
         int responseLen = responseContent.getBytes("utf-8").length;
         byte[]  responseContent2 = responseContent.getBytes("utf-8");
         //构建一个协议包
-        JUC.com.netty.netty.protocoltcp.MessageProtocol messageProtocol = new MessageProtocol();
+       MessageProtocol messageProtocol = new MessageProtocol();
         messageProtocol.setLen(responseLen);
         messageProtocol.setContent(responseContent2);
 

@@ -1,14 +1,11 @@
 package com.netty.netty.protocoltcp;
 
-import JUC.com.netty.netty.protocoltcp.MessageProtocol;
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
 import java.nio.charset.Charset;
 
-public class MyClientHandler extends SimpleChannelInboundHandler<JUC.com.netty.netty.protocoltcp.MessageProtocol> {
+public class MyClientHandler extends SimpleChannelInboundHandler<MessageProtocol> {
 
     private int count;
     @Override
@@ -21,7 +18,7 @@ public class MyClientHandler extends SimpleChannelInboundHandler<JUC.com.netty.n
             int length = mes.getBytes(Charset.forName("utf-8")).length;
 
             //创建协议包对象
-            JUC.com.netty.netty.protocoltcp.MessageProtocol messageProtocol = new JUC.com.netty.netty.protocoltcp.MessageProtocol();
+            MessageProtocol messageProtocol = new MessageProtocol();
             messageProtocol.setLen(length);
             messageProtocol.setContent(content);
             ctx.writeAndFlush(messageProtocol);

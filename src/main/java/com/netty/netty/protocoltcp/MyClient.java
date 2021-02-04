@@ -2,7 +2,6 @@ package com.netty.netty.protocoltcp;
 
 
 
-import JUC.com.netty.netty.protocoltcp.MyClientInitializer;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.EventLoopGroup;

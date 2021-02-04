@@ -1,6 +1,5 @@
 package com.netty.netty.websocket;
 
-import JUC.com.netty.netty.websocket.MyTextWebSocketFrameHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;

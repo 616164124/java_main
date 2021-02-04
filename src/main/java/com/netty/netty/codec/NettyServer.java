@@ -1,7 +1,5 @@
 package com.netty.netty.codec;
 
-import JUC.com.netty.netty.codec.NettyServerHandler;
-import JUC.com.netty.netty.codec.StudentPOJO;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;

@@ -1,7 +1,7 @@
 package com.SynclnDetail;
 
 
-import JUC.com.SynclnDetail.User;
+
 import org.openjdk.jol.info.ClassLayout;
 
 public class T01 {

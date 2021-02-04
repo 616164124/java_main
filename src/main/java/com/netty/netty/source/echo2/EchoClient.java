@@ -15,7 +15,6 @@
  */
 package com.netty.netty.source.echo2;
 
-import JUC.com.netty.netty.source.echo2.EchoClientHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;

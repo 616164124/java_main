@@ -1,9 +1,8 @@
 package com.netty.netty.codec;
 
-import JUC.com.netty.netty.codec.StudentPOJO;
-import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import io.netty.channel.*;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.util.CharsetUtil;
 
 /*
@@ -12,7 +11,7 @@ import io.netty.util.CharsetUtil;
 2. 这时我们自定义一个Handler , 才能称为一个handler
  */
 //public class NettyServerHandler extends ChannelInboundHandlerAdapter {
-public class NettyServerHandler extends SimpleChannelInboundHandler<JUC.com.netty.netty.codec.StudentPOJO.Student> {
+public class NettyServerHandler extends SimpleChannelInboundHandler<StudentPOJO.Student> {
 
 
     //读取数据实际(这里我们可以读取客户端发送的消息)

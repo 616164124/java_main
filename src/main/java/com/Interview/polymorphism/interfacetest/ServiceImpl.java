@@ -1,6 +1,5 @@
 package com.Interview.polymorphism.interfacetest;
 
-import JUC.com.Interview.polymorphism.interfacetest.Service;
 
 /**
  * @version: V1.0

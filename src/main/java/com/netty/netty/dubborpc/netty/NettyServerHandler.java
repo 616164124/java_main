@@ -1,8 +1,8 @@
 package com.netty.netty.dubborpc.netty;
-
-
-import JUC.com.netty.netty.dubborpc.customer.ClientBootstrap;
-import JUC.com.netty.netty.dubborpc.provider.HelloServiceImpl;
+//dubborpc.customer.ClientBootstrap;
+//import com.atguigu.netty.dubborpc.provider.HelloServiceImpl;
+import com.netty.netty.dubborpc.customer.ClientBootstrap;
+import com.netty.netty.dubborpc.provider.HelloServiceImpl;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 

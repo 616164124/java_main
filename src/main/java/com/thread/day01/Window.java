@@ -1,6 +1,5 @@
 package com.thread.day01;
 
-import JUC.com.thread.day01.TinkerWindowRunnable;
 
 import java.util.Arrays;
 import java.util.List;

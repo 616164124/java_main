@@ -6,7 +6,8 @@ package com.Interview;
 
 
 
-import JUC.com.dao.User;
+
+import com.dao.User;
 
 import java.util.HashMap;
 

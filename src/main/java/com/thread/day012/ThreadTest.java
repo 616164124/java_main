@@ -1,6 +1,5 @@
 package com.thread.day012;
 
-import JUC.com.thread.day012.Add;
 
 import java.util.concurrent.TimeUnit;
 

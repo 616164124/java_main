@@ -1,6 +1,5 @@
 package com.thread.day012;
 
-import JUC.com.thread.day012.PersonEnum;
 
 import java.util.concurrent.CountDownLatch;
 

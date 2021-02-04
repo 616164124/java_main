@@ -1,7 +1,6 @@
 package com.netty.netty.codec2;
 
 
-import JUC.com.netty.netty.codec2.MyDataInfo;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -13,7 +12,7 @@ import io.netty.util.CharsetUtil;
 2. 这时我们自定义一个Handler , 才能称为一个handler
  */
 //public class NettyServerHandler extends ChannelInboundHandlerAdapter {
-public class NettyServerHandler extends SimpleChannelInboundHandler<JUC.com.netty.netty.codec2.MyDataInfo.MyMessage> {
+public class NettyServerHandler extends SimpleChannelInboundHandler<MyDataInfo.MyMessage> {
 
 
     //读取数据实际(这里我们可以读取客户端发送的消息)
@@ -22,17 +21,17 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<JUC.com.nett
     2. Object msg: 就是客户端发送的数据 默认Object
      */
     @Override
-    public void channelRead0(ChannelHandlerContext ctx, JUC.com.netty.netty.codec2.MyDataInfo.MyMessage msg) throws Exception {
+    public void channelRead0(ChannelHandlerContext ctx, MyDataInfo.MyMessage msg) throws Exception {
 
         //根据dataType 来显示不同的信息
 
-        JUC.com.netty.netty.codec2.MyDataInfo.MyMessage.DataType dataType = msg.getDataType();
-        if(dataType == JUC.com.netty.netty.codec2.MyDataInfo.MyMessage.DataType.StudentType) {
+        MyDataInfo.MyMessage.DataType dataType = msg.getDataType();
+        if(dataType == MyDataInfo.MyMessage.DataType.StudentType) {
 
-            JUC.com.netty.netty.codec2.MyDataInfo.Student student = msg.getStudent();
+            MyDataInfo.Student student = msg.getStudent();
             System.out.println("学生id=" + student.getId() + " 学生名字=" + student.getName());
 
-        } else if(dataType == JUC.com.netty.netty.codec2.MyDataInfo.MyMessage.DataType.WorkerType) {
+        } else if(dataType == MyDataInfo.MyMessage.DataType.WorkerType) {
             MyDataInfo.Worker worker = msg.getWorker();
             System.out.println("工人的名字=" + worker.getName() + " 年龄=" + worker.getAge());
         } else {

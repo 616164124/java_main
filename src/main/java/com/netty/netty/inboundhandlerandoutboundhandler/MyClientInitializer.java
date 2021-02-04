@@ -1,8 +1,6 @@
 package com.netty.netty.inboundhandlerandoutboundhandler;
 
-import JUC.com.netty.netty.inboundhandlerandoutboundhandler.MyByteToLongDecoder2;
-import JUC.com.netty.netty.inboundhandlerandoutboundhandler.MyClientHandler;
-import JUC.com.netty.netty.inboundhandlerandoutboundhandler.MyLongToByteEncoder;
+
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;

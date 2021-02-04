@@ -1,8 +1,6 @@
 package com.netty.netty.protocoltcp;
 
-import JUC.com.netty.netty.protocoltcp.MyClientHandler;
-import JUC.com.netty.netty.protocoltcp.MyMessageDecoder;
-import JUC.com.netty.netty.protocoltcp.MyMessageEncoder;
+
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;

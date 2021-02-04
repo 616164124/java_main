@@ -1,6 +1,6 @@
 package com.netty.netty.protocoltcp;
 
-import JUC.com.netty.netty.protocoltcp.MessageProtocol;
+
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ReplayingDecoder;
@@ -18,7 +18,7 @@ public class MyMessageDecoder extends ReplayingDecoder<Void> {
         in.readBytes(content);
 
         //封装成 MessageProtocol 对象，放入 out， 传递下一个handler业务处理
-        JUC.com.netty.netty.protocoltcp.MessageProtocol messageProtocol = new MessageProtocol();
+        MessageProtocol messageProtocol = new MessageProtocol();
         messageProtocol.setLen(length);
         messageProtocol.setContent(content);
 

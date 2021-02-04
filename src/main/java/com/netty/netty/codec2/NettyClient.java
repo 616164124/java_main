@@ -1,6 +1,6 @@
 package com.netty.netty.codec2;
 
-import JUC.com.netty.netty.codec2.NettyClientHandler;
+import com.netty.netty.dubborpc.publicinterface.HelloService;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -48,5 +48,8 @@ public class NettyClient {
             group.shutdownGracefully();
 
         }
+    }
+
+    public void getBean(Class<HelloService> helloServiceClass, String providerName) {
     }
 }

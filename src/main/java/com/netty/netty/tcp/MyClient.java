@@ -2,7 +2,6 @@ package com.netty.netty.tcp;
 
 
 
-import JUC.com.netty.netty.tcp.MyClientInitializer;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.EventLoopGroup;

@@ -1,6 +1,5 @@
 package com.netty.netty.inboundhandlerandoutboundhandler;
 
-import JUC.com.netty.netty.inboundhandlerandoutboundhandler.MyClientInitializer;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.EventLoopGroup;

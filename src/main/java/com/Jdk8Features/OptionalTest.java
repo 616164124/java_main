@@ -2,7 +2,6 @@ package com.Jdk8Features;
 
 
 
-import JUC.com.Jdk8Features.User;
 
 import java.util.Optional;
 
@@ -21,9 +20,9 @@ public class OptionalTest {
   public static void main(String[] args) {
     Optional<Object> o = Optional.ofNullable(null);
     Optional<Integer> o2 = Optional.ofNullable(1);
-    JUC.com.Jdk8Features.User user = new JUC.com.Jdk8Features.User(23, "fks");
+   User user = new User(23, "fks");
     // 判断user 是否为null，如果是null则new User（）不是返回 user
-    JUC.com.Jdk8Features.User user1 = Optional.ofNullable(user).orElse(new JUC.com.Jdk8Features.User(232, "uyihk"));
+    User user1 = Optional.ofNullable(user).orElse(new User(232, "uyihk"));
     Optional<User> user2 = Optional.ofNullable(user);
     System.out.println(user2.get().getName());
     System.out.println(user1.getName());

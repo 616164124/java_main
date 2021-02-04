@@ -1,8 +1,6 @@
 package com.netty.netty.codec;
 
-import JUC.com.netty.netty.codec.StudentPOJO;
 import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.CharsetUtil;
@@ -15,7 +13,7 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 
         //发生一个Student 对象到服务器
 
-        JUC.com.netty.netty.codec.StudentPOJO.Student student = StudentPOJO.Student.newBuilder().setId(4).setName("智多星 吴用").build();
+        StudentPOJO.Student student = StudentPOJO.Student.newBuilder().setId(4).setName("智多星 吴用").build();
         //Teacher , Member ,Message
         ctx.writeAndFlush(student);
     }

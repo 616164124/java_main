@@ -1,6 +1,6 @@
 package com.netty.netty.simple;
 
-import JUC.com.netty.netty.simple.NettyServerHandler;
+
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;

@@ -1,6 +1,5 @@
 package com.netty.netty.codec2;
 
-import JUC.com.netty.netty.codec2.MyDataInfo;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -16,14 +15,14 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 
         //随机的发送Student 或者 Workder 对象
         int random = new Random().nextInt(3);
-        JUC.com.netty.netty.codec2.MyDataInfo.MyMessage myMessage = null;
+        MyDataInfo.MyMessage myMessage = null;
 
         if(0 == random) { //发送Student 对象
 
-            myMessage = JUC.com.netty.netty.codec2.MyDataInfo.MyMessage.newBuilder().setDataType(JUC.com.netty.netty.codec2.MyDataInfo.MyMessage.DataType.StudentType).setStudent(JUC.com.netty.netty.codec2.MyDataInfo.Student.newBuilder().setId(5).setName("玉麒麟 卢俊义").build()).build();
+            myMessage = MyDataInfo.MyMessage.newBuilder().setDataType(MyDataInfo.MyMessage.DataType.StudentType).setStudent(MyDataInfo.Student.newBuilder().setId(5).setName("玉麒麟 卢俊义").build()).build();
         } else { // 发送一个Worker 对象
 
-            myMessage = JUC.com.netty.netty.codec2.MyDataInfo.MyMessage.newBuilder().setDataType(JUC.com.netty.netty.codec2.MyDataInfo.MyMessage.DataType.WorkerType).setWorker(MyDataInfo.Worker.newBuilder().setAge(20).setName("老李").build()).build();
+            myMessage = MyDataInfo.MyMessage.newBuilder().setDataType(MyDataInfo.MyMessage.DataType.WorkerType).setWorker(MyDataInfo.Worker.newBuilder().setAge(20).setName("老李").build()).build();
         }
 
         ctx.writeAndFlush(myMessage);

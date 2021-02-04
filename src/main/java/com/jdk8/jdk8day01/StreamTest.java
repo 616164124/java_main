@@ -2,7 +2,9 @@ package com.jdk8.jdk8day01;
 
 
 
-import JUC.com.thread.day009.User;
+
+
+import com.Jdk8Features.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;

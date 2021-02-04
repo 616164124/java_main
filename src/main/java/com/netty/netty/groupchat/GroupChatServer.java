@@ -1,6 +1,5 @@
 package com.netty.netty.groupchat;
 
-import JUC.com.netty.netty.groupchat.GroupChatServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;

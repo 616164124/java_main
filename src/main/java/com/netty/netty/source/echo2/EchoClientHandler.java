@@ -15,7 +15,6 @@
  */
 package com.netty.netty.source.echo2;
 
-import JUC.com.netty.netty.source.echo2.EchoClient;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;

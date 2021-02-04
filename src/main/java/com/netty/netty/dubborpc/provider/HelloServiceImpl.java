@@ -1,7 +1,7 @@
 package com.netty.netty.dubborpc.provider;
 
 
-import JUC.com.netty.netty.dubborpc.publicinterface.HelloService;
+import com.netty.netty.dubborpc.publicinterface.HelloService;
 
 public class HelloServiceImpl implements HelloService {
 

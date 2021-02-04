@@ -2,7 +2,8 @@ package com.CollectionTest;
 
 
 
-import JUC.com.Jdk8Features.User;
+
+import com.dao.User;
 
 import java.util.*;
 
@@ -58,7 +59,7 @@ public class VectorTest {
         });
     System.out.println(userList);
     // jkd8 新特性写法 根据 number 排序
-    userList.stream().map(user -> user.getNumber()).sorted().forEach(System.out::print);
+//    userList.stream().map(user -> user.getNumber()).sorted().forEach(System.out::print);
     System.out.println(userList);
   }
 }

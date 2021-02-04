@@ -1,6 +1,5 @@
 package com.netty.netty.tcp;
 
-import JUC.com.netty.netty.tcp.MyClientHandler;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;

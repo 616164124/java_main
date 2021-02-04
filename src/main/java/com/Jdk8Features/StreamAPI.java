@@ -1,6 +1,5 @@
 package com.Jdk8Features;
 
-import JUC.com.Jdk8Features.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,19 +14,19 @@ public class StreamAPI {
     List<int[]> ints = Arrays.asList(Aryyays);
 
     List<String> list = Arrays.asList("126", "2318", "1313", "sfsfsf", "化", "126");
-    List<JUC.com.Jdk8Features.User> objects =
+    List<User> objects =
         Arrays.asList(
-            new JUC.com.Jdk8Features.User(12, "hua", 89),
-            new JUC.com.Jdk8Features.User(12, "li2", 234),
-            new JUC.com.Jdk8Features.User(12, "zhao1", 17),
-            new JUC.com.Jdk8Features.User(12, "zhao1", 64));
+            new User(12, "hua", 89),
+            new User(12, "li2", 234),
+            new User(12, "zhao1", 17),
+            new User(12, "zhao1", 64));
 
-    List<JUC.com.Jdk8Features.User> objectsSameAge =
+    List<User> objectsSameAge =
         Arrays.asList(
-            new JUC.com.Jdk8Features.User(12, "hua", 89),
-            new JUC.com.Jdk8Features.User(12, "li2", 89),
-            new JUC.com.Jdk8Features.User(12, "zhao1", 89),
-            new JUC.com.Jdk8Features.User(12, "zhao1", 89));
+            new User(12, "hua", 89),
+            new User(12, "li2", 89),
+            new User(12, "zhao1", 89),
+            new User(12, "zhao1", 89));
     System.out.println("===========allmatch==============");
     System.out.println(objects.stream().allMatch((s) -> s.getAge() == 89));
     // filter 过滤 object中的值
@@ -41,7 +40,7 @@ public class StreamAPI {
     Stream<String> distinct = list.stream().distinct();
     distinct.forEach(System.out::println);
     System.out.println("===========objects==============");
-    Stream<JUC.com.Jdk8Features.User> distinct1 = objects.stream().distinct();
+    Stream<User> distinct1 = objects.stream().distinct();
     distinct1.forEach((a) -> System.out.println(a.getName()));
     // sorted
     System.out.println("===========objects sorted==============");

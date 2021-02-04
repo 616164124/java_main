@@ -1,7 +1,6 @@
 package com.netty.netty.codec2;
 
-import JUC.com.netty.netty.codec2.MyDataInfo;
-import JUC.com.netty.netty.codec2.NettyServerHandler;
+
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;

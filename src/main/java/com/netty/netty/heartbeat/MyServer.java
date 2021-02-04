@@ -1,6 +1,5 @@
 package com.netty.netty.heartbeat;
 
-import JUC.com.netty.netty.heartbeat.MyServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;

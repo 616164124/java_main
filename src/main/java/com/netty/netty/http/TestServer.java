@@ -1,6 +1,5 @@
 package com.netty.netty.http;
 
-import JUC.com.netty.netty.http.TestServerInitializer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.EventLoopGroup;
