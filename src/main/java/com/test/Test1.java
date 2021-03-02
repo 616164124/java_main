@@ -2,12 +2,12 @@ package com.test;
 
 import java.util.concurrent.TimeUnit;
 
-public class test1 {
+public class Test1 {
 
   volatile boolean flag = true;
 
   public static void main(String[] args) {
-    test1 test1 = new test1();
+    Test1 test1 = new Test1();
 
     new Thread(test1::m, "test1 p").start();
 
@@ -20,6 +20,16 @@ public class test1 {
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
+   int hell;
+
+    new Thread(
+            new Runnable() {
+              @Override
+              public void run() {
+                System.out.println("hello");
+              }
+            })
+        .start();
 
     test1.flag = false;
   }

@@ -20,7 +20,7 @@ public class HashMapTest {
         Integer integer = new Integer(12);
         String s = new String("123");
 
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10; i++) {
             hashMap.put(new Test01(), new Object());
         }
 

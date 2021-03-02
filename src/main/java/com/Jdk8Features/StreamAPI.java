@@ -1,18 +1,25 @@
 package com.Jdk8Features;
 
+import com.sun.org.slf4j.internal.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 /** 关于jdk8新特性filter */
 public class StreamAPI {
+
   public static void main(String[] args) {
 
     int[] Aryyays = {1, 23, 4, 324, 5, 23};
     List<int[]> ints = Arrays.asList(Aryyays);
-
+    HashMap<String, Integer> hashMap = new HashMap<>();
+    hashMap.put("hua", 12);
+    hashMap.put("li", 23);
+    hashMap.put("mu", 4);
+    hashMap.put("zhang", 332);
+    hashMap.put("liu", 98);
+    hashMap.put("liu",111);
     List<String> list = Arrays.asList("126", "2318", "1313", "sfsfsf", "化", "126");
     List<User> objects =
         Arrays.asList(
@@ -71,14 +78,22 @@ public class StreamAPI {
     System.out.println(objectsSameAge.stream().allMatch(param -> param.getAge() == 89));
     // limit limit(long maxSize) 截取前面maxSize条数据,在上面的代码的基础上我加了个方法
     objectsSameAge.stream()
-            .filter(param -> param.getName() != "zhao1")
-            .limit(2)
-            .allMatch(param -> param.getAge() == 89);
-
+        .filter(param -> param.getName() != "zhao1")
+        .limit(2)
+        .allMatch(param -> param.getAge() == 89);
 
     ArrayList<User> objects1 = new ArrayList<>();
-  }
 
+    hashMap.entrySet().stream()
+        .filter(
+            a -> {
+              return a.getValue() > 12;
+            })
+        .forEach(a -> System.out.println(a));
+    hashMap.entrySet().stream().forEach(a -> System.out.println(a));
+    Set<String> keySet = hashMap.keySet();
+    keySet.stream().forEach(a -> System.out.println(a));
+  }
 
   // 全排列
   // TODO

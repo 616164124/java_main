@@ -37,8 +37,6 @@ public class NettyServer {
                         //给pipeline 设置处理器
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
-
-
                             ChannelPipeline pipeline = ch.pipeline();
                             //在pipeline加入ProtoBufDecoder
                             //指定对哪种对象进行解码
@@ -53,8 +51,9 @@ public class NettyServer {
             //启动服务器(并绑定端口)
             ChannelFuture cf = bootstrap.bind(6668).sync();
 
-            //给cf 注册监听器，监控我们关心的事件
+            //
 
+            //给cf 注册监听器，监控我们关心的事件
             cf.addListener(new ChannelFutureListener() {
                 @Override
                 public void operationComplete(ChannelFuture future) throws Exception {

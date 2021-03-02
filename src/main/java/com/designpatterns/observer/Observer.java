@@ -7,24 +7,23 @@
  */
 package com.designpatterns.observer;
 
-/**
- * @version: V1.0
- * @author: mikael
- * @className: Observer
- * @packageName: designpatterns.observer
- * @description:
- * @data: 2020-10-24
- **/
-
-
 public class Observer {
+    public static void main(String[] args) {
+        Son son = new Son();
+        son.sys();
+
+    }
 }
 
-class Father{
-
+class Father {
+    public void sys() {
+        System.out.println("Father say.....");
+    }
 }
 
-class son{
-
-
+class Son extends Father {
+    public Son() {
+        Father father = new Father();
+        System.out.println("son say.........");
+    }
 }

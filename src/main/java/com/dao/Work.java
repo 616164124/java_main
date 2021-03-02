@@ -2,7 +2,9 @@ package com.dao;
 
 import java.util.Date;
 
-// 工作类
+/**
+ * 工作类
+ */
 public class Work {
   // 工作名称
   private String workName;

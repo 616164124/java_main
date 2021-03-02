@@ -1,13 +1,10 @@
 package com.Interview;
 
+import java.util.HashMap;
+
 /**
- * @version: V1.0
- * @author: mikael
- * @className: BreakTest
- * @packageName: Interview
- * @description:
- * @data: 2020-10-25
- **/
+ * @author mikael
+ */
 public class BreakTest {
     public static void main(String[] args) {
 
@@ -16,8 +13,11 @@ public class BreakTest {
                 System.out.println("i\t" + i);
                 break;
             }
-            if (i > 79)
+            HashMap hashMap = new HashMap(12);
+
+            if (i > 79) {
                 System.out.println(i);
+            }
         }
     }
 }

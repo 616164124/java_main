@@ -20,6 +20,8 @@ import java.lang.annotation.*;
  * 编译时动态处理，编译时通过代码里标识的元数据动态处理，例如动态生成代码。 运行时动态处理，运行时通过代码里标识的元数据动态处理，例如使用反射注入实例
  */
 public class AnnotationsTest {
+   
+
   public static void main(String[] args) {
     Annotation[] annotation = Man.class.getAnnotations();
     System.out.println(annotation.length);
