@@ -52,7 +52,9 @@ class Sychronize2test {
               new Thread(n) {
                 @Override
                 public void run() {
-                  while (true) sychinzie.produce();
+                  while (true) {
+                    sychinzie.produce();
+                  }
                 }
               }.start();
             });
@@ -63,7 +65,9 @@ class Sychronize2test {
               new Thread(n) {
                 @Override
                 public void run() {
-                  while (true) sychinzie.comsume();
+                  while (true) {
+                    sychinzie.comsume();
+                  }
                 }
               }.start();
             });

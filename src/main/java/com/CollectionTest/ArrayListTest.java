@@ -1,12 +1,20 @@
 package com.CollectionTest;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
+
+/**
+ * arraylist 由数组构成，
+ *  @author mikael
+ */
 public class ArrayListTest {
   public static void main(String[] args) {
     // 有序可重复
     ArrayList arrayList = new ArrayList();
     ArrayList arrayList2 = new ArrayList();
+
     arrayList.add("14");
     System.out.println(arrayList.size() + '\t');
 
@@ -48,10 +56,23 @@ public class ArrayListTest {
 
     ArrayList<Object> objects = new ArrayList<>();
     finalizeTest finalizeTest = new finalizeTest();
-
+     List arrayList1 = (List)arrayList;
+    arrayList1.forEach((aa) -> System.out.print(aa));
+    Iterator iterator = arrayList1.iterator();
+    System.out.println("===============1==========");
+    while (iterator.hasNext()){
+      System.out.println(iterator.next());
+    }
+    System.out.println("===========2========");
+    for (Object i: arrayList){
+      System.out.print(i);
+    }
+    System.out.println("===========3========");
+    arrayList.forEach((cc) -> System.out.print(cc));
   }
 }
 class finalizeTest {
+ @Override
  public void finalize(){
     System.out.println("实现了finalize");
   }

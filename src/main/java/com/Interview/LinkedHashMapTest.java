@@ -20,5 +20,6 @@ public class LinkedHashMapTest {
     // 为true时  查询时，把最新查出来的元素放在末位
     objectObjectLinkedHashMap.get("kfjla");
     System.out.println(objectObjectLinkedHashMap);
+
   }
 }

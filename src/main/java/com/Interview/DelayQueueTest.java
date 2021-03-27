@@ -1,6 +1,9 @@
 package com.Interview;
 
-import java.util.concurrent.*;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.DelayQueue;
+import java.util.concurrent.Delayed;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 延迟队列
@@ -17,7 +20,7 @@ public class DelayQueueTest {
         delayqueue.put(new Task("task2", now + 40000));
         delayqueue.put(new Task("task3", now + 6000));
         delayqueue.put(new Task("task4", now + 1000));
-        System.out.println(delayqueue);
+//       System.out.println(delayqueue);
 
         for (int i = 0; i < 4; i++) {
             //会停顿，take()等待时间到
@@ -57,12 +60,29 @@ public class DelayQueueTest {
          */
         @Override
         public long getDelay(TimeUnit unit) {
+            System.out.println("123");
             return unit.convert(time - System.currentTimeMillis(), TimeUnit.MILLISECONDS);
         }
 
         @Override
         public String toString() {
+            System.out.println("11111");
             return "" + time + "\t" + name;
         }
     }
+
+
+    class Task1 implements Delayed {
+
+        @Override
+        public long getDelay(TimeUnit unit) {
+            return 0;
+        }
+
+        @Override
+        public int compareTo(Delayed o) {
+            return 0;
+        }
+    }
+
 }

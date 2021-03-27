@@ -7,8 +7,7 @@ public class ThreadPrintABC_mode1_reform {
   enum ReadytoRun {
     t1,
     t2,
-    t3,
-    t4
+    t3
   }
 
   // 不使用volatile 时，会造成死锁
@@ -17,7 +16,7 @@ public class ThreadPrintABC_mode1_reform {
     char[] chars = "abcdef".toCharArray();
     char[] chars1 = "123456".toCharArray();
     char[] chars2 = "ABCDEF".toCharArray();
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < chars.length; i++) {
       new Thread(
               () -> {
                 for (char c : chars) {
@@ -58,4 +57,5 @@ public class ThreadPrintABC_mode1_reform {
       }
     }
   }
+
 }

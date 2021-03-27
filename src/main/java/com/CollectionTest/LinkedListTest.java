@@ -23,5 +23,7 @@ public class LinkedListTest {
     strings.add("3");
     System.out.println(strings);
     System.out.println(strings.get(0));
+    System.out.println("===========1========");
+    strings.forEach(aa -> System.out.println(aa));
   }
 }

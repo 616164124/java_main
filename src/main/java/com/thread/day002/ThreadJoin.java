@@ -10,12 +10,12 @@ public class ThreadJoin {
     Thread thread1 =
         new Thread(
             () -> {
-              IntStream.range(1, 100)
+              IntStream.range(1, 10)
                   .forEach(
                       n -> System.out.println(Thread.currentThread().getName() + "\tone\t" + n));
               try {
                 Thread.sleep(1_000);
-                System.out.println("结束!!!!!!");
+                System.out.println(Thread.currentThread().getName()+"结束!!!!!!");
               } catch (InterruptedException e) {
                 e.printStackTrace();
               }
@@ -24,12 +24,12 @@ public class ThreadJoin {
     Thread thread2 =
         new Thread(
             () -> {
-              IntStream.range(1, 100)
+              IntStream.range(1, 10)
                   .forEach(
                       n -> System.out.println(Thread.currentThread().getName() + "\ttwo\t" + n));
               try {
                 Thread.sleep(1_000);
-                System.out.println("结束!!!!!!");
+                System.out.println(Thread.currentThread().getName()+"结束!!!!!!");
               } catch (InterruptedException e) {
                 e.printStackTrace();
               }
@@ -38,12 +38,12 @@ public class ThreadJoin {
     Thread thread3 =
         new Thread(
             () -> {
-              IntStream.range(1, 100)
+              IntStream.range(1, 10)
                   .forEach(
                       n -> System.out.println(Thread.currentThread().getName() + "\tthree\t" + n));
               try {
                 Thread.sleep(1_000);
-                System.out.println("结束!!!!!!");
+                System.out.println(Thread.currentThread().getName()+"结束!!!!!!");
               } catch (InterruptedException e) {
                 e.printStackTrace();
               }
@@ -61,7 +61,7 @@ public class ThreadJoin {
     }
 
     // 1到100的数
-    IntStream.range(1, 100).forEach(n -> System.out.println(n));
+//    IntStream.range(1, 100).forEach(n -> System.out.println(n));
     System.out.println("main 结束!!!!!");
   }
 }

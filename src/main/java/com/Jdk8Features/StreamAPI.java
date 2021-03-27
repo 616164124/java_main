@@ -1,9 +1,6 @@
 package com.Jdk8Features;
 
-import com.sun.org.slf4j.internal.LoggerFactory;
-
 import java.util.*;
-import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 /** 关于jdk8新特性filter */
@@ -13,7 +10,7 @@ public class StreamAPI {
 
     int[] Aryyays = {1, 23, 4, 324, 5, 23};
     List<int[]> ints = Arrays.asList(Aryyays);
-    HashMap<String, Integer> hashMap = new HashMap<>();
+    HashMap<String, Integer> hashMap = new HashMap<String, Integer>();
     hashMap.put("hua", 12);
     hashMap.put("li", 23);
     hashMap.put("mu", 4);
@@ -93,6 +90,7 @@ public class StreamAPI {
     hashMap.entrySet().stream().forEach(a -> System.out.println(a));
     Set<String> keySet = hashMap.keySet();
     keySet.stream().forEach(a -> System.out.println(a));
+
   }
 
   // 全排列

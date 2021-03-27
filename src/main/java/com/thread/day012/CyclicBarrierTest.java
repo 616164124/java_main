@@ -1,13 +1,17 @@
 package com.thread.day012;
 
-import java.util.concurrent.BrokenBarrierException;
-import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /** CyclicBarrier (集齐七颗龙珠才能召唤神龙) */
 public class CyclicBarrierTest {
 
   public static void main(String[] args) {
+
+      ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(12, 12, 100, TimeUnit.MILLISECONDS,
+             new LinkedBlockingDeque<Runnable>(19){
+
+             });
+
       CyclicBarrier cyclicBarrier =
               new CyclicBarrier(
                       7,
