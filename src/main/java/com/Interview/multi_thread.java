@@ -4,11 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 // 证明volatile的不具有原子性
 
-/**
- * volatile  特性：保证可见性
- *                禁止指令重排
- *                不保证原子性
- */
+/** volatile 特性：保证可见性 禁止指令重排 不保证原子性 */
 public class multi_thread {
   static volatile int i = 0;
   static volatile int ii = 0;
@@ -20,7 +16,7 @@ public class multi_thread {
       new Thread(
               () -> {
                 for (int j = 0; j < 10000; j++) {
-                  add();
+                  synAdd();
                   iii = iii + 1;
                   addd();
                 }
@@ -31,12 +27,12 @@ public class multi_thread {
 
     TimeUnit.SECONDS.sleep(5);
 
-    System.out.println("sychronzied\t"+i);
-    System.out.println("addd()\t"+ii);
-    System.out.println("iiii = iii+1\t"+iii);
+    System.out.println("sychronzied\t" + i);
+    System.out.println("addd()\t" + ii);
+    System.out.println("iiii = iii+1\t" + iii);
   }
 
-  public static synchronized void add() {
+  public static synchronized void synAdd() {
     i = i + 1;
   }
 

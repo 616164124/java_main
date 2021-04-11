@@ -18,20 +18,24 @@ import java.util.concurrent.TimeUnit;
  * @className: ThreadPoolTest
  * @packageName: Thread.threadpool
  * @description:
- * @data: 2020-11-05
+ * @date: 2020-11-05
  */
 public class ThreadPoolTest {
 
-    public static void main(String[] args) {
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 2, 4, TimeUnit.SECONDS
-                , new ArrayBlockingQueue<Runnable>(3), new MyRejectedExecutionHandler());
-    }
+  public static void main(String[] args) {
+    ThreadPoolExecutor executor =
+        new ThreadPoolExecutor(
+            1,
+            2,
+            4,
+            TimeUnit.SECONDS,
+            new ArrayBlockingQueue<Runnable>(3),
+            new MyRejectedExecutionHandler());
+  }
 }
 
 class MyRejectedExecutionHandler implements RejectedExecutionHandler {
 
-    @Override
-    public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
-
-    }
+  @Override
+  public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {}
 }

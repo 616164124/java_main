@@ -4,9 +4,6 @@
  */
 package com.Interview;
 
-
-
-
 import com.dao.User;
 
 import java.util.HashMap;
@@ -17,7 +14,7 @@ import java.util.HashMap;
  * @className: HashMapTest
  * @packageName: Interview
  * @description: HashMap测试
- * @data: 2020-09-11
+ * @date: 2020-09-11
  */
 public class HashMapTest {
   public static void main(String[] args) {

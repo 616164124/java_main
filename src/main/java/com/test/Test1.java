@@ -1,5 +1,6 @@
 package com.test;
 
+import java.util.Stack;
 import java.util.concurrent.TimeUnit;
 
 public class Test1 {
@@ -12,6 +13,8 @@ public class Test1 {
     new Thread(test1::m, "test1 p").start();
 
     long t = 23;
+    Stack<Character> s = new Stack<>();
+    s.push('{');
 
     test1.n();
 
@@ -20,7 +23,7 @@ public class Test1 {
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
-   int hell;
+    int hell;
 
     new Thread(
             new Runnable() {

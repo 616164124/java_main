@@ -12,7 +12,7 @@ import java.util.concurrent.Semaphore;
  * @className: ThreadLoopExecution
  * @packageName: Thread
  * @description: 线程循环执行信号量版本
- * @data: 2020-09-11
+ * @date: 2020-09-11
  */
 public class ThreadLoopExecution {
 

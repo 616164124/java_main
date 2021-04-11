@@ -12,7 +12,7 @@ import java.util.HashSet;
  * @className: PrintAllPermutations
  * @packageName: Interview
  * @description: Java 中，怎么打印出一个字符串的所有排列
- * @data: 2020-09-06
+ * @date: 2020-09-06
  */
 public class PrintAllPermutations {
   public static void main(String[] args) {

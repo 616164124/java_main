@@ -17,7 +17,7 @@ import java.io.*;
  * @className: Deep_clone
  * @packageName: Interview
  * @description: 深克隆/浅克隆
- * @data: 2020-08-29
+ * @date: 2020-08-29
  */
 public class Deep_clone {
   public static void main(String[] args) throws CloneNotSupportedException {
@@ -48,7 +48,7 @@ public class Deep_clone {
  * @version: V1.0
  * @author: mikael
  * @description:
- * @data: 2020/03/29
+ * @date: 2020/03/29
  */
 class CloneTest3 implements Serializable {
   private int id;

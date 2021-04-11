@@ -10,7 +10,7 @@ package com.github_snippet;
  * @className: RandInteger
  * @packageName: github_snippet
  * @description: 随机生成int
- * @data: 2020-08-30 5:49
+ * @date: 2020-08-30 5:49
  */
 public class RandInteger {
   public static void main(String[] args) {}

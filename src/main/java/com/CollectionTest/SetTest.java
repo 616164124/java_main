@@ -14,7 +14,7 @@ import java.util.Set;
  * @className: SetTest
  * @packageName: CollectionTest
  * @description: set方法的test
- * @data: 2020-09-06
+ * @date: 2020-09-06
  */
 public class SetTest {
   public static void main(String[] args) {
@@ -33,13 +33,13 @@ public class SetTest {
     strings.add("123");
     strings.add("Ma");
     strings.add("NB");
-    for (String s:strings){
+    for (String s : strings) {
       System.out.println(s);
     }
     int h;
     int i = (h = "Ma".hashCode()) ^ (h >>> 16);
     int a = (h = "NB".hashCode()) ^ (h >>> 16);
 
-    System.out.println(i+ "\t"+a);
+    System.out.println(i + "\t" + a);
   }
 }

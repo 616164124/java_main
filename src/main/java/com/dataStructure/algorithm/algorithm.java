@@ -14,7 +14,7 @@ import java.util.List;
  * @className: algorithm
  * @packageName: dataStructure.algorithm
  * @description: 一个数组内全部组合
- * @data: 2020-09-15
+ * @date: 2020-09-15
  */
 public class algorithm {
   public static void main(String[] args) {

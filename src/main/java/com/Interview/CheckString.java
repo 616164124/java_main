@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
  * @className: CheckString
  * @packageName: Interview
  * @description: java中判断字符串是否为只包含数字
- * @data: 2020-09-06
+ * @date: 2020-09-06
  */
 public class CheckString {
   public static void main(String[] args) {

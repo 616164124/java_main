@@ -15,24 +15,24 @@ import java.util.concurrent.BlockingQueue;
  * @className: Procutor
  * @packageName: Thread.block_queue
  * @description:
- * @data: 2020-11-05
+ * @date: 2020-11-05
  */
 public class Producer implements Runnable {
-    private int element = 0;
-    private BlockingQueue<Integer> blockingQueue;
+  private int element = 0;
+  private BlockingQueue<Integer> blockingQueue;
 
-    public Producer(BlockingQueue<Integer> blockingQueue) {
+  public Producer(BlockingQueue<Integer> blockingQueue) {
 
-        this.blockingQueue = blockingQueue;
+    this.blockingQueue = blockingQueue;
+  }
+
+  @Override
+  public void run() {
+
+    while (element < 100) {
+      System.out.println("element\t" + element);
+      blockingQueue.offer(element++);
     }
-
-    @Override
-    public void run() {
-
-        while (element < 100) {
-            System.out.println("element\t" + element);
-            blockingQueue.offer(element++);
-        }
-        System.out.println("Producer done!!!!");
-    }
+    System.out.println("Producer done!!!!");
+  }
 }

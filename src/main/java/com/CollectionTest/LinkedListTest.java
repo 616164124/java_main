@@ -12,7 +12,7 @@ import java.util.LinkedList;
  * @className: LinkedListTest
  * @packageName: CollectionTest
  * @description: LinkedList的测试
- * @data: 2020-09-06
+ * @date: 2020-09-06
  */
 public class LinkedListTest {
   public static void main(String[] args) {

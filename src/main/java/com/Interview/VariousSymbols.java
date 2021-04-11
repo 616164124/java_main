@@ -9,8 +9,8 @@ package com.Interview;
  * @author: mikael
  * @className: VariousSymbols
  * @packageName: Interview
- * @description: 各种java符号计算  参考网址：https://blog.csdn.net/u012534326/article/details/85726431
- * @data: 2020-09-11
+ * @description: 各种java符号计算 参考网址：https://blog.csdn.net/u012534326/article/details/85726431
+ * @date: 2020-09-11
  */
 public class VariousSymbols {
   public static void main(String[] args) {
@@ -34,7 +34,7 @@ public class VariousSymbols {
     // ~   取反  如果 a>=0 则 j 为a的绝对值+1 的负数
     //           如果 a<0  则j为a 的绝对值 -1 的正数
     int j = ~a;
-    System.out.println( "a的值\t"+a +" \t~之后的值 \t"+j);
+    System.out.println("a的值\t" + a + " \t~之后的值 \t" + j);
     System.out.println();
     // 运算符 << 跟  >> ;
     double c = Math.pow(2, 3); // 立方的表示方法,2的立方
@@ -52,11 +52,11 @@ public class VariousSymbols {
     System.out.println(f * 3 + "\t" + s5 + "\t");
     System.out.println(d2 * 3 + "\t" + s6);
 
-    int i=3;
-    int aa=4;
-    i=+1;  // 相当于 i=i+1
-    aa+=1; // 相当于  aa=1;
-    System.out.println("i\t"+i);
-    System.out.println("aa\t"+aa);
+    int i = 3;
+    int aa = 4;
+    i = +1; // 相当于 i=i+1
+    aa += 1; // 相当于  aa=1;
+    System.out.println("i\t" + i);
+    System.out.println("aa\t" + aa);
   }
 }

@@ -14,7 +14,7 @@ import java.util.Map;
  * @className: SearchString
  * @packageName: Interview
  * @description: Java查找数组重复元素，并打印重复元素、重复次数、重复元素位置
- * @data: 2020-09-06
+ * @date: 2020-09-06
  */
 public class SearchString {
   public static void main(String[] args) {

@@ -3,12 +3,12 @@ package com.thread.threadpool;
 /**
  * @description:
  * @author: mikael
- * @data: 2020/11/14
+ * @date: 2020/11/14
  */
 public class IsInterruptedTest {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Thread.interrupted();
-    }
+    Thread.interrupted();
+  }
 }

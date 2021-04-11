@@ -12,7 +12,7 @@ import java.util.concurrent.RecursiveTask;
  * @className: ForkjoinTest
  * @packageName: thread.forkjoin
  * @description:
- * @data: 2021-01-17
+ * @date: 2021-01-17
  */
 public class ForkJoinTest {
   public static void main(String[] args) throws ExecutionException, InterruptedException {
@@ -71,7 +71,8 @@ class SumTask extends RecursiveTask<Integer> {
     return leftTask.join() + rightTask.join();
   }
 }
-class SumTask1 extends RecursiveTask<Integer>{
+
+class SumTask1 extends RecursiveTask<Integer> {
 
   @Override
   protected Integer compute() {

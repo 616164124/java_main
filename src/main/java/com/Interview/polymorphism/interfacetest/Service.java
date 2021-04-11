@@ -6,9 +6,8 @@ package com.Interview.polymorphism.interfacetest;
  * @className: Service
  * @packageName: Interview.polymorphism.interfacetest
  * @description:
- * @data: 2020-12-04
- **/
+ * @date: 2020-12-04
+ */
 public interface Service {
-    String say(String str);
+  String say(String str);
 }
-  

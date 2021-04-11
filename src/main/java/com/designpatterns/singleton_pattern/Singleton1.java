@@ -10,7 +10,7 @@ package com.designpatterns.singleton_pattern;
  * @className: singleton
  * @packageName: singleton_pattern
  * @description: 枚举
- * @data: 2020-10-01
+ * @date: 2020-10-01
  */
 enum Singleton7 {
   SINGLETON_7;
@@ -24,7 +24,7 @@ enum Singleton7 {
  * @className: singleton
  * @packageName: singleton_pattern
  * @description: 普通单例模式
- * @data: 2020-10-01
+ * @date: 2020-10-01
  */
 public class Singleton1 {
   private static Singleton1 singleton1 = new Singleton1();
@@ -46,7 +46,7 @@ public class Singleton1 {
  * @className: singleton
  * @packageName: singleton_pattern
  * @description: 懒汉单例模式 线程不安全
- * @data: 2020-10-01
+ * @date: 2020-10-01
  */
 class Singleton2 {
   private static Singleton2 singleton2;
@@ -67,7 +67,7 @@ class Singleton2 {
  * @className: singleton
  * @packageName: singleton_pattern
  * @description: 懒汉单例模式 线程安全(有synchronize加锁)
- * @data: 2020-10-01
+ * @date: 2020-10-01
  */
 class Singleton3 {
   private static Singleton3 singleton3;
@@ -88,7 +88,7 @@ class Singleton3 {
  * @className: singleton
  * @packageName: singleton_pattern
  * @description: 饿汉单例模式 线程安全 缺点都是static，程序初始化就创建了，造成垃圾过多。
- * @data: 2020-10-01
+ * @date: 2020-10-01
  */
 class Singleton4 {
   private static Singleton4 singleton4 = new Singleton4();
@@ -106,7 +106,7 @@ class Singleton4 {
  * @className: singleton
  * @packageName: singleton_pattern
  * @description: 双重校验锁（dcl）单例 创建的时候用 singleton5 方法创建
- * @data: 2020-10-01
+ * @date: 2020-10-01
  */
 class Singleton5 {
   private static volatile Singleton5 singleton5;
@@ -131,7 +131,7 @@ class Singleton5 {
  * @className: singleton
  * @packageName: singleton_pattern
  * @description: 登记式/静态内部类 懒加载 线程安全
- * @data: 2020-10-01
+ * @date: 2020-10-01
  */
 class Singleton6 {
   private Singleton6() {}

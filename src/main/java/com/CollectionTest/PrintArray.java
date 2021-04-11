@@ -13,7 +13,7 @@ import java.util.Arrays;
  * @className: PrintArray
  * @packageName: CollectionTest
  * @description: JAVA 打印数组
- * @data: 2020-09-06
+ * @date: 2020-09-06
  */
 public class PrintArray {
   public static void main(String[] args) {

@@ -10,7 +10,7 @@ package com.Interview;
  * @className: volatileTest
  * @packageName: Interview
  * @description: volatile 数组 参考网址：https://blog.csdn.net/u014108122/article/details/38173201
- * @data: 2020-09-05
+ * @date: 2020-09-05
  */
 
 // volatile修饰的变量如果是对象或数组之类的，其含义是对象获数组的地址具有可见性，但是数组或对象内部的成员改变不具备可见性：

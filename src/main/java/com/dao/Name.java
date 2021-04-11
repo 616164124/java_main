@@ -3,7 +3,6 @@ package com.dao;
 /**
  * @author: mikael
  * @description:
- * @data: 2020/11/09
+ * @date: 2020/11/09
  */
-public class Name {
-}
+public class Name {}
