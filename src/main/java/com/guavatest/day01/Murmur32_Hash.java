@@ -5,7 +5,6 @@ import com.google.common.hash.Hashing;
 import java.math.BigInteger;
 import java.util.concurrent.atomic.LongAdder;
 
-
 /**
  * 采用murmur3_32来实现短连接的生产
  *
@@ -21,6 +20,8 @@ public class Murmur32_Hash {
     Murmur32_Hash test2 = new Murmur32_Hash();
     System.out.println(test2.shortenUrl(url));
     System.out.println(BASE);
+    System.out.println("九五至尊，天下首富====》" + "九五至尊，天下首富".hashCode()); //  -576041546
+
     // ***************
     BigInteger bigInteger = new BigInteger("123");
     BigInteger[] bigIntegers = bigInteger.divideAndRemainder(new BigInteger("12"));
@@ -30,6 +31,7 @@ public class Murmur32_Hash {
 
   /**
    * 生产短连接码
+   *
    * @param url
    * @return
    */
@@ -37,7 +39,8 @@ public class Murmur32_Hash {
     long murmur32 = Hashing.murmur3_32().hashUnencodedChars(url).padToLong();
     System.out.println(Long.MAX_VALUE);
     System.out.println(murmur32);
-    murmur32 = 123123131333333L;
+    // murmur32 = 123123131333333L;
+    murmur32 = 576041546;
     String encoded;
     encoded = encode(murmur32);
     return encoded;

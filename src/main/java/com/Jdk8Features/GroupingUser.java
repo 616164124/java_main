@@ -1,11 +1,15 @@
 package com.Jdk8Features;
 
-
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
+/**
+ * @description:
+ * @author：Mikael
+ */
 public class GroupingUser {
   public static void main(String[] args) {
     List<User> objects =
@@ -21,6 +25,7 @@ public class GroupingUser {
     Map<String, List<User>> collect2 =
         objects.stream().collect(Collectors.groupingBy(User::getName));
     System.out.println(collect.get(64));
+    System.out.println(collect);
     System.out.println(collect2);
     // 字符串中区分数字跟字符
     String str = "jfksjf763jfl";
@@ -36,5 +41,12 @@ public class GroupingUser {
     }
     System.out.println(stringBuffer);
     System.out.println(stringBuffer2);
+    BigInteger bigInteger = new BigInteger("22");
+    BigInteger multiply = bigInteger.multiply(new BigInteger("12"));
+    System.out.println(multiply);
+    BigDecimal a2 = new BigDecimal("0.22");
+    BigDecimal b2 = new BigDecimal("0.55");
+    BigDecimal multiply1 = a2.multiply(b2);
+    System.out.println(multiply1);
   }
 }
