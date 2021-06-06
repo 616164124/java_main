@@ -1,9 +1,11 @@
 package com.test;
 
 import java.util.Date;
+import java.util.Random;
 import java.util.UUID;
 
 /**
+ * 随机数demo
  * 雪花算法实现demo
  */
 public class SnowFlakeUtil {
@@ -82,6 +84,21 @@ public class SnowFlakeUtil {
     }
 
     public static void main(String[] args) {
+
+        Random random = new Random();
+        StringBuilder  stringBuilder = new StringBuilder();
+        StringBuilder  stringBuilder2 = new StringBuilder();
+        char c= 'e';
+        char x='w';
+        for(int i=0;i<4;i++){
+        //随机生成大写的英文字母
+            c = (char)(random.nextInt((26))+65);
+        //随机生成小写的英文字母
+            x = (char)(random.nextInt((26))+97);
+         stringBuilder.append(c);
+            stringBuilder2.append(x);
+        }
+        System.out.println(stringBuilder.toString()+"\t"+stringBuilder2.toString());
         SnowFlakeUtil snowFlakeUtil = new SnowFlakeUtil(3, 5);
         System.out.println(snowFlakeUtil.getNextId());
         UUID uuid = UUID.randomUUID();
