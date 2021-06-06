@@ -17,15 +17,15 @@ public class T15_FullGC_Problem01 {
   public static void main(String[] args) throws Exception {
     executor.setMaximumPoolSize(50);
 
-    BigDecimal i = new BigDecimal("6475.65").divide(new BigDecimal("16184.39"),2,BigDecimal.ROUND_HALF_UP);
+    //BigDecimal i = new BigDecimal("6475.65").divide(new BigDecimal("16184.39"),2,BigDecimal.ROUND_HALF_UP);
     //16184.39 je1
     //6475.65 je10
-    System.out.println(i.toString());
-//    for (; ; ) {
-//      modelFit();
-//
-//      Thread.sleep(100);
-//    }
+    //System.out.println(i.toString());
+    for (; ; ) {
+      modelFit();
+
+      Thread.sleep(100);
+    }
   }
 
   private static void modelFit() {

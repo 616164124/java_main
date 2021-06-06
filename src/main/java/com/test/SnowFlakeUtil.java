@@ -1,11 +1,15 @@
 package com.test;
 
+import java.util.Date;
 import java.util.UUID;
 
+/**
+ * 雪花算法实现demo
+ */
 public class SnowFlakeUtil {
 
     // 起始时间戳
-    private final static long START_STMP = 1480166465631L;
+    private final static long START_STMP = 0L;
 
     // 每部分的位数
     private final static long SEQUENCE_BIT = 12; // 序列号占用位数
@@ -78,13 +82,18 @@ public class SnowFlakeUtil {
     }
 
     public static void main(String[] args) {
-        SnowFlakeUtil snowFlakeUtil = new SnowFlakeUtil(12, 12);
+        SnowFlakeUtil snowFlakeUtil = new SnowFlakeUtil(3, 5);
         System.out.println(snowFlakeUtil.getNextId());
         UUID uuid = UUID.randomUUID();
         String replace = "";
+        System.out.println(System.currentTimeMillis()+"\t"+new Date().getTime()+"\t"+uuid.toString());
+        Long l= 599083566539259904l;
+        System.out.println(Long.MAX_VALUE+"\tlong的最大值为：\t" );
         for (int i=0;i<1000;i++) {
             replace = uuid.toString().replaceAll("-", "");
         }
         System.out.println(replace);
+
+
     }
 }
