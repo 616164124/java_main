@@ -18,7 +18,7 @@ public class ForkJoinTest {
   public static void main(String[] args) throws ExecutionException, InterruptedException {
     int[] i = {1, 2, 312, 23};
     System.out.println(Arrays.toString(i));
-    // 生成随机数组
+    // 生成数组
     int[] a = gennerateArray(5, 34);
     // System.out.println("单线程执行结果: " + ArrayUtils.sum(a));
     ForkJoinPool forkJoinPool = new ForkJoinPool();
@@ -28,7 +28,7 @@ public class ForkJoinTest {
     System.out.println("fork.join执行结果: " + result.get());
   }
 
-  // 生成随机的数组
+  // 生成的数组
   public static int[] gennerateArray(int len, int max) {
     int[] arr = new int[len];
     for (int i = 0; i < arr.length; i++) {

@@ -9,7 +9,7 @@ package com.github_snippet;
  * @author: mikael
  * @className: RandInteger
  * @packageName: github_snippet
- * @description: 随机生成int
+ * @description: 生成int
  * @date: 2020-08-30 5:49
  */
 public class RandInteger {
