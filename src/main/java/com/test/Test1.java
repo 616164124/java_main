@@ -12,7 +12,7 @@ public class Test1 {
 
     new Thread(test1::m, "test1 p").start();
 
-    long t = 23;
+    long t =123l;
     Stack<Character> s = new Stack<>();
     s.push('{');
 

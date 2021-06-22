@@ -24,13 +24,10 @@ public class GsonTest {
         //BigDecimal
         BigDecimal decimal = new BigDecimal("12");
         BigDecimal i = new BigDecimal("6475.65").divide(new BigDecimal("16184.39"),2,BigDecimal.ROUND_HALF_UP);
+        String bcje="123.123";
+        //bcje=(Integer.valueOf(bcje)/0.13)-Integer.valueOf(bcje)>-1&&Integer.valueOf(bcje)/0.13-Integer.valueOf(bcje)<1?bcje:new BigDecimal(bcje).divide(new BigDecimal("0.13"),2,BigDecimal.ROUND_HALF_UP).toString();
 
-        
-
-
-        System.out.println(decimal.divide(new BigDecimal(1345),4,BigDecimal.ROUND_HALF_UP));
-        System.out.println(decimal.divide(new BigDecimal("4"),4,BigDecimal.ROUND_HALF_UP));
-        System.out.println(decimal.multiply(new BigDecimal("123")).setScale(5, BigDecimal.ROUND_HALF_UP));
+        System.out.println(bcje+"----------");
         String uuid = UUID.randomUUID().toString();
         System.out.println(uuid.replace("-", ""));
 

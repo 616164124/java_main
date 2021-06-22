@@ -110,7 +110,5 @@ public class SnowFlakeUtil {
             replace = uuid.toString().replaceAll("-", "");
         }
         System.out.println(replace);
-
-
     }
 }
