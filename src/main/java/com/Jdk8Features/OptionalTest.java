@@ -26,6 +26,7 @@ public class OptionalTest {
     users.add(user);
     // 判断user 是否为null，如果是null则new User（）不是返回 user
     User user1 = Optional.ofNullable(user).orElse(new User(232, "uyihk"));
+
     if (users.size() > 0) {
       System.out.println("111111");
       System.out.println(hashMap.size());

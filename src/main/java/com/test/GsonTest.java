@@ -4,6 +4,7 @@ import com.dao.User;
 import com.google.gson.Gson;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class GsonTest {
@@ -30,6 +31,9 @@ public class GsonTest {
         System.out.println(bcje+"----------");
         String uuid = UUID.randomUUID().toString();
         System.out.println(uuid.replace("-", ""));
+
+        ArrayList<String> strings = new ArrayList<>();
+
 
     }
 }

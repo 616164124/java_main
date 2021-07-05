@@ -1,10 +1,8 @@
 package com.guavatest.day01;
 
 import com.google.common.hash.Hashing;
-import org.springframework.util.DigestUtils;
 
 import java.math.BigInteger;
-import java.security.MessageDigest;
 import java.util.concurrent.atomic.LongAdder;
 
 /**
@@ -29,7 +27,6 @@ public class Murmur32_Hash {
     BigInteger[] bigIntegers = bigInteger.divideAndRemainder(new BigInteger("12"));
     System.out.println(bigIntegers[0]);
     LongAdder longAdder = new LongAdder();
-
   }
 
   /**
