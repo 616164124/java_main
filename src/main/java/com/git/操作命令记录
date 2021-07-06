@@ -5,3 +5,4 @@ $ git push -u origin master         # 将本次更改更新到github项目上去
 
 
 
+git config --global http.sslCAInfo "C:\Program Files\Git\mingw64\ssl\cert.pem"

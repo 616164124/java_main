@@ -22,10 +22,34 @@ public class MergeTest {
     users.add(user3);
     users.add(user2);
     users.add(user1);
-    HashMap<String, Integer> hashMap = new HashMap<>();
+    HashMap<String, Integer> userhashMap = new HashMap<>();
+    HashMap<String, Integer> map = new HashMap<>();
+    map.put("1", 100);
+    map.put("2", 30000000);
+    map.put("3", 400);
+    map.put("4", 500);
     // max 可以换成其他的形式
-    //将计算的值存入hashmap中
-    users.forEach(user -> hashMap.merge(user.getName(), user.getAge(), Integer::sum));
-    System.out.println(hashMap.toString());
+    // 将计算的值存入hashmap中
+    users.forEach(user -> userhashMap.merge(user.getName(), user.getAge(), Integer::sum));
+    System.out.println(userhashMap.toString());
+    users.forEach(user -> userhashMap.merge(user.getName(), user.getAge(), Integer::compareTo));
+    System.out.println(userhashMap.toString());
+    // 如果 key 对应的 value 不存在，则返回该 value 值，如果存在，则返回通过 remappingFunction 重新计算后的值。
+    // key不存在map中则返回value的值
+    // key存在map且value的值也是相同的则根据remappingFunction 重新计算后返回的值
+    // key存在map且value的值不相同的则根据remappingFunction 重新计算后返回的值
+    Integer merge =
+        map.merge(
+            "2",
+            30000,
+            (oldvalue, newvalue) -> {
+              if (oldvalue > newvalue) {
+                return oldvalue;
+              } else {
+                return newvalue;
+              }
+            });
+
+    System.out.println(merge);
   }
 }
