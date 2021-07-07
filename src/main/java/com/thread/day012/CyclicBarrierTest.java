@@ -2,7 +2,7 @@ package com.thread.day012;
 
 import java.util.concurrent.*;
 
-/** CyclicBarrier (集齐七颗龙珠才能召唤神龙) */
+/** CyclicBarrier (集齐七颗才能召唤神龙) */
 public class CyclicBarrierTest {
 
   public static void main(String[] args) {

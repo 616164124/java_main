@@ -23,6 +23,8 @@ public class GsonTest {
         User o = (User) gson.fromJson(ss, User.class);
         System.out.println("===========" + o.getName());
         //BigDecimal
+        String ssss= new BigDecimal("100").multiply(new BigDecimal("0.03")).setScale(2, BigDecimal.ROUND_HALF_UP).toString();
+        System.out.println(ssss+"==========================================");
         BigDecimal decimal = new BigDecimal("12");
         BigDecimal i = new BigDecimal("6475.65").divide(new BigDecimal("16184.39"),2,BigDecimal.ROUND_HALF_UP);
         String bcje="123.123";
