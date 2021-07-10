@@ -2,29 +2,39 @@ package com.thread;
 
 import org.springframework.scheduling.concurrent.CustomizableThreadFactory;
 
-import javax.xml.bind.SchemaOutputResolver;
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.*;
-import java.util.function.Supplier;
 
 public class ComputerFutureTest01 {
     private static ExecutorService POOL = Executors.newFixedThreadPool(4, new CustomizableThreadFactory("SbxxService-pool-"));
+    private static List<Future<String>> futurelist = new ArrayList<Future<String>>();
 
     public static void main(String[] args) {
+        for (int i = 0; i < 9; i++) {
+            POOL.execute(new Runnable() {
+                @Override
+                public void run() {
+                    sleep(2, TimeUnit.SECONDS);
+                }
+            });
 
-        Future<?> submit = POOL.submit(new T01());
-         submit = POOL.submit(new T02());
 
+            POOL.execute(new Runnable() {
+                @Override
+                public void run() {
+                    sleep(3, TimeUnit.SECONDS);
+                }
+            });
+        }
         try {
-            submit.get();
-            System.out.println("jieshu");
+            POOL.shutdown();
+          if( POOL.awaitTermination(1, TimeUnit.DAYS)){
+              System.out.println("====================");
+          }
         } catch (InterruptedException e) {
             e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
         }
-        POOL.shutdown();
-
 
     }
 
@@ -36,7 +46,8 @@ public class ComputerFutureTest01 {
         }
     }
 }
-class T01 implements Runnable{
+
+class T01 implements Runnable {
 
     @Override
     public void run() {
@@ -50,7 +61,7 @@ class T01 implements Runnable{
 }
 
 
-class T02 implements Runnable{
+class T02 implements Runnable {
 
     @Override
     public void run() {
@@ -60,5 +71,6 @@ class T02 implements Runnable{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
     }
 }

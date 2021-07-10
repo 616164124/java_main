@@ -28,7 +28,7 @@ public class FutureTest {
             }
         }
         System.out.println("结束\t"+s);
-        POOL.shutdown();
+       // POOL.shutdown();
 
     }
 }
