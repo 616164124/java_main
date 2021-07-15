@@ -23,7 +23,8 @@ public class CalendarTest {
         System.out.println(localDate);
 
         ZonedDateTime now1 = ZonedDateTime.now();
-        System.out.println("当前时间是: " + now);
+
+        System.out.println("当前时间是: " + now+"\t"+now1);
         //
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");//24小时制
         DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("yyyy/MM/dd");
