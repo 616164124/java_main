@@ -1,5 +1,6 @@
 package com.test;
 
+import java.math.BigDecimal;
 import java.util.Stack;
 import java.util.concurrent.TimeUnit;
 
@@ -9,6 +10,10 @@ public class Test1 {
 
   public static void main(String[] args) {
     Test1 test1 = new Test1();
+
+    String s12 =".13";
+    System.out.println(new BigDecimal(s12));
+    System.out.println(s12.trim() +"\t"+ s12);
 
     new Thread(test1::m, "test1 p").start();
 

@@ -7,5 +7,7 @@ public class TestUse {
 		client.save(data);
 		client.setSaveData(new SaveToFile());
 		client.save(data);
+		client.setSaveData(new SaveToMysql());
+		client.save(data);
 	}
 }

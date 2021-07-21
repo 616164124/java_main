@@ -11,13 +11,20 @@ public class FutureTest {
     private static ExecutorService POOL = Executors.newFixedThreadPool(4, new CustomizableThreadFactory("SbxxService-pool-"));
 
     public static void main(String[] args) {
-       // UpFutureTask upFutureTask = new UpFutureTask();
+        // UpFutureTask upFutureTask = new UpFutureTask();、
+
+        String[] strings = {"12", "333", "ffff", "tttt", "jjjjj"};
+
         futurelist.add((Future<String>) POOL.submit(new T01()));
         futurelist.add((Future<String>) POOL.submit(new T02()));
-        String s="";
-        for(Future<String> future:futurelist){
+        String s = "";
+
+        for (Future<String> future : futurelist) {
             try {
-                 s = future.get(15, TimeUnit.SECONDS);
+                if (future.isDone()) {
+                    s = future.get();
+                }
+                s = future.get(15, TimeUnit.SECONDS);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
@@ -27,8 +34,8 @@ public class FutureTest {
                 return;
             }
         }
-        System.out.println("结束\t"+s);
-       // POOL.shutdown();
+        System.out.println("结束\t" + s);
+        // POOL.shutdown();
 
     }
 }
@@ -39,7 +46,7 @@ class T01 implements Callable {
     @Override
     public Object call() throws Exception {
         try {
-            Thread.sleep(10000);
+            Thread.sleep(100);
             System.out.println("t01----");
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -54,7 +61,7 @@ class T02 implements Callable {
     @Override
     public Object call() throws Exception {
         try {
-            Thread.sleep(10000);
+            Thread.sleep(100);
             System.out.println("t02----");
 
         } catch (InterruptedException e) {

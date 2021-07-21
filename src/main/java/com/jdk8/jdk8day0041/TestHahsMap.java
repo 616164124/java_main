@@ -1,5 +1,6 @@
 package com.jdk8.jdk8day0041;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,4 +25,8 @@ public class TestHahsMap {
 
     }
   }
+  public void test01(){
+
+  }
+
 }
