@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class algorithm {
   public static void main(String[] args) {
-    String[] array = new String[] {"1", "2", "3"};
+    String[] array = new String[] {"1", "2", "3","a"};
     List<String> strings = Arrays.asList(array);
     LinkedList linkedList = new LinkedList(strings);
     System.out.println(linkedList);

@@ -28,7 +28,6 @@ public class Test1 {
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
-    int hell;
 
     new Thread(
             new Runnable() {
@@ -40,6 +39,17 @@ public class Test1 {
         .start();
 
     test1.flag = false;
+
+//只适用于基本数据类型，不用临时变量，交换a,b的值
+    int a=123;
+    int b=897;
+    a=a^b;
+    b=a^b;
+    a=b^a;
+    System.out.println(a+"\t"+b);
+
+
+    System.out.println("".equals("12"));
   }
 
   void m() {
