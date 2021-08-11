@@ -16,14 +16,14 @@ public class ComputerFuture {
         CompletableFuture.supplyAsync(
             () -> {
               System.out.println("1-1-1");
-              sleep(10, TimeUnit.SECONDS);
+              sleep(16, TimeUnit.SECONDS);
               return "1-1-2";
             });
     CompletableFuture<String> uCompletableFuture2 =
         CompletableFuture.supplyAsync(
             () -> {
               System.out.println("2-2-1");
-              sleep(10, TimeUnit.SECONDS);
+              sleep(11, TimeUnit.SECONDS);
               return "2-2-2";
             });
 
@@ -34,7 +34,7 @@ public class ComputerFuture {
               @Override
               public String apply(String s, String s2) {
                 System.out.println("3-1");
-                sleep(10, TimeUnit.SECONDS);
+                sleep(7, TimeUnit.SECONDS);
                 return "3完成";
               }
             });

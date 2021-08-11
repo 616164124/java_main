@@ -39,8 +39,8 @@ public class StreamAPI {
         .forEach((a) -> System.out.println(a.getName()));
     list.stream().filter((a) -> a.endsWith("3") && a.startsWith("1")).forEach(System.out::print);
     System.out.println();
-    System.out.println("------------distinct   去重------------");
     // distinct   去重打印
+    System.out.println("------------distinct   去重------------");
     Stream<String> distinct = list.stream().distinct();
     distinct.forEach(System.out::println);
     System.out.println("===========objects==============");

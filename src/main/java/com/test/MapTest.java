@@ -2,23 +2,33 @@ package com.test;
 
 import com.app.designpattern.factorymethod.ArrayList;
 
+import java.util.HashMap;
+
 /**
  * @author mikael
  */
 public class MapTest {
-  public static void main(String[] args) {
-      String[] strings={"1000","10001","100002"};
-      Demo demo = new Demo();
-      ArrayList<Demo> arrayList = new ArrayList<>();
-      for(int i=0;i<strings.length;i++){
+    public static void main(String[] args) {
+        String[] strings = {"1000", "10001", "100002"};
+        Demo demo = new Demo();
+        ArrayList<Demo> arrayList = new ArrayList<>();
+        for (int i = 0; i < strings.length; i++) {
 
-          }
+        }
 
-  }
+        HashMap<Object, Object> hashMap = new HashMap<>();
+        if(hashMap.isEmpty()){
+            hashMap.put("k", "  ");
+            System.out.println("empty!!!!!");
+        }
+        String k =(String) hashMap.get("k").toString().trim();
+
+    }
 }
-class Demo{
+
+class Demo {
     private String uuid;
-    private String  bh;
+    private String bh;
     private String bz;
 
     public String getUuid() {

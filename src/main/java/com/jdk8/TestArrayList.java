@@ -18,7 +18,10 @@ public class TestArrayList {
     System.out.println(ints.size()); // 为 1
     System.out.println(integers.size()); // 为 5
     System.out.println(strings.size()); // 为 5
-    integers1.addAll(integers);
+  //  integers1.addAll(integers);
     System.out.println(integers1.size());
+
+    System.out.println(strings.subList(0, strings.size()).toString());
+
   }
 }

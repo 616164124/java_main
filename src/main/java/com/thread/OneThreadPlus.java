@@ -3,6 +3,9 @@ package com.thread;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * 数字连续的
+ */
 public class OneThreadPlus {
 
   public static void main(String[] args) {

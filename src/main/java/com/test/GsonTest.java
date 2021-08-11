@@ -2,11 +2,17 @@ package com.test;
 
 import com.dao.User;
 import com.google.gson.Gson;
+import com.sun.javafx.collections.MappingChange;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
+/**
+ * https://blog.csdn.net/qq_36838191/article/details/80596316
+ */
 public class GsonTest {
 
     public static void main(String[] args) {
@@ -36,6 +42,15 @@ public class GsonTest {
 
         ArrayList<String> strings = new ArrayList<>();
 
+        Map<String, String> map = new HashMap<>();
+        map.put("uuu", 111+"");
+        map.put("uuu2", 222+"");
+        map.put("uuu3", 3333+"");
+        String s1 = gson.toJson(map);
+        System.out.println(s1);
+        Map map1 = gson.fromJson(s1, Map.class);
+        String uuu3 =(String) map1.get("uuu3");
+        System.out.println(uuu3);
 
     }
 }

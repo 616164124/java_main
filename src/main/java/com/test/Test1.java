@@ -48,8 +48,9 @@ public class Test1 {
     a=b^a;
     System.out.println(a+"\t"+b);
 
-
     System.out.println("".equals("12"));
+    int i= 182/10+1;
+    System.out.println(i+"\t i======");
   }
 
   void m() {

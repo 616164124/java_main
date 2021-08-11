@@ -7,10 +7,9 @@
  */
 package com.thread.threadpool;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.RejectedExecutionHandler;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.*;
 
 /**
  * @version: V1.0
@@ -22,6 +21,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class ThreadPoolTest {
 
+
   public static void main(String[] args) {
     ThreadPoolExecutor executor =
         new ThreadPoolExecutor(
@@ -31,6 +31,30 @@ public class ThreadPoolTest {
             TimeUnit.SECONDS,
             new ArrayBlockingQueue<Runnable>(3),
             new MyRejectedExecutionHandler());
+
+    List<Future<String>> futurelist = new ArrayList<Future<String>>();
+    for(int i=0;i<10;i++){
+      try {
+        futurelist.add(executor.submit(new T1()));
+
+        futurelist.add(executor.submit(new T2()));
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+    }
+    System.out.println("结束1。。。");
+    for (Future future:futurelist){
+      if(future.isDone()){
+        try {
+          future.get();
+        } catch (InterruptedException e) {
+          e.printStackTrace();
+        } catch (ExecutionException e) {
+          e.printStackTrace();
+        }
+      }
+    }
+    System.out.println("结束2.。。。。。");
   }
 }
 
@@ -38,4 +62,22 @@ class MyRejectedExecutionHandler implements RejectedExecutionHandler {
 
   @Override
   public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {}
+}
+class T1 implements Callable{
+
+  @Override
+  public Object call() throws Exception {
+    System.out.println("1111");
+    return "t1....";
+  }
+}
+
+
+class T2 implements Callable{
+
+  @Override
+  public Object call() throws Exception {
+    System.out.println("2222");
+    return "t2....";
+  }
 }
