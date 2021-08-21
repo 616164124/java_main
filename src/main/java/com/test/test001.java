@@ -30,6 +30,19 @@ public class test001 {
         hashMap1.put("ttt", new BigDecimal(133));
         hashMap1.put("ttt", new BigDecimal(13));
         System.out.println(hashMap1.get("ttt"));
+
+        switch ("ee"){
+            case "ccc":
+                System.out.println("ccc");
+                break;
+            case "aaa":
+                System.out.println("aaa");
+                break;
+//            default:
+//                System.out.println("bbbbb");
+        }
+        System.out.println("12331");
+
     }
 
 }
