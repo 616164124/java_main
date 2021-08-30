@@ -3,10 +3,11 @@ package com.test;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class test001 {
     public static void main(String[] args) {
-        String sss="123|TAX";
+        String sss = "123|TAX";
         System.out.println(sss);
 
         boolean contains = sss.contains("|TAX");
@@ -14,8 +15,8 @@ public class test001 {
 
         String[] split = sss.split("\\|");
         System.out.println(split[0]);
-        if(1==1)
-        System.out.println("1==1");
+        if (1 == 1)
+            System.out.println("1==1");
         System.out.println("1111");
         HashMap<String, String> hashMap = new HashMap<>();
         System.out.println(hashMap.get("AA"));
@@ -31,17 +32,18 @@ public class test001 {
         hashMap1.put("ttt", new BigDecimal(13));
         System.out.println(hashMap1.get("ttt"));
 
-        switch ("ee"){
-            case "ccc":
-                System.out.println("ccc");
-                break;
-            case "aaa":
-                System.out.println("aaa");
-                break;
-//            default:
-//                System.out.println("bbbbb");
+        String ss = "\"{\\\"resultCode\\\":\\\"000000\\\",\\\"resultMsg\\\":\\\"接口调用成功！\\\",\\\"resultObj\\\":{\\\"cfje\\\":\\\"50\\\",\\\"nsrsbh\\\":\\\"913300007047239447\\\",\\\"swjg_dm\\\":\\\"13301063100\\\",\\\"nsrmc\\\":\\\"浙江浙科信息技术有限公司\\\",\\\"swjgmc\\\":\\\"国家税务总局杭州市西湖区税务局税源管理一科\\\"}}\"";
+        String a = "1231";
+        String s = "{\"fk_1\":\"" + a + "\",\"sqq\":\"" + a + "\",\"sqz\":\"" + a + "\",\"sswfxwdjuuid\":\"" + a + "\",\"sswfsddm\":\"" + a + "\",\"wfssjcfyj\":\"" + " " + "\",\"wfxwbh\",\"" + a + "\",\"wfxwmc\":\"" + a + "\",\"lyqd_dm\":\"" + a + "\"}";
+
+        System.out.println(s);
+        int c = 10;
+        if ((c > 1 && c < 30) || (c > 2 && c < 22) || (c > 5 && c < 10)) {
+            System.out.println(111);
         }
-        System.out.println("12331");
+        ThreadLocalRandom current = ThreadLocalRandom.current();
+        //[0-10]正整数的随机数，包头不包尾
+        System.out.println(current.nextInt(0, 10));
 
     }
 
