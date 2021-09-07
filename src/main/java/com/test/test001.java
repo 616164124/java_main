@@ -1,12 +1,15 @@
 package com.test;
 
 
+import javax.crypto.KeyGenerator;
 import java.math.BigDecimal;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class test001 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchAlgorithmException {
         String sss = "123|TAX";
         System.out.println(sss);
 
@@ -44,6 +47,17 @@ public class test001 {
         ThreadLocalRandom current = ThreadLocalRandom.current();
         //[0-10]正整数的随机数，包头不包尾
         System.out.println(current.nextInt(0, 10));
+        System.out.println(current.toString());
+        boolean isFlag=true;
+        if(!isFlag){
+        }
+        SecureRandom random = SecureRandom.getInstance("SHA1PRNG");
+        random.nextInt(10);
+        System.out.println( random.nextInt(10));
+
+        KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
+
+
 
     }
 

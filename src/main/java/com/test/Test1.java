@@ -47,11 +47,11 @@ public class Test1 {
     b=a^b;
     a=b^a;
     System.out.println(a+"\t"+b);
-
     System.out.println("".equals("12"));
     int i= 182/10+1;
     System.out.println(i+"\t i======");
   }
+
 
   void m() {
     System.out.println("m start");
@@ -61,5 +61,13 @@ public class Test1 {
 
   void n() {
     System.out.println("n()");
+  }
+
+ public static int  t(){
+if(1<2){
+  return 9;
+}
+
+    return 1;
   }
 }
