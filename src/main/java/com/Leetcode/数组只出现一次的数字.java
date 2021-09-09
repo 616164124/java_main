@@ -10,7 +10,7 @@ import java.util.Arrays;
  */
 public class 数组只出现一次的数字 {
     public static void main(String[] args) {
-        int a=8^8^6^3^6;
+        int a = 8 ^ 8 ^ 6 ^ 3 ^ 6;
         System.out.println(a);
         long l = System.currentTimeMillis();
         int i = find();
