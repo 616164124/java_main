@@ -1,12 +1,18 @@
 package com.测试;
 
-public class test01 {
+import java.util.Random;
+import java.util.UUID;
+
+public class Test01 {
     public static void main(String[] args) {
 
+
+        System.out.println(new Random().nextInt(10));
         int add = add();
         System.out.println(add);
-
+        System.out.println(UUID.randomUUID().toString());
         System.out.println("jfklsjflsf");
+
     }
 
     public static int add(){

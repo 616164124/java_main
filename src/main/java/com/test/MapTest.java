@@ -3,6 +3,8 @@ package com.test;
 import com.app.designpattern.factorymethod.ArrayList;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * @author mikael
@@ -22,6 +24,25 @@ public class MapTest {
             System.out.println("empty!!!!!");
         }
         String k =(String) hashMap.get("k").toString().trim();
+
+        hashMap.put("1231", 883);
+
+        hashMap.put("121", 9913);
+
+        hashMap.put("31", 23);
+
+        hashMap.put("3", 122313);
+        hashMap.forEach(()=>{
+
+        });
+
+        Set<Object> objects = hashMap.keySet();
+        for (int i = 0; i < objects.size(); i++) {
+            Iterator<Object> iterator = objects.iterator();
+//            while (iterator.next()){
+//                iterator.
+//            }
+        }
 
     }
 }

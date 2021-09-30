@@ -18,8 +18,7 @@ public class 数组只出现一次的数字 {
         l = System.currentTimeMillis() - l;
         System.out.println(l + "\t" + i);
         int[] nums = {11, 11, 23, 23, 2, 3, 3, 23, 2, 1};
-        Field f ;
-        f.setAccessible(false);
+
         int 异或1 = 异或(nums);
         System.out.println(异或1);
     }

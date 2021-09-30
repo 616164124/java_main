@@ -10,3 +10,6 @@ git config --global http.sslCAInfo "C:\Program Files\Git\mingw64\ssl\cert.pem"
 
 ##问题 OpenSSL SSL_read: Connection was reset, errno 10054
 git config --global http.sslVerify "false"
+
+##（切记）强制将提交的内容覆盖远程代码
+git push -f
