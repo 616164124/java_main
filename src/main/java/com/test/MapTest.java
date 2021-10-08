@@ -32,9 +32,6 @@ public class MapTest {
         hashMap.put("31", 23);
 
         hashMap.put("3", 122313);
-        hashMap.forEach(()=>{
-
-        });
 
         Set<Object> objects = hashMap.keySet();
         for (int i = 0; i < objects.size(); i++) {

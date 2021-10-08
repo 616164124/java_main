@@ -12,7 +12,7 @@ public class Test01 {
 
         System.out.println(new Random().nextInt(10));
         int add = add();
-        System.out.println(add);
+        System.out.printf("add为 %d",add);
         System.out.println(UUID.randomUUID().toString());
         System.out.println("jfklsjflsf");
 

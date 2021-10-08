@@ -2,7 +2,6 @@ package com.test;
 
 import com.dao.User;
 import com.google.gson.Gson;
-import com.sun.javafx.collections.MappingChange;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -24,7 +23,7 @@ public class GsonTest {
         //将对象，转化为string
         String s = gson.toJson(user);
         System.out.println(s);
-        String ss = "{\"id\":12,\"name\":\"ming\",\"age\":13}\n";
+        String ss = "{\"id\":12,\"name\":\"ming\",\"age\":13}";
         //将字符串转化为对象类型
         User o = (User) gson.fromJson(ss, User.class);
         System.out.println("===========" + o.getName());

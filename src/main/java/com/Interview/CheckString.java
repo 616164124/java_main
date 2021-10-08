@@ -27,6 +27,9 @@ public class CheckString {
     // 获取ascii值
     System.out.println(Integer.valueOf('9'));
     System.out.println(Integer.valueOf('a'));
+    System.out.println(Integer.valueOf('z'));
+    System.out.println(Integer.valueOf('A'));
+    System.out.println(Integer.valueOf('B'));
   }
 
   // 采用正则表达式的方式
