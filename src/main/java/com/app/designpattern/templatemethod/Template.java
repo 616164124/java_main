@@ -9,4 +9,5 @@ public class Template extends AbstractTemplate {
 	void calcData() {
 		data = (String)data+data;
 	}
+
 }

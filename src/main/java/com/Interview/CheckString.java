@@ -34,7 +34,7 @@ public class CheckString {
 
   // 采用正则表达式的方式
   public static boolean isNumber1(String str) {
-    Pattern compile = Pattern.compile("[0-9]*");
+    Pattern compile = Pattern.compile("[0-9]*");//[1-9][0-9]{4,}
     boolean matches = compile.matcher(str).matches();
     return matches;
   }
