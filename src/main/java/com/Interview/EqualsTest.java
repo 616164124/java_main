@@ -1,6 +1,7 @@
 package com.Interview;
 
 import com.dao.User;
+import org.springframework.beans.BeanUtils;
 
 /*
  * @version: V1.0
@@ -16,5 +17,6 @@ public class EqualsTest {
     User user2 = new User(1, "hua", 33);
     System.out.println(user1.getAge().equals(user2.getAge())); // true
     System.out.println(user1.equals(user2)); // false
+
   }
 }

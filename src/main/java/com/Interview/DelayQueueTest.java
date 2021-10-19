@@ -60,7 +60,7 @@ public class DelayQueueTest {
          */
         @Override
         public long getDelay(TimeUnit unit) {
-            System.out.println("123");
+            System.out.println("======");
             return unit.convert(time - System.currentTimeMillis(), TimeUnit.MILLISECONDS);
         }
 

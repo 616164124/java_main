@@ -37,6 +37,7 @@ public class GsonTest {
 
         System.out.println(bcje+"----------");
         String uuid = UUID.randomUUID().toString();
+        System.out.println(uuid);
         System.out.println(uuid.replace("-", ""));
 
         ArrayList<String> strings = new ArrayList<>();
