@@ -12,4 +12,14 @@ public class SuperClass implements SuperInterface {
     public void methodFace1() {
         System.out.println("SuperClass.......methodFace1");
     }
+
+    @Override
+    public void methodFace3() {
+
+    }
+
+    @Override
+    public void methodFace2() {
+
+    }
 }
