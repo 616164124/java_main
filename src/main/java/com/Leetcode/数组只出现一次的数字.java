@@ -3,7 +3,7 @@ package com.Leetcode;
 import jdk.nashorn.internal.runtime.FindProperty;
 
 import java.lang.reflect.Field;
-import java.sql.Array;
+
 import java.util.Arrays;
 
 /**
@@ -37,7 +37,10 @@ public class 数组只出现一次的数字 {
         //如果前面所有的数字都出现了两次，说明答案是最后一个数字
         return nums[nums.length - 1];
     }
-
+    public static int find2(int num){
+    System.out.println("123");
+        return 12;
+    }
     public static int 异或(int[] params) {
         int ans = params[0];
         if (params.length > 1) {
