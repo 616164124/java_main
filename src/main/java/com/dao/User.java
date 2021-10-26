@@ -1,8 +1,10 @@
 package com.dao;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.Serializable;
 
-public class User implements Serializable {
+public class User implements Serializable, Comparable {
   private int id;
   private String name;
   private Integer age;
@@ -44,4 +46,8 @@ public class User implements Serializable {
     return "dao.User {" + "id=" + id + ", name='" + name + '\'' + ", age=" + age + '}';
   }
 
+  @Override
+  public int compareTo(@NotNull Object o) {
+    return this.age;
+  }
 }

@@ -5,5 +5,6 @@ public class SubClass extends SuperClass {
 
     public void method1() {
         System.out.println("subclass.... method1");
+        superClass.method1();
     }
 }

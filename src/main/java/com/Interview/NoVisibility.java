@@ -15,7 +15,7 @@ public class NoVisibility {
 
   public static void main(String[] args) throws InterruptedException {
     new ReaderThread().start();
-    Thread.sleep(1000);
+    Thread.sleep(10000);
     number = 42;
     ready = true;
     Thread.sleep(10000);

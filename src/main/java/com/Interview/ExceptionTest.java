@@ -7,8 +7,9 @@ public class ExceptionTest {
   private static int doMethod(int i) throws Exception {
 
     try {
-      return i / 10;
+      return 10/ i;
     } catch (Exception e) {
+      System.out.println("catch in method。。。。");
       throw new Exception("exception in method");
     } finally {
       System.out.println("finally  exception in method ");
@@ -20,9 +21,10 @@ public class ExceptionTest {
     try {
       doMethod(0);
     } catch (Exception e) {
-      System.out.println("exception in main");
+      System.out.println("catch in main。。。。");
+    }finally {
+      System.out.println("finally in main");
     }
-    System.out.println("finally in main");
 
     // 结果：
     // finally  exception in method

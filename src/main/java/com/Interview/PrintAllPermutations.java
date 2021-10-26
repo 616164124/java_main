@@ -27,7 +27,7 @@ public class PrintAllPermutations {
     hashSet2.add("acc");
     hashSet2.add("acc");
 
-    hashSet2.add("ac3");
+    hashSet2.add("acc");
     hashSet2.add("acc");
     for (Object o : hashSet2) {
       //

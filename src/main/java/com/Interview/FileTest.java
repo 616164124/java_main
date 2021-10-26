@@ -14,7 +14,7 @@ public class FileTest {
     System.out.println(fileParent);
     System.out.println("------------------------------");
     // 遍历该目录下的所有文件
-    File file = new File("F:\\123\\");
+    File file = new File("c:\\123\\");
 
     String[] list = file.list();
     for (String name : list) {
