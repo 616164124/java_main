@@ -3,16 +3,16 @@ package com.Interview;
 public class staticTest1 {
   public static void main(String[] args) {
     //
-    b b = new b();
+    BB b = new BB();
   }
 }
 
-class a {
-  public a() {
+class AA {
+  public AA() {
     System.out.print("A gouzhao");
   }
 
-  private static a a = new a(); // 执行了一次new
+  private static AA a = new AA(); // 执行了一次new
 
   static {
     System.out.print("static");
@@ -23,8 +23,8 @@ class a {
   }
 }
 
-class b extends a {
-  public b() {
+class BB extends AA {
+  public BB() {
     System.out.println("B");
   }
 }

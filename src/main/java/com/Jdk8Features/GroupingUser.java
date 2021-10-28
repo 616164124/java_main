@@ -26,6 +26,7 @@ public class GroupingUser {
         objects.stream().collect(Collectors.groupingBy(User::getName));
     System.out.println(collect.get(64));
     System.out.println(collect);
+    System.out.println("===============");
     System.out.println(collect2);
     // 字符串中区分数字跟字符
     String str = "jfksjf763jfl";

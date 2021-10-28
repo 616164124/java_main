@@ -12,11 +12,11 @@ public class BubbleSort {
     boolean hasChange = true;
     int n = nums.length;
     for (int i = 0; i < n - 1 && hasChange; i++) {
-      hasChange = false;
+//      hasChange = false;
       for (int j = 0; j < n - i - 1; j++) {
         if (nums[j] > nums[j + 1]) {
           swap(nums, j, j + 1);
-          hasChange = true;
+//          hasChange = true;
         }
       }
     }

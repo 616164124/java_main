@@ -14,7 +14,7 @@ public class TestDate {
     // 格式化时间 年月日
     LocalDate of = LocalDate.of(1992, Month.of(3), 3);
     System.out.println(of);
-    SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
+    SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY年MM月dd日");
     System.out.println(dateFormat.format(new Date()));
   }
 }
