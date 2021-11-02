@@ -15,14 +15,15 @@ public class 一个正整数的二进制有几个1 {
       if ((i & (1 << a)) == (1 << a)) {count++;}
     }
     //证明是否为2的次方
-    i=8;
+    i=16;
     System.out.println(Integer.toString(13, 2));
     System.out.println("==================");
 
     System.out.println("count\t"+count);
     if((i&(i-1))==0){
-      System.out.println(i);
+      System.out.println( "为2的次方\t"+i);
     }
-
+    System.out.println("===============");
+    System.out.println(16&15);
   }
 }

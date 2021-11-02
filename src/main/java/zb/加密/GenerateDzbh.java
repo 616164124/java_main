@@ -3,20 +3,21 @@ package zb.加密;
 import java.security.MessageDigest;
 import java.util.Random;
 import java.util.UUID;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class GenerateDzbh {
     public static String getChains(String content) {
         content+="_"+ UUID.randomUUID().toString();
-        String[] aResult = getDzArr(content);//将产生4组6位字符串
+        String[] aResult = getString(content);//将产生4组6位字符串
         for (int i = 0; i < aResult.length; i++) {
             System.out.println("[" + i + "]:" + aResult[i]);
         }
-        Random random = new Random();
-        int j = random.nextInt(4);//产成4以内随机数
+
+        int j = ThreadLocalRandom.current().nextInt(4);//产成4以内随机数
         return aResult[j];
     }
 
-    private static String[] getDzArr(String content) {
+    private static String[] getString(String content) {
         // 可以自定义生成 MD5 加密字符传前的混合 KEY
         String key = "skfjfslkjiejlkjflsnklsflg"+content;
         // 要使用生成 URL 的字符
