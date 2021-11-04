@@ -1,8 +1,5 @@
 package zb.算法.简单算法;
 
-import java.awt.font.NumericShaper;
-import java.util.HashMap;
-import java.util.Scanner;
 
 public class 快速排序 {
 
@@ -13,7 +10,7 @@ public class 快速排序 {
 //        for (int i = 0; i < n; ++i) {
 //            nums[i] = sc.nextInt();
 //        }
-        int[] nums = {11, 23, 4, 13, 5123};
+        int[] nums = {2, 1, 3, 4, 41, 12, 234, 3, 12, 3123};
         int n = nums.length;
         quickSort(nums, 0, n - 1);
         for (int i = 0; i < n; ++i) {
@@ -21,9 +18,9 @@ public class 快速排序 {
         }
         System.out.println();
 
-        int[] numss = {2, 1,3, 4, 41, 12, 234};
-        n=numss.length;
-        test01(numss, 0, n - 1);
+        int[] numss = {2, 1, 3, 4, 41, 12344, 123, 423, 12, 231, 31324, 123141};
+        n = numss.length;
+        test03(numss, 0, n - 1);
         for (int i = 0; i < n; ++i) {
             System.out.printf("%d ", numss[i]);
         }
@@ -65,11 +62,49 @@ public class 快速排序 {
                 nums[i] = nums[j];
                 nums[j] = t;
             }
-            test01(nums, left, j);
-            test01(nums, j + 1, right);
         }
+        test01(nums, left, j);
+        test01(nums, j + 1, right);
+    }
 
+    public static void test02(int[] nums, int left, int right) {
+        if (left >= right) {
+            return;
+        }
+//        i表示开始位置，j表示结束位置
+        int i = left - 1;
+        int j = right + 1;
+        int x = nums[left];
+        while (i < j) {
+            while (nums[++i] < x) ;
+            while (nums[--j] > x) ;
+            if (i < j) {
+                int t = nums[i];
+                nums[i] = nums[j];
+                nums[j] = t;
+            }
+        }
+        test02(nums, left, j);
+        test02(nums, j + 1, right);
+    }
 
+    public static void test03(int[] nums, int left, int right) {
+        if (left >= right) {
+            return;
+        }
+        int i = left - 1, j = right + 1;
+        int x = nums[left];
+        while (i < j) {
+            while (nums[++i] < x) ;
+            while (nums[--j] > x) ;
+            if (i < j) {
+                int t = nums[i];
+                nums[i] = nums[j];
+                nums[j] = t;
+            }
+        }
+        test03(nums, left, j);
+        test03(nums, j + 1, right);
     }
 
 }

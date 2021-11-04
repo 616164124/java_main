@@ -6,9 +6,9 @@ import java.util.Random;
 public class 一个正整数的二进制有几个1 {
   public static void main(String[] args) {
 
-    int i = new Random().nextInt(60);
+    int i = new Random().nextInt(160);
     int count=0;
-    System.out.println(i + "\t" + Integer.toString(i, 2));
+    System.out.println(i + "\t二进制为：" + Integer.toString(i, 2));
     System.out.println("==================");
 //    32为最大32位
     for (int a = 0; a < 32; a++) {
