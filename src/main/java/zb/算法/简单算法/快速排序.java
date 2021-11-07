@@ -88,25 +88,25 @@ public class 快速排序 {
         test02(nums, j + 1, right);
     }
 
-    public static void test03(int[] nums, int left, int right) {
-        if (left >= right) {
+    public static void test03(int[] arr,int left,int right){
+        if(left>=right){
             return;
         }
-        int i = left - 1, j = right + 1;
-        int x = nums[left];
-        while (i < j) {
-            while (nums[++i] < x) ;
-            while (nums[--j] > x) ;
-            if (i < j) {
-                int t = nums[i];
-                nums[i] = nums[j];
-                nums[j] = t;
+        int i=left-1,j=right+1;
+        int x = arr[left];
+        while (i<j){
+            while(arr[++i]<x);
+            while (arr[--j]>x);
+            if(i<j){
+                int temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
             }
         }
-        test03(nums, left, j);
-        test03(nums, j + 1, right);
-    }
+        test03(arr,left,j);
+        test03(arr,j+1,right);
 
+    }
 }
 
 

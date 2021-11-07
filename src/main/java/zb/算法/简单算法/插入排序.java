@@ -1,8 +1,20 @@
 package zb.算法.简单算法;
 
+
+import zb.算法.common.IntUtil;
+
 import java.util.Arrays;
 
 public class 插入排序 {
+
+    public static void main(String[] args) {
+
+        int[] i = IntUtil.randomInt(10);
+
+        insertSort(i);
+        System.out.println(Arrays.toString(i));
+    }
+    
     public static void insertSort(int[] arr) {
         if (arr == null || arr.length == 0)
             return;
@@ -24,10 +36,5 @@ public class 插入排序 {
 
     }
 
-    public static void main(String[] args) {
 
-        int[] i = {2, 32, 4, 55};
-        insertSort(i);
-        System.out.println(Arrays.toString(i));
-    }
 }
