@@ -6,7 +6,6 @@ public class 希尔排序 {
 
     private static int[] shellSort(int[] arr) {
         int n = arr.length;
-
         for (int gap = n / 2; gap > 0; gap /= 2) {
             for (int i = gap; i < n; i++) {
                 int key = arr[i];

@@ -54,15 +54,16 @@ public class 选择排序 {
     }
 
    public static void test03(int[] arr){
-        int minPos=0;
-        for(int i=0;i<arr.length-1;i++){
-            minPos=i;
-            for(int j=i+1;j<arr.length;j++){
-                if(arr[j]>arr[minPos]){
-                    minPos=j;
-                }
-            }
-            swap(arr,i,minPos);
+       int minPos;
+        for (int i = 0; i < arr.length; i++) {
+           minPos=i;
+           for(int j=i+1;j<arr.length;j++){
+               if(arr[j]<arr[minPos]){
+                   minPos=j;
+               }
+           }
+            swap(arr, i,minPos);
+
         }
    }
 
