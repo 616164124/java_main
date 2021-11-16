@@ -13,7 +13,7 @@ public class Test02 {
             System.out.println("123");
         } else {
             System.out.println("kjkjk");
-            System.out.println("hufs");
+            System.out.println("hufs11");
         }
     }
 }
