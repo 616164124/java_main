@@ -1,11 +1,17 @@
 package zb.算法.简单算法;
 
+import zb.算法.common.CommonUtil;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class 桶排序 {
     public static void main(String[] args) {
-        int a[] = {1, 8, 7, 44, 42, 46, 38, 34, 33, 17, 15, 16, 27, 28, 24};
+        int[] aa = {1, 8, 7, 44, 42, 46, 38, 34, 33, 17, 15, 16, 27, 28, 24};
+        int[] a = CommonUtil.randomInt(20);
+
+        System.out.println(Arrays.toString(a));
         List[] buckets = new ArrayList[5];
         for (int i = 0; i < buckets.length; i++)//初始化
         {

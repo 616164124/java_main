@@ -1,13 +1,13 @@
 package zb.算法.简单算法;
 
-import zb.算法.common.IntUtil;
+import zb.算法.common.CommonUtil;
 
 import java.util.Arrays;
 
 public class 归并排序 {
     // 归并排序的实现
     public static void main(String[] args) {
-        int[] nums = IntUtil.randomInt(10);
+        int[] nums = CommonUtil.randomInt(10);
         System.out.println(Arrays.toString(nums));
         sort(nums, 0, nums.length - 1);
         System.out.println(Arrays.toString(nums));

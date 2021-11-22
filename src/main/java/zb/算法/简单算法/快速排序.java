@@ -115,25 +115,24 @@ public class 快速排序 {
         test03(arr, j + 1, right);
     }
 
-    public static void  test04(int[] arr,int left,int right){
-        if(left>=right){
+    public static void test04(int[] arr, int left, int right) {
+        if (left >= right) {
             return;
         }
-        int i=left-1,j=right+1;
-        int x =arr[left];
-        while (i<j){
-            while (arr[++i]<x);
-            while (arr[--j]>x);
-            if(i<j){
-                int tmp=arr[i];
-                arr[i]=arr[j];
-                arr[j]=tmp;
+        int i = left - 1, j = right + 1;
+        int x = arr[left];
+        while (i < j) {
+            while (arr[++i] < x) ;
+            while (arr[--j] > x) ;
+            if (i < j) {
+                int tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
             }
         }
-        test04(arr, left, j);
-        test04(arr, j+1, right);
 
     }
+
 }
 
 

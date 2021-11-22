@@ -1,5 +1,7 @@
 package zb.算法.简单算法;
 
+import zb.算法.common.CommonUtil;
+
 import java.util.Arrays;
 
 public class 选择排序 {
@@ -10,8 +12,9 @@ public class 选择排序 {
         int[] ints = Arrays.copyOf(i, i.length);
         selectSort(i);
         System.out.println(Arrays.toString(i));
-        int[] ii = {11, 2, 66, 4, 6, 12};
-         test03(ii);
+        int[] ii = CommonUtil.randomInt(5);
+        System.out.println(Arrays.toString(ii));
+        test03(ii);
         System.out.println(Arrays.toString(ii));
 
     }
@@ -45,7 +48,7 @@ public class 选择排序 {
         for (int i = 0; i < arr.length - 1; i++) {
             int minPos = i;
             for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] <arr[minPos]) {
+                if (arr[j] < arr[minPos]) {
                     minPos = j;
                 }
             }
@@ -53,18 +56,17 @@ public class 选择排序 {
         }
     }
 
-   public static void test03(int[] arr){
-       int minPos;
+    public static void test03(int[] arr){
+        int minPos;
         for (int i = 0; i < arr.length; i++) {
-           minPos=i;
-           for(int j=i+1;j<arr.length;j++){
-               if(arr[j]<arr[minPos]){
-                   minPos=j;
-               }
-           }
-            swap(arr, i,minPos);
-
+            minPos=i;
+            for(int j = i+1;j<arr.length;j++){
+                if(arr[j]<arr[minPos]){
+                    minPos=j;
+                }
+            }
+            CommonUtil.swap(arr, i, minPos);
         }
-   }
+    }
 
 }
