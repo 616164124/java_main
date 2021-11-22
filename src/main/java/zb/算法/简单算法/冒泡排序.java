@@ -16,7 +16,7 @@ public class 冒泡排序 {
         int[] ii = {2, 3, 7, 8, 23, 11};
         test01(ii);
         System.out.println(Arrays.toString(ii));
-        int[] ints = IntUtil.randomInt(100);
+        int[] ints = IntUtil.randomInt(10);
         System.out.println("=========");
         System.out.println(Arrays.toString(ints));
         test01(ints);
@@ -57,8 +57,6 @@ public class 冒泡排序 {
                 }
             }
         }
-
-
     }
 
 

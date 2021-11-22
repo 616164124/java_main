@@ -11,8 +11,11 @@ public class 选择排序 {
         selectSort(i);
         System.out.println(Arrays.toString(i));
         int[] ii = {11, 2, 66, 4, 6, 12};
-         test03(ii);
+        test03(ii);
         System.out.println(Arrays.toString(ii));
+        int[] iii = {11, 2, 66, 4, 6, 12};
+        test04(iii);
+        System.out.println(Arrays.toString(iii));
 
     }
 
@@ -55,15 +58,28 @@ public class 选择排序 {
 
    public static void test03(int[] arr){
         int minPos=0;
-        for(int i=0;i<arr.length-1;i++){
-            minPos=i;
-            for(int j=i+1;j<arr.length;j++){
-                if(arr[j]>arr[minPos]){
-                    minPos=j;
+       for (int i = 0; i < arr.length - 1; i++) {
+           minPos = i;
+           for (int j = i + 1; j < arr.length; j++) {
+               if (arr[j] > arr[minPos]) {
+                   minPos = j;
+               }
+           }
+           swap(arr, i, minPos);
+       }
+   }
+
+    public static void test04(int[] arr) {
+        int minPos;
+        for (int i = 0; i < arr.length-1; i++) {
+            minPos = i;
+            for (int j = i+1; j < arr.length; j++) {
+                if (arr[j] < arr[minPos]) {
+                    minPos = j;
                 }
             }
-            swap(arr,i,minPos);
+            swap(arr, i, minPos);
         }
-   }
+    }
 
 }

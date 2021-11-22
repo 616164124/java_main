@@ -17,5 +17,6 @@ public class Test01 {
     while (!queue.isEmpty()) {
       System.out.println(queue.poll());
     }
+
   }
 }

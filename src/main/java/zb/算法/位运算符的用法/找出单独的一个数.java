@@ -15,7 +15,9 @@ public class 找出单独的一个数 {
             x = (x ^ a[i + 1]);
         }
         System.out.println(x);
-        int c = 13 ^ 13;
+        String s = Integer.toString(13, 2);
+        System.out.println("s的二进制\t"+s);
+        int c = 13 ^ 12;
         System.out.println(c);
     }
 }
