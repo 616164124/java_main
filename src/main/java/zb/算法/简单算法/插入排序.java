@@ -1,14 +1,15 @@
 package zb.算法.简单算法;
 
 
-import zb.算法.common.IntUtil;
+
+import zb.算法.common.CommonUtil;
 
 import java.util.Arrays;
 
 public class 插入排序 {
 
     public static void main(String[] args) {
-        int[] i = IntUtil.randomInt(10);
+        int[] i = CommonUtil.randomInt(10);
         insertSort(i);
         System.out.println(Arrays.toString(i));
     }

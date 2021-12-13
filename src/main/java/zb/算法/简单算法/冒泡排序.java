@@ -1,6 +1,7 @@
 package zb.算法.简单算法;
 
-import zb.算法.common.IntUtil;
+
+import zb.算法.common.CommonUtil;
 
 import java.util.Arrays;
 
@@ -16,7 +17,7 @@ public class 冒泡排序 {
         int[] ii = {2, 3, 7, 8, 23, 11};
         test01(ii);
         System.out.println(Arrays.toString(ii));
-        int[] ints = IntUtil.randomInt(10);
+        int[] ints = CommonUtil.randomInt(10);
         System.out.println("=========");
         System.out.println(Arrays.toString(ints));
         test01(ints);

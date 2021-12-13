@@ -13,6 +13,7 @@ public class MapTest {
     public static void main(String[] args) {
         String[] strings = {"1000", "10001", "100002"};
         Demo demo = new Demo();
+
         ArrayList<Demo> arrayList = new ArrayList<>();
         for (int i = 0; i < strings.length; i++) {
 
@@ -26,7 +27,9 @@ public class MapTest {
         String k =(String) hashMap.get("k").toString().trim();
 
         hashMap.put("1231", 883);
+        hashMap.put("u", 123);
 
+        hashMap.put("u", 1234324);
         hashMap.put("121", 9913);
 
         hashMap.put("31", 23);

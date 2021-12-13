@@ -15,3 +15,6 @@ public class DateBuilder2 implements IDateBuilder{
 		return myDate.date;
 	}
 }
+
+
+
