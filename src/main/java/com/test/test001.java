@@ -48,15 +48,24 @@ public class test001 {
         //[0-10]正整数的随机数，包头不包尾
         System.out.println(current.nextInt(0, 10));
         System.out.println(current.toString());
-        boolean isFlag=true;
-        if(!isFlag){
+        boolean isFlag = true;
+        if (!isFlag) {
         }
         SecureRandom random = SecureRandom.getInstance("SHA1PRNG");
         random.nextInt(10);
-        System.out.println( random.nextInt(10));
+        System.out.println(random.nextInt(10));
 
         KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
+        String name = "hsfhk";
+        switch (name) {
+            case "hsfhk":
+                System.out.println("hsfhk");
+            case "hsfh":
+                System.out.println("hsfhk");
+            case "hsk":
+                System.out.println("hsfhk");
 
+        }
 
 
     }

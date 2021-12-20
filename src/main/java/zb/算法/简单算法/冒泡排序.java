@@ -20,7 +20,7 @@ public class 冒泡排序 {
         int[] ints = CommonUtil.randomInt(10);
         System.out.println("=========");
         System.out.println(Arrays.toString(ints));
-        test01(ints);
+        test02(ints);
         System.out.println(Arrays.toString(ints));
 
     }
@@ -60,5 +60,20 @@ public class 冒泡排序 {
         }
     }
 
+    public static void test02(int[] arr){
+        if(arr==null){
+            return;
+        }
+        for(int i = 0;i<arr.length;i++){
+            for(int j =0;j<arr.length-1;j++){
+                if(arr[j]>arr[j+1]){
+                    int temp= arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
+                }
 
+            }
+        }
+
+    }
 }
