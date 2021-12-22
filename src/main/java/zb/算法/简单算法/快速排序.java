@@ -1,6 +1,8 @@
 package zb.算法.简单算法;
 
 
+import org.checkerframework.checker.i18n.qual.LocalizableKey;
+
 public class 快速排序 {
 
     public static void main(String[] args) {
@@ -26,9 +28,9 @@ public class 快速排序 {
         }
         System.out.println();
 
-        int[] numsss = {2, 1, 3, 4, 41, 12344, 123, 423, 12, 231, 31324, 123141};
+        int[] numsss = {2, 1, 3, 4, 41, 12344, 123, 423, 1231479,12, 231, 31324, 123141};
         n = numsss.length;
-        test05(numsss, 0, n - 1);
+        test06(numsss, 0, n - 1);
         for (int i = 0; i < n; ++i) {
             System.out.printf("%d ", numsss[i]);
         }
@@ -116,28 +118,45 @@ public class 快速排序 {
     }
 
 
-
-public static  void test05(int[] arr,int left,int right){
-        if(left>= right){
+    public static void test05(int[] arr, int left, int right) {
+        if (left >= right) {
             return;
         }
-        int i = left+1,j=right-1;
+        int i = left + 1, j = right - 1;
         int x = arr[left];
-        while (i<j){
-            while (arr[++i]<x);
-            while (arr[--j]>x);
-            if(i<j){
-                int temp=arr[i];
-                arr[i]= arr[j];
-                arr[j]=temp;
+        while (i < j) {
+            while (arr[++i] < x) ;
+            while (arr[--j] > x) ;
+            if (i < j) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
         test05(arr, left, j);
-        test05(arr,j+1, right);
+        test05(arr, j + 1, right);
+    }
 
+    public static void test06(int[] arr, int left, int right) {
+        if(left>=right){
+            return;
+        }
+        int i = left-1,j=right+1;
+        int x = arr[left];
+        while (i<j){
+            while (x>arr[++i]){}
+            while (x<arr[--j]){}
+            if(i<j){
+                int temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+        test06(arr, left, j);
+        test06(arr,j+1,right);
 
-}
-    
+    }
+
 
 }
 

@@ -39,7 +39,7 @@ public class fist {
         ListNode listNode = reverseList(five);
         System.out.println("111");
         int i = 3;
-        System.out.println(i^2);
+        System.out.println(i^5);
     }
 
 }
