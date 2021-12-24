@@ -15,7 +15,7 @@ public class FistMethod {
     private static int countPrime(int range) {
        int count=0;
         for (int i1 = 2; i1 < range; i1++) {
-            count+=findPrime(i1)?1:0;
+            count=count+(findPrime(i1)?1:0);
         }
         return count;
     }

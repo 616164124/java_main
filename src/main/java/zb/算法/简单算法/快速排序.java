@@ -20,7 +20,7 @@ public class 快速排序 {
         }
         System.out.println();
 
-        int[] numss = {2, 1, 3, 4, 41, 12344, 123, 423, 12, 231, 31324, 123141};
+        int[] numss = {2, 1, 31324, 3, 4, 41, 231, 123141};
         n = numss.length;
         test03(numss, 0, n - 1);
         for (int i = 0; i < n; ++i) {
@@ -28,9 +28,10 @@ public class 快速排序 {
         }
         System.out.println();
 
-        int[] numsss = {2, 1, 3, 4, 41, 12344, 123, 423, 1231479,12, 231, 31324, 123141};
+        int[] numsss = {2, 1, 3, 4, 41, 12344, 123, 423, 1231479, 12, 231, 31324, 123141};
         n = numsss.length;
-        test06(numsss, 0, n - 1);
+
+        test05(numsss, 0, n - 1);
         for (int i = 0; i < n; ++i) {
             System.out.printf("%d ", numsss[i]);
         }
@@ -122,7 +123,7 @@ public class 快速排序 {
         if (left >= right) {
             return;
         }
-        int i = left + 1, j = right - 1;
+        int i = left - 1, j = right + 1;
         int x = arr[left];
         while (i < j) {
             while (arr[++i] < x) ;
@@ -138,23 +139,24 @@ public class 快速排序 {
     }
 
     public static void test06(int[] arr, int left, int right) {
-        if(left>=right){
+        if (left >= right) {
             return;
         }
-        int i = left-1,j=right+1;
+        int i = left - 1, j = right + 1;
         int x = arr[left];
-        while (i<j){
-            while (x>arr[++i]){}
-            while (x<arr[--j]){}
-            if(i<j){
-                int temp=arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp;
+        while (i < j) {
+            while (x > arr[++i]) {
+            }
+            while (x < arr[--j]) {
+            }
+            if (i < j) {
+                int tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
             }
         }
         test06(arr, left, j);
-        test06(arr,j+1,right);
-
+        test06(arr, j + 1, right);
     }
 
 

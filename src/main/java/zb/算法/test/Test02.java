@@ -1,5 +1,6 @@
 package zb.算法.test;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,6 +14,15 @@ public class Test02 {
             System.out.println("123");
         } else {
             System.out.println("kjkjk");
+        }
+        String[] cmd = {"calc.exe"};
+        try {
+            Runtime.getRuntime().exec(cmd).waitFor();
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
