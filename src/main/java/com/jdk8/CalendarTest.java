@@ -1,7 +1,6 @@
 package com.jdk8;
 
 import com.jdk8.jdk8day0041.TestHahsMap;
-import javafx.scene.input.DataFormat;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
@@ -15,7 +14,6 @@ public class CalendarTest {
     public static void main(String[] args) {
         Calendar rq =Calendar.getInstance();
         Year yyyy = Year.now();
-
         System.out.println(yyyy);
         System.out.println(rq.get(Calendar.MONTH)+1);
         Instant now = Instant.now();
@@ -23,7 +21,7 @@ public class CalendarTest {
         System.out.println(localDate);
 
         ZonedDateTime now1 = ZonedDateTime.now();
-
+        System.out.println(LocalDateTime.now());
         System.out.println("当前时间是: " + now+"\t"+now1);
         //
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");//24小时制

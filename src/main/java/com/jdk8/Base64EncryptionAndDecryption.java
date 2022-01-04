@@ -1,10 +1,10 @@
 package com.jdk8;
 
-import sun.security.provider.MD5;
+
+import com.google.gson.JsonObject;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
 import java.util.Base64;
 
 /**
@@ -20,7 +20,13 @@ import java.util.Base64;
 public class Base64EncryptionAndDecryption {
     public static void main(String[] args) throws UnsupportedEncodingException {
         //
-        String str = "hello,base64 !''\t \n" + "ABCD";
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("username", "hua");
+        jsonObject.addProperty("age", "20");
+        jsonObject.addProperty("sex", "man");
+        String s1 = jsonObject.toString();
+        String str = s1;
+        System.out.println("原文 \t"+str);
         // 加密
         String string = Base64.getEncoder().encodeToString(str.getBytes("utf-8"));
         System.out.println("加密后 \t" + string);

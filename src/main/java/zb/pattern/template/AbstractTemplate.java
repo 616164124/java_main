@@ -2,10 +2,6 @@ package zb.pattern.template;
 
 
 import com.dao.User;
-import com.sun.org.apache.bcel.internal.generic.NEW;
-import org.aspectj.weaver.ast.Var;
-
-import java.util.Map;
 
 
 public abstract class AbstractTemplate {
