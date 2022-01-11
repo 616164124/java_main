@@ -2,6 +2,7 @@ package com.jdk8;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.Date;
 
@@ -9,8 +10,8 @@ import java.util.Date;
 // https://blog.csdn.net/hspingcc/article/details/73332526
 public class TestDate {
   public static void main(String[] args) {
-    LocalDate date = LocalDate.now();
-    System.out.println(date);
+    String now = LocalDateTime.now().toString();
+    System.out.println(now);
     // 格式化时间 年月日
     LocalDate of = LocalDate.of(1992, Month.of(3), 3);
     System.out.println(of);
