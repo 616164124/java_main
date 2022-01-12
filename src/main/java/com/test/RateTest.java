@@ -1,6 +1,8 @@
 package com.test;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.UUID;
 
@@ -37,6 +39,10 @@ public class RateTest {
       money = (int) (money * rate);
       System.out.println(count + "\t" + simpleDateFormat.format(current) + "\t" + money);
     }
-
+    System.out.println("====================");
+    long l = System.nanoTime();
+    LocalDateTime localDateTime;
+    LocalDateTime now1 = LocalDateTime.now();
+    System.out.println(now1);
   }
 }

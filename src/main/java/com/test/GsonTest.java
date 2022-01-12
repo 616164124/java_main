@@ -1,13 +1,11 @@
 package com.test;
 
 import com.dao.User;
+import com.google.common.collect.Maps;
 import com.google.gson.Gson;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * https://blog.csdn.net/qq_36838191/article/details/80596316
@@ -51,6 +49,7 @@ public class GsonTest {
         Map map1 = gson.fromJson(s1, Map.class);
         String uuu3 =(String) map1.get("uuu3");
         System.out.println(uuu3);
+
 
     }
 }

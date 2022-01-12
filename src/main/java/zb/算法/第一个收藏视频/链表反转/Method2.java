@@ -14,19 +14,13 @@ public class Method2 {
         node2.setNext(node3);
         node3.setNext(node4);
 
-        node0 = test2(node0);
+        node0=test01(node0);
         while (null != node0) {
             System.out.print(node0.getData() + ",");
             node0 = node0.getNext();
         }
 
         System.out.println("\n************打印反转前的链表**************");
-
-        Node node = test2(node0);
-        while (node!=null){
-            System.out.println(node.getData());
-            node=node.getNext();
-        }
 
         // 打印反转前的链表
         Node h = node0;
@@ -69,16 +63,14 @@ public class Method2 {
         node.setNext(null);
         return rehead;
     }
-
-    public static Node test2(Node node) {
-        if (node == null || node.getNext() == null) {
+    public static Node test2(Node node){
+        if(node ==null||node.getNext()==null){
             return node;
         }
-        Node prHeader = test2(node.getNext());
+        Node test=test2(node.getNext());
         node.getNext().setNext(node);
         node.setNext(null);
-
-        return prHeader;
+        return test;
     }
 
 
