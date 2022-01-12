@@ -1,7 +1,9 @@
 package com.jdk8;
 
-import sun.security.provider.MD5;
 
+import javax.crypto.Cipher;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -29,4 +31,25 @@ public class Base64EncryptionAndDecryption {
         System.out.println("解密 \t " + s);
 
     }
+
+    public static final String KEY_MD5 = "MD5";
+
+    /***
+     * MD5加密（生成唯一的MD5值）
+     * @param data
+     * @return
+     * @throws Exception
+     */
+    public static byte[] encryMD5(byte[] data) throws Exception {
+        MessageDigest md5 = MessageDigest.getInstance(KEY_MD5);
+        md5.update(data);
+        return md5.digest();
+    }
+
+
+
+
+
+
+
 }

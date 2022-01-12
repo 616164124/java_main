@@ -2,7 +2,6 @@ package zb.算法.简单算法;
 
 
 
-import com.dp.Test;
 import zb.算法.common.CommonUtil;
 
 import java.util.Arrays;
@@ -11,9 +10,7 @@ public class 插入排序 {
 
     public static void main(String[] args) {
         int[] i = CommonUtil.randomInt(10);
-        System.out.println(Arrays.toString(i));
-//        insertSort(i);
-        test01(i);
+        insertSort(i);
         System.out.println(Arrays.toString(i));
     }
     
@@ -35,19 +32,22 @@ public class 插入排序 {
             //插入
             arr[j] = target;
         }
-
     }
 
-    public static void test01(int[] arr){
-        for (int i = 1; i < arr.length; i++) {
-            for (int j = i-1; j >=0&&arr[j]>arr[j+1] ; j--) {
-                int temp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
-            }
+    public static void test02(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return;
         }
-
-
+        for (int i = 0; i < arr.length; i++) {
+            int j = i;
+            int target = arr[j];
+            while (j > 0 && target < arr[j - 1]) {
+                arr[j] = arr[j - 1];
+                j--;
+            }
+            arr[j] = target;
+        }
     }
+
 
 }
