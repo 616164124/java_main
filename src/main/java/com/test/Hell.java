@@ -9,69 +9,69 @@ import java.util.concurrent.atomic.LongAdder;
  * @author：Mikael
  */
 public class Hell {
-  public static void main(String[] args) {
-    System.out.println("Miho");
-    int i = 1234567891;
-    ConcurrentHashMap<String, String> s = new ConcurrentHashMap<>();
-    s.put("one", "1");
+    public static void main(String[] args) {
+        System.out.println("Miho");
+        int i = 1234567891;
+        ConcurrentHashMap<String, String> s = new ConcurrentHashMap<>();
+        s.put("one", "1");
 
-    complies(12);
-    LongAdder longAdder = new LongAdder();
-    longAdder.add(1234567891011L);
-    longAdder.increment();
-    System.out.println(longAdder);
-    int[] arr = new int[365];
-    int aaa = 1;
-    int sum = 300;
-    while (sum < 1000000) {
-      sum = (int) (sum * 1.04);
-      aaa++;
-      System.out.println(sum);
-      arr[aaa] = sum;
+        complies(12);
+        LongAdder longAdder = new LongAdder();
+        longAdder.add(1234567891011L);
+        longAdder.increment();
+        System.out.println(longAdder);
+        int[] arr = new int[365];
+        int aaa = 1;
+        int sum = 300;
+        while (sum < 1000000) {
+            sum = (int) (sum * 1.04);
+            aaa++;
+            System.out.println(sum);
+            arr[aaa] = sum;
+        }
+        System.out.println("天数：" + (aaa) + "\t");
+
+        char a = 'a';
+        int aa = 1;
+        switch (a) {
+            case 'a':
+                aa++;
+            case 'b':
+                aa++;
+            case 'c':
+                aa++;
+                break;
+            default:
+                aa--;
+        }
+        System.out.println("aa" + aa);
+
+        int num = 50;
+        int cc = num;
+        int dd = num;
+        int ee = num;
+        dd = +1;
+        cc += 1;
+        num = (num++) + 1;
+        ee = (++num) * 2;
+
+        System.out.println(num + "\t" + cc + "\t" + dd + "\t" + ee);
+
+        ArrayList<Integer> integers = new ArrayList<>();
+        integers.add(12);
+        integers.get(12);
     }
-    System.out.println("天数：" + (aaa) + "\t");
 
-    char a = 'a';
-    int aa = 1;
-    switch (a) {
-      case 'a':
-        aa++;
-      case 'b':
-        aa++;
-      case 'c':
-        aa++;
-        break;
-      default:
-        aa--;
+    public static void complies(int a) {
+        int i = a;
+        System.out.println(i);
     }
-    System.out.println("aa" + aa);
-
-    int num = 50;
-    int cc = num;
-    int dd = num;
-    int ee = num;
-    dd = +1;
-    cc += 1;
-    num = (num++) + 1;
-    ee = (++num) * 2;
-
-    System.out.println(num + "\t" + cc + "\t" + dd + "\t" + ee);
-
-    ArrayList<Integer> integers = new ArrayList<>();
-    integers.add(12);
-    integers.get(12);
-  }
-
-  public static void complies(int a) {
-    int i = a;
-    System.out.println(i);
-  }
 }
 
 class Instace {
-  private static Instace a;
+    private static Instace a;
 
-  public Instace() {
-    a = new Instace();
-  }
+    public Instace() {
+        a = new Instace();
+    }
 }

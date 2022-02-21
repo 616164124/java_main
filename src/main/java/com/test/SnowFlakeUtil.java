@@ -28,8 +28,8 @@ public class SnowFlakeUtil {
     private final static long DATACENTER_LEFT = SEQUENCE_BIT + MACHINE_BIT;
     private final static long TIMESTMP_LEFT = DATACENTER_LEFT + DATACENTER_BIT;
 
-    private long datacenterId; // 机房id
-    private long machineId; // 机器id
+    private final long datacenterId; // 机房id
+    private final long machineId; // 机器id
     private long sequence = 0L; // 序列号
     private long lastStmp = -1L; // 上次的时间戳
 
@@ -86,27 +86,27 @@ public class SnowFlakeUtil {
     public static void main(String[] args) {
 
         Random random = new Random();
-        StringBuilder  stringBuilder = new StringBuilder();
-        StringBuilder  stringBuilder2 = new StringBuilder();
-        char c= 'e';
-        char x='w';
-        for(int i=0;i<4;i++){
-        //随机生成大写的英文字母
-            c = (char)(random.nextInt((26))+65);
-        //随机生成小写的英文字母
-            x = (char)(random.nextInt((26))+97);
-         stringBuilder.append(c);
+        StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder stringBuilder2 = new StringBuilder();
+        char c = 'e';
+        char x = 'w';
+        for (int i = 0; i < 4; i++) {
+            //随机生成大写的英文字母
+            c = (char) (random.nextInt((26)) + 65);
+            //随机生成小写的英文字母
+            x = (char) (random.nextInt((26)) + 97);
+            stringBuilder.append(c);
             stringBuilder2.append(x);
         }
-        System.out.println(stringBuilder.toString()+"\t"+stringBuilder2.toString());
+        System.out.println(stringBuilder + "\t" + stringBuilder2);
         SnowFlakeUtil snowFlakeUtil = new SnowFlakeUtil(3, 5);
         System.out.println(snowFlakeUtil.getNextId());
         UUID uuid = UUID.randomUUID();
         String replace = "";
-        System.out.println(System.currentTimeMillis()+"\t"+new Date().getTime()+"\t"+uuid.toString());
-        Long l= 599083566539259904l;
-        System.out.println(Long.MAX_VALUE+"\tlong的最大值为：\t" );
-        for (int i=0;i<1000;i++) {
+        System.out.println(System.currentTimeMillis() + "\t" + new Date().getTime() + "\t" + uuid);
+        Long l = 599083566539259904l;
+        System.out.println(Long.MAX_VALUE + "\tlong的最大值为：\t");
+        for (int i = 0; i < 1000; i++) {
             replace = uuid.toString().replaceAll("-", "");
         }
         System.out.println(replace);

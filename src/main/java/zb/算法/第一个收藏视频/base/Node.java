@@ -3,7 +3,6 @@ package zb.算法.第一个收藏视频.base;
 public class Node {
 
 
-
     private int Data;// 数据域
     private Node Next;// 指针域
 

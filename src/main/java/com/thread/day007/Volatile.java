@@ -1,4 +1,7 @@
 package com.thread.day007;
 
-/** */
-public class Volatile {}
+/**
+ *
+ */
+public class Volatile {
+}

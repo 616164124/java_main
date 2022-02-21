@@ -14,53 +14,53 @@ import java.util.Map;
 */
 // 两数之和
 public class two_sun {
-  // 方法一  缺点
-  public int[] twoSum(int[] nums, int target) {
-    for (int i = 0; i < nums.length; i++) { // i 为找到第一个元素
-      for (int j = i + 1; j < nums.length; j++) { // j 为找到第二个元素
-        if (nums[j] == target - nums[i]) {
-          return new int[] {i, j};
+    // 方法一  缺点
+    public int[] twoSum(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) { // i 为找到第一个元素
+            for (int j = i + 1; j < nums.length; j++) { // j 为找到第二个元素
+                if (nums[j] == target - nums[i]) {
+                    return new int[]{i, j};
+                }
+            }
         }
-      }
+        throw new IllegalArgumentException("No two sum solution");
     }
-    throw new IllegalArgumentException("No two sum solution");
-  }
 
-  /**
-   * 利用hashmap 遍历数组将每个数组中的元素与在数组中的索引,全部放入map中,在map中寻找complement的值相等的 k 值 <k,value>
-   *
-   * <p>map 的k 值为数组中的元素
-   *
-   * @param nums
-   * @param target
-   * @return
-   */
-  // 方法二
-  public int[] twoSum2(int[] nums, int target) {
-    Map<Integer, Integer> map = new HashMap<>();
-    for (int i = 0; i < nums.length; i++) {
-      int complement = target - nums[i]; // complement 为差值
-      if (map.containsKey(complement)) {
-        return new int[] {map.get(complement), i};
-      }
-      map.put(nums[i], i);
+    /**
+     * 利用hashmap 遍历数组将每个数组中的元素与在数组中的索引,全部放入map中,在map中寻找complement的值相等的 k 值 <k,value>
+     *
+     * <p>map 的k 值为数组中的元素
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
+    // 方法二
+    public int[] twoSum2(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i]; // complement 为差值
+            if (map.containsKey(complement)) {
+                return new int[]{map.get(complement), i};
+            }
+            map.put(nums[i], i);
+        }
+        throw new IllegalArgumentException("No two sum solution");
     }
-    throw new IllegalArgumentException("No two sum solution");
-  }
 }
 
 class twosum {
-  public static void main(String[] args) throws Exception {
-    int[] i = {1, 2, 4, 5, 7, 3};
-    two_sun two_sun = new two_sun();
-    int[] ints = two_sun.twoSum(i, 8);
-    for (int j = 0; j < ints.length; j++) {
-      System.out.println(ints[j]);
+    public static void main(String[] args) throws Exception {
+        int[] i = {1, 2, 4, 5, 7, 3};
+        two_sun two_sun = new two_sun();
+        int[] ints = two_sun.twoSum(i, 8);
+        for (int j = 0; j < ints.length; j++) {
+            System.out.println(ints[j]);
+        }
+        /** ********************************************* */
+        int[] ints2 = two_sun.twoSum2(i, 8);
+        for (int j = 0; j < ints2.length; j++) {
+            System.out.println(ints2[j]);
+        }
     }
-    /** ********************************************* */
-    int[] ints2 = two_sun.twoSum2(i, 8);
-    for (int j = 0; j < ints2.length; j++) {
-      System.out.println(ints2[j]);
-    }
-  }
 }

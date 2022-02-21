@@ -6,17 +6,17 @@ package com.Leetcode;
  * <p>HTML 里这些特殊字符和它们对应的字符实体包括：
  */
 public class entityParser {
-  public static void main(String[] args) {
-    long l = System.nanoTime();
-    String text = "&amp; is an HTML entity but &ambassador; is not.";
+    public static void main(String[] args) {
+        long l = System.nanoTime();
+        String text = "&amp; is an HTML entity but &ambassador; is not.";
 
-    System.out.println(
-        text.replace("&quot", "”")
-            .replace("&apos", "‘")
-            .replace("&amp;", "&")
-            .replace("&gt", ">")
-            .replace("&lt", "<")
-            .replace("&frasl", "/"));
-    System.out.println((System.nanoTime() - l) / 1000_0000);
-  }
+        System.out.println(
+                text.replace("&quot", "”")
+                        .replace("&apos", "‘")
+                        .replace("&amp;", "&")
+                        .replace("&gt", ">")
+                        .replace("&lt", "<")
+                        .replace("&frasl", "/"));
+        System.out.println((System.nanoTime() - l) / 1000_0000);
+    }
 }

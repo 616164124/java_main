@@ -2,16 +2,18 @@ package com.Annotations;
 
 import java.lang.annotation.*;
 
-/** @author Administrator */
+/**
+ * @author Administrator
+ */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @interface Persons {
-  Person[] value();
+    Person[] value();
 }
 
 @Repeatable(Persons.class)
 @interface Person {
-  String role() default "";
+    String role() default "";
 }
 
 /**
@@ -20,16 +22,16 @@ import java.lang.annotation.*;
  * 编译时动态处理，编译时通过代码里标识的元数据动态处理，例如动态生成代码。 运行时动态处理，运行时通过代码里标识的元数据动态处理，例如使用反射注入实例
  */
 public class AnnotationsTest {
-   
 
-  public static void main(String[] args) {
-    Annotation[] annotation = Man.class.getAnnotations();
-    System.out.println(annotation.length);
-    Persons annotation1 = (Persons) annotation[0];
-    for (Person person : annotation1.value()) {
-      System.out.println(person.role());
+
+    public static void main(String[] args) {
+        Annotation[] annotation = Man.class.getAnnotations();
+        System.out.println(annotation.length);
+        Persons annotation1 = (Persons) annotation[0];
+        for (Person person : annotation1.value()) {
+            System.out.println(person.role());
+        }
     }
-  }
 }
 
 
@@ -38,5 +40,5 @@ public class AnnotationsTest {
 @Person(role = "coo")
 @Person(role = "son")
 class Man {
-  String name;
+    String name;
 }

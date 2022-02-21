@@ -8,7 +8,7 @@ import javax.mail.FetchProfile;
  * @author mikael
  */
 public class 链表 {
-    private static class  Node{
+    private static class Node {
         Item item;
         Node next;
     }
@@ -17,8 +17,8 @@ public class 链表 {
         Node one = new Node();
         Node two = new Node();
         Node three = new Node();
-        one.next=two;
-        two.next=three;
+        one.next = two;
+        two.next = three;
 
     }
 }

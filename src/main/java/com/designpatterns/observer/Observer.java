@@ -1,9 +1,9 @@
 /**
- * projectName: JUC   
- * fileName: Observer.java  
- * packageName: designpatterns.observer   
+ * projectName: JUC
+ * fileName: Observer.java
+ * packageName: designpatterns.observer
  * date: 2020-10-24
- * copyright(c) 2017-2020 xxx公司  
+ * copyright(c) 2017-2020 xxx公司
  */
 package com.designpatterns.observer;
 

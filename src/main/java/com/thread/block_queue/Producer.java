@@ -18,21 +18,21 @@ import java.util.concurrent.BlockingQueue;
  * @date: 2020-11-05
  */
 public class Producer implements Runnable {
-  private int element = 0;
-  private BlockingQueue<Integer> blockingQueue;
+    private int element = 0;
+    private final BlockingQueue<Integer> blockingQueue;
 
-  public Producer(BlockingQueue<Integer> blockingQueue) {
+    public Producer(BlockingQueue<Integer> blockingQueue) {
 
-    this.blockingQueue = blockingQueue;
-  }
-
-  @Override
-  public void run() {
-
-    while (element < 100) {
-      System.out.println("element\t" + element);
-      blockingQueue.offer(element++);
+        this.blockingQueue = blockingQueue;
     }
-    System.out.println("Producer done!!!!");
-  }
+
+    @Override
+    public void run() {
+
+        while (element < 100) {
+            System.out.println("element\t" + element);
+            blockingQueue.offer(element++);
+        }
+        System.out.println("Producer done!!!!");
+    }
 }

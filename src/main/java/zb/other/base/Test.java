@@ -11,10 +11,10 @@ public class Test {
         hashMap.put("mu", 4);
         hashMap.put("zhang", 332);
         hashMap.put("liu", 98);
-        hashMap.put("liu",111);
+        hashMap.put("liu", 111);
 
-        hashMap.forEach((key,value)->{
-            System.out.println("key==>"+key+"\t\tvalue==>"+value);
+        hashMap.forEach((key, value) -> {
+            System.out.println("key==>" + key + "\t\tvalue==>" + value);
         });
     }
 }

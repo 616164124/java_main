@@ -13,14 +13,14 @@ import java.util.StringTokenizer;
  * nextToken(String delim)：与 4 类似，以指定的分隔符返回结果。
  */
 public class StringTokenizerTest {
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    String s = "jkfm,jlkfs";
+        String s = "jkfm,jlkfs";
 
-    StringTokenizer stringTokenizer =
-        new StringTokenizer(s, ",", true); // true时,分隔符也输出,false时不将分割符输出
-    while (stringTokenizer.hasMoreElements()) {
-      System.out.println(stringTokenizer.nextElement());
+        StringTokenizer stringTokenizer =
+                new StringTokenizer(s, ",", true); // true时,分隔符也输出,false时不将分割符输出
+        while (stringTokenizer.hasMoreElements()) {
+            System.out.println(stringTokenizer.nextElement());
+        }
     }
-  }
 }

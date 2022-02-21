@@ -20,28 +20,28 @@ import java.io.*;
  * @date: 2020-08-29
  */
 public class Deep_clone {
-  public static void main(String[] args) throws CloneNotSupportedException {
-    // 浅克隆  引用类型的类 cloneTest2中变化了，则
-    CloneTest2 cloneTest2 = new CloneTest2(9);
-    CloneTest cloneTest = new CloneTest(18, "jfls", cloneTest2);
-    CloneTest a = (CloneTest) cloneTest.clone();
-    System.out.println(a);
-    System.out.println(cloneTest);
-    System.out.println();
-    System.out.println(a);
-    System.out.println(cloneTest);
-    System.out.println();
-    a.setName("liu");
-    System.out.println(a);
-    System.out.println(cloneTest);
-    System.out.println("--------------------");
-    // 深克隆
-    CloneTest3 shen = new CloneTest3(99, "shen", cloneTest2);
-    CloneTest3 o = (CloneTest3) shen.clone1();
-    cloneTest2.setId(888888);
-    System.out.println(shen);
-    System.out.println(o);
-  }
+    public static void main(String[] args) throws CloneNotSupportedException {
+        // 浅克隆  引用类型的类 cloneTest2中变化了，则
+        CloneTest2 cloneTest2 = new CloneTest2(9);
+        CloneTest cloneTest = new CloneTest(18, "jfls", cloneTest2);
+        CloneTest a = (CloneTest) cloneTest.clone();
+        System.out.println(a);
+        System.out.println(cloneTest);
+        System.out.println();
+        System.out.println(a);
+        System.out.println(cloneTest);
+        System.out.println();
+        a.setName("liu");
+        System.out.println(a);
+        System.out.println(cloneTest);
+        System.out.println("--------------------");
+        // 深克隆
+        CloneTest3 shen = new CloneTest3(99, "shen", cloneTest2);
+        CloneTest3 o = (CloneTest3) shen.clone1();
+        cloneTest2.setId(888888);
+        System.out.println(shen);
+        System.out.println(o);
+    }
 }
 
 /**
@@ -51,50 +51,50 @@ public class Deep_clone {
  * @date: 2020/03/29
  */
 class CloneTest3 implements Serializable {
-  private int id;
-  private String name;
-  private CloneTest2 cloneTest2;
+    private int id;
+    private String name;
+    private final CloneTest2 cloneTest2;
 
-  public CloneTest3(int id, String name, CloneTest2 cloneTest2) {
-    this.id = id;
-    this.name = name;
-    this.cloneTest2 = cloneTest2;
-  }
-
-  public CloneTest3(CloneTest2 cloneTest2) {
-    this.cloneTest2 = cloneTest2;
-  }
-
-  /*
-   * @Description: 深克隆方法一: 将对象序列化
-   * @Author: mikael
-   * @Date: 2020/8/29
-   * @param null:
-   * @return: null
-   **/
-  public Object clone1() throws CloneNotSupportedException {
-    CloneTest3 cloneTest3 = null;
-    try {
-      ByteArrayOutputStream baos = new ByteArrayOutputStream();
-      ObjectOutputStream oos = new ObjectOutputStream(baos);
-      oos.writeObject(this);
-      // 将流序列化成对象
-      ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
-      ObjectInputStream ois = new ObjectInputStream(bais);
-      cloneTest3 = (CloneTest3) ois.readObject();
-    } catch (Exception e) {
-      System.out.println(e.toString());
+    public CloneTest3(int id, String name, CloneTest2 cloneTest2) {
+        this.id = id;
+        this.name = name;
+        this.cloneTest2 = cloneTest2;
     }
-    return cloneTest3;
-  }
 
-  /*
-   * @Description: 深克隆方法二: 将引用类型进行克隆 而引用的类也需要实现Cloneable接口
-   * @Author: mikael
-   * @Date: 2020/14/29
-   * @param null:
-   * @return: null
-   **/
+    public CloneTest3(CloneTest2 cloneTest2) {
+        this.cloneTest2 = cloneTest2;
+    }
+
+    /*
+     * @Description: 深克隆方法一: 将对象序列化
+     * @Author: mikael
+     * @Date: 2020/8/29
+     * @param null:
+     * @return: null
+     **/
+    public Object clone1() throws CloneNotSupportedException {
+        CloneTest3 cloneTest3 = null;
+        try {
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            ObjectOutputStream oos = new ObjectOutputStream(baos);
+            oos.writeObject(this);
+            // 将流序列化成对象
+            ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
+            ObjectInputStream ois = new ObjectInputStream(bais);
+            cloneTest3 = (CloneTest3) ois.readObject();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return cloneTest3;
+    }
+
+    /*
+     * @Description: 深克隆方法二: 将引用类型进行克隆 而引用的类也需要实现Cloneable接口
+     * @Author: mikael
+     * @Date: 2020/14/29
+     * @param null:
+     * @return: null
+     **/
   /* @Override
       public Object clone2() throws CloneNotSupportedException {
           CloneTest2 cloneTest2 = (CloneTest2)super.clone();
@@ -102,34 +102,34 @@ class CloneTest3 implements Serializable {
           return student;
       }
   */
-  @Override
-  public String toString() {
-    return "CloneTest{"
-        + "id="
-        + id
-        + ", name='"
-        + name
-        + '\''
-        + ", cloneTest2="
-        + cloneTest2
-        + '}';
-  }
+    @Override
+    public String toString() {
+        return "CloneTest{"
+                + "id="
+                + id
+                + ", name='"
+                + name
+                + '\''
+                + ", cloneTest2="
+                + cloneTest2
+                + '}';
+    }
 
-  public int getId() {
-    return id;
-  }
+    public int getId() {
+        return id;
+    }
 
-  public void setId(int id) {
-    this.id = id;
-  }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 }
 
 /*
@@ -140,52 +140,52 @@ class CloneTest3 implements Serializable {
  * @return: null
  **/
 class CloneTest implements Cloneable {
-  private int id;
-  private String name;
-  private CloneTest2 cloneTest2;
+    private int id;
+    private String name;
+    private final CloneTest2 cloneTest2;
 
-  public CloneTest(int id, String name, CloneTest2 cloneTest2) {
-    this.id = id;
-    this.name = name;
-    this.cloneTest2 = cloneTest2;
-  }
+    public CloneTest(int id, String name, CloneTest2 cloneTest2) {
+        this.id = id;
+        this.name = name;
+        this.cloneTest2 = cloneTest2;
+    }
 
-  public CloneTest(CloneTest2 cloneTest2) {
-    this.cloneTest2 = cloneTest2;
-  }
+    public CloneTest(CloneTest2 cloneTest2) {
+        this.cloneTest2 = cloneTest2;
+    }
 
-  public Object clone() throws CloneNotSupportedException {
-    return super.clone();
-  }
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 
-  @Override
-  public String toString() {
-    return "CloneTest{"
-        + "id="
-        + id
-        + ", name='"
-        + name
-        + '\''
-        + ", cloneTest2="
-        + cloneTest2
-        + '}';
-  }
+    @Override
+    public String toString() {
+        return "CloneTest{"
+                + "id="
+                + id
+                + ", name='"
+                + name
+                + '\''
+                + ", cloneTest2="
+                + cloneTest2
+                + '}';
+    }
 
-  public int getId() {
-    return id;
-  }
+    public int getId() {
+        return id;
+    }
 
-  public void setId(int id) {
-    this.id = id;
-  }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 }
 
 /*
@@ -196,22 +196,22 @@ class CloneTest implements Cloneable {
  * @return: null
  **/
 class CloneTest2 implements Serializable {
-  private int id;
+    private int id;
 
-  public CloneTest2(int id) {
-    this.id = id;
-  }
+    public CloneTest2(int id) {
+        this.id = id;
+    }
 
-  @Override
-  public String toString() {
-    return "CloneTest{" + "id=" + id + '}';
-  }
+    @Override
+    public String toString() {
+        return "CloneTest{" + "id=" + id + '}';
+    }
 
-  public int getId() {
-    return id;
-  }
+    public int getId() {
+        return id;
+    }
 
-  public void setId(int id) {
-    this.id = id;
-  }
+    public void setId(int id) {
+        this.id = id;
+    }
 }

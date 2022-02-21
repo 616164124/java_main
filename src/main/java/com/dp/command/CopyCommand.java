@@ -2,6 +2,7 @@ package com.dp.command;
 
 public class CopyCommand extends Command {
     Content c;
+
     public CopyCommand(Content c) {
         this.c = c;
     }
@@ -13,6 +14,6 @@ public class CopyCommand extends Command {
 
     @Override
     public void undo() {
-        c.msg = c.msg.substring(0, c.msg.length()/2);
+        c.msg = c.msg.substring(0, c.msg.length() / 2);
     }
 }

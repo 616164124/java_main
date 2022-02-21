@@ -89,7 +89,7 @@ class URLFilter implements Filter {
 }
 
 class FilterChain implements Filter {
-    private List<Filter> filters = new ArrayList<>();
+    private final List<Filter> filters = new ArrayList<>();
 
     public FilterChain add(Filter f) {
         filters.add(f);
@@ -97,8 +97,8 @@ class FilterChain implements Filter {
     }
 
     public boolean doFilter(Msg m) {
-        for(Filter f : filters) {
-            if(!f.doFilter(m)) return false;
+        for (Filter f : filters) {
+            if (!f.doFilter(m)) return false;
         }
 
         return true;

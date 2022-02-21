@@ -24,14 +24,14 @@ public class Main {
         commands.add(new CopyCommand(c));
         commands.add(new DeleteCommand(c));
 
-        for(Command comm : commands) {
+        for (Command comm : commands) {
             comm.doit();
         }
 
 
         System.out.println(c.msg);
 
-        for(int i= commands.size()-1; i>=0; i--) {
+        for (int i = commands.size() - 1; i >= 0; i--) {
             commands.get(i).undo();
         }
 

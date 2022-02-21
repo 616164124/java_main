@@ -13,7 +13,7 @@ class LinkedList_ implements Collection_ {
         Node n = new Node(o);
         n.next = null;
 
-        if(head == null) {
+        if (head == null) {
             head = n;
             tail = n;
         }
@@ -24,7 +24,7 @@ class LinkedList_ implements Collection_ {
     }
 
     private class Node {
-        private Object o;
+        private final Object o;
         Node next;
 
         public Node(Object o) {

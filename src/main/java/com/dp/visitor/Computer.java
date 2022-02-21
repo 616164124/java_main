@@ -20,6 +20,7 @@ public class Computer {
 
 abstract class ComputerPart {
     abstract void accept(Visitor v);
+
     //some other operations eg:getName getBrand
     abstract double getPrice();
 }
@@ -65,7 +66,9 @@ class Board extends ComputerPart {
 
 interface Visitor {
     void visitCpu(CPU cpu);
+
     void visitMemory(Memory memory);
+
     void visitBoard(Board board);
 }
 
@@ -74,17 +77,17 @@ class PersonelVisitor implements Visitor {
 
     @Override
     public void visitCpu(CPU cpu) {
-        totalPrice += cpu.getPrice()*0.9;
+        totalPrice += cpu.getPrice() * 0.9;
     }
 
     @Override
     public void visitMemory(Memory memory) {
-        totalPrice += memory.getPrice()*0.85;
+        totalPrice += memory.getPrice() * 0.85;
     }
 
     @Override
     public void visitBoard(Board board) {
-        totalPrice += board.getPrice()*0.95;
+        totalPrice += board.getPrice() * 0.95;
     }
 }
 
@@ -93,16 +96,16 @@ class CorpVisitor implements Visitor {
 
     @Override
     public void visitCpu(CPU cpu) {
-        totalPrice += cpu.getPrice()*0.6;
+        totalPrice += cpu.getPrice() * 0.6;
     }
 
     @Override
     public void visitMemory(Memory memory) {
-        totalPrice += memory.getPrice()*0.75;
+        totalPrice += memory.getPrice() * 0.75;
     }
 
     @Override
     public void visitBoard(Board board) {
-        totalPrice += board.getPrice()*0.75;
+        totalPrice += board.getPrice() * 0.75;
     }
 }

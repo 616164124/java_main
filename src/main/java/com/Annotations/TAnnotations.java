@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface TAnnotations {
-  int value();
+    int value();
 
-  String name();
+    String name();
 }

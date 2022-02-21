@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.concurrent.*;
 
 public class FutureTest {
-    private static List<Future<String>> futurelist = new ArrayList<Future<String>>();
-    private static ExecutorService POOL = Executors.newFixedThreadPool(4, new CustomizableThreadFactory("SbxxService-pool-"));
+    private static final List<Future<String>> futurelist = new ArrayList<Future<String>>();
+    private static final ExecutorService POOL = Executors.newFixedThreadPool(4, new CustomizableThreadFactory("SbxxService-pool-"));
 
     public static void main(String[] args) {
         // UpFutureTask upFutureTask = new UpFutureTask();、

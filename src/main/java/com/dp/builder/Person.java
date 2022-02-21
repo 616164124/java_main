@@ -8,7 +8,8 @@ public class Person {
     int score;
     Location loc;
 
-    private Person() {}
+    private Person() {
+    }
 
     public static class PersonBuilder {
         Person p = new Person();

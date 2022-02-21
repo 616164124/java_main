@@ -5,12 +5,12 @@ import java.util.concurrent.CountDownLatch;
 
 class Add {
 
-  public int anInt(int i) {
+    public int anInt(int i) {
 
-    i = i + 1;
+        i = i + 1;
 
-    return i;
-  }
+        return i;
+    }
 }
 
 /**
@@ -20,44 +20,44 @@ class Add {
  */
 public class CountDownLatchTest {
 
-  public static void main(String[] args) {
-    // 一般用法
-    CountDownLatch countDownLatch = new CountDownLatch(5);
-    for (int i = 0; i <= 5; i++) {
-      //
-      new Thread(
-              () -> {
-                System.out.println(Thread.currentThread().getName() + "\t 出去了");
-                countDownLatch.countDown();
-              })
-          .start();
-    }
+    public static void main(String[] args) {
+        // 一般用法
+        CountDownLatch countDownLatch = new CountDownLatch(5);
+        for (int i = 0; i <= 5; i++) {
+            //
+            new Thread(
+                    () -> {
+                        System.out.println(Thread.currentThread().getName() + "\t 出去了");
+                        countDownLatch.countDown();
+                    })
+                    .start();
+        }
 
-    try {
-      countDownLatch.await();
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
+        try {
+            countDownLatch.await();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
-    System.out.println(" ++++++++" + Thread.currentThread().getName());
-    // 枚举用法
-    /** PersonEnum.getPersonEnum(i)中的i 需要与枚举中的Code变量一直 */
-    CountDownLatch countDownLatchEnum = new CountDownLatch(5);
-    for (int i = 1; i <= 4; i++) {
-      new Thread(
-              () -> {
-                System.out.println(Thread.currentThread().getName() + "\t 出去了");
-                countDownLatchEnum.countDown();
-              },
-              PersonEnum.getPersonEnum(i).getNeme())
-          .start();
-    }
+        System.out.println(" ++++++++" + Thread.currentThread().getName());
+        // 枚举用法
+        /** PersonEnum.getPersonEnum(i)中的i 需要与枚举中的Code变量一直 */
+        CountDownLatch countDownLatchEnum = new CountDownLatch(5);
+        for (int i = 1; i <= 4; i++) {
+            new Thread(
+                    () -> {
+                        System.out.println(Thread.currentThread().getName() + "\t 出去了");
+                        countDownLatchEnum.countDown();
+                    },
+                    PersonEnum.getPersonEnum(i).getNeme())
+                    .start();
+        }
 
-    try {
-      countDownLatchEnum.await();
-    } catch (InterruptedException e) {
-      e.printStackTrace();
+        try {
+            countDownLatchEnum.await();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(" +++Enum+++++" + Thread.currentThread().getName());
     }
-    System.out.println(" +++Enum+++++" + Thread.currentThread().getName());
-  }
 }

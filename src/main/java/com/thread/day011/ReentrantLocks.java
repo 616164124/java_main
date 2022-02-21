@@ -14,37 +14,37 @@ import java.util.concurrent.TimeUnit;
  */
 class Phone {
 
-  public synchronized void sendMsg() {
-    System.out.println(Thread.currentThread().getName() + "\t sendMsg");
-    sendEmail();
-    try {
-      TimeUnit.SECONDS.sleep(3);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
+    public synchronized void sendMsg() {
+        System.out.println(Thread.currentThread().getName() + "\t sendMsg");
+        sendEmail();
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
-  }
 
-  public void sendEmail() {
-    System.out.println(Thread.currentThread().getName() + "#########\t sendEmail");
-  }
+    public void sendEmail() {
+        System.out.println(Thread.currentThread().getName() + "#########\t sendEmail");
+    }
 }
 
 public class ReentrantLocks {
 
-  public static void main(String[] args) {
-    Phone phone = new Phone();
-    new Thread(
-            () -> {
-              phone.sendMsg();
-            },
-            "t1")
-        .start();
-    // t2 与t1不能同时进行，必须等t1结束才能继续执行
-    new Thread(
-            () -> {
-              phone.sendMsg();
-            },
-            "t2")
-        .start();
-  }
+    public static void main(String[] args) {
+        Phone phone = new Phone();
+        new Thread(
+                () -> {
+                    phone.sendMsg();
+                },
+                "t1")
+                .start();
+        // t2 与t1不能同时进行，必须等t1结束才能继续执行
+        new Thread(
+                () -> {
+                    phone.sendMsg();
+                },
+                "t2")
+                .start();
+    }
 }

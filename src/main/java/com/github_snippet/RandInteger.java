@@ -13,5 +13,6 @@ package com.github_snippet;
  * @date: 2020-08-30 5:49
  */
 public class RandInteger {
-  public static void main(String[] args) {}
+    public static void main(String[] args) {
+    }
 }

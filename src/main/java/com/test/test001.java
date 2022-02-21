@@ -26,7 +26,7 @@ public class test001 {
 
         System.out.println("==================================================");
         BigDecimal multiply = new BigDecimal("0").multiply(new BigDecimal("0.03"));
-        System.out.println(multiply.toString());
+        System.out.println(multiply);
         HashMap<String, BigDecimal> hashMap1 = new HashMap<>();
         hashMap1.put("ttt", new BigDecimal(12222));
         hashMap1.put("ttt", new BigDecimal(12111));
@@ -47,7 +47,7 @@ public class test001 {
         ThreadLocalRandom current = ThreadLocalRandom.current();
         //[0-10]正整数的随机数，包头不包尾
         System.out.println(current.nextInt(0, 10));
-        System.out.println(current.toString());
+        System.out.println(current);
         boolean isFlag = true;
         if (!isFlag) {
         }

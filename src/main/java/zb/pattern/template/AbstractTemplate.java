@@ -6,7 +6,8 @@ import com.dao.User;
 
 public abstract class AbstractTemplate {
     String data = "1231";
-    User user=new User(12,"u",44);
+    User user = new User(12, "u", 44);
+
     //其他子方法
     abstract void getData();
 

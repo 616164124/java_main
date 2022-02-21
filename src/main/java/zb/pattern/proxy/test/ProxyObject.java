@@ -4,9 +4,9 @@ public class ProxyObject implements AbstractObject {
     AbstractObject abstractObject;
 
     @Override
-    public synchronized void  method1() {
+    public synchronized void method1() {
         if (abstractObject == null) {
-                return;
+            return;
         }
         abstractObject.method1();
         System.out.println("ProxyObject.....method1..");

@@ -11,13 +11,13 @@ import java.util.List;
 
 class Child {
     private boolean cry = false;
-    private List<Observer> observers = new ArrayList<>();
+    private final List<Observer> observers = new ArrayList<>();
 
     {
         observers.add(new Dad());
         observers.add(new Mum());
         observers.add(new Dog());
-        observers.add((e)->{
+        observers.add((e) -> {
             System.out.println("ppp");
         });
         //hook callback function
@@ -33,7 +33,7 @@ class Child {
 
         wakeUpEvent event = new wakeUpEvent(System.currentTimeMillis(), "bed", this);
 
-        for(Observer o : observers) {
+        for (Observer o : observers) {
             o.actionOnWakeUp(event);
         }
     }
@@ -43,7 +43,7 @@ abstract class Event<T> {
     abstract T getSource();
 }
 
-class wakeUpEvent extends Event<Child>{
+class wakeUpEvent extends Event<Child> {
     long timestamp;
     String loc;
     Child source;

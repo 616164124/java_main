@@ -1,7 +1,7 @@
 package com.dp.state.thread;
 
 public class TerminatedState extends ThreadState_ {
-    private Thread_ t;
+    private final Thread_ t;
 
     public TerminatedState(Thread_ t) {
         this.t = t;

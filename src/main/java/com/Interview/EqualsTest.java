@@ -12,11 +12,11 @@ import org.springframework.beans.BeanUtils;
  * @date: 2020-11-03
  **/
 public class EqualsTest {
-  public static void main(String[] args) {
-    User user1 = new User(1, "hua", 33);
-    User user2 = new User(1, "hua", 33);
-    System.out.println(user1.getAge().equals(user2.getAge())); // true
-    System.out.println(user1.equals(user2)); // false
+    public static void main(String[] args) {
+        User user1 = new User(1, "hua", 33);
+        User user2 = new User(1, "hua", 33);
+        System.out.println(user1.getAge().equals(user2.getAge())); // true
+        System.out.println(user1.equals(user2)); // false
 
-  }
+    }
 }

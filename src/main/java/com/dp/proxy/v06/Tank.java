@@ -33,6 +33,7 @@ public class Tank implements Movable {
 
 class TankTimeProxy implements Movable {
     Tank tank;
+
     @Override
     public void move() {
         long start = System.currentTimeMillis();
@@ -44,6 +45,7 @@ class TankTimeProxy implements Movable {
 
 class TankLogProxy implements Movable {
     Tank tank;
+
     @Override
     public void move() {
         System.out.println("start moving...");

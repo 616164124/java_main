@@ -1,7 +1,7 @@
 package com.dp.state.thread;
 
 public class NewState extends ThreadState_ {
-    private Thread_ t;
+    private final Thread_ t;
 
     public NewState(Thread_ t) {
         this.t = t;
@@ -9,8 +9,8 @@ public class NewState extends ThreadState_ {
 
     @Override
     void move(Action input) {
-        if(input.msg == "start")
-        t.state = new RunningState(t);
+        if (input.msg == "start")
+            t.state = new RunningState(t);
     }
 
     @Override

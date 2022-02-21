@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 public class Window {
-  public static void main(String[] args) {
+    public static void main(String[] args) {
     /*      new Thread();
 
     TinkerWindow  tinkerWindow01 =    new  TinkerWindow("一号");
@@ -16,27 +16,27 @@ public class Window {
     tinkerWindow02.start();
     tinkerWindow03.start();*/
 
-    final TinkerWindowRunnable tinkerWindowRunnable = new TinkerWindowRunnable();
-    Thread thread1 = new Thread(tinkerWindowRunnable, "one");
-    Thread thread2 = new Thread(tinkerWindowRunnable, "two");
-    Thread thread3 = new Thread(tinkerWindowRunnable, "three");
-    thread1.start();
-    thread2.start();
-    thread3.start();
+        final TinkerWindowRunnable tinkerWindowRunnable = new TinkerWindowRunnable();
+        Thread thread1 = new Thread(tinkerWindowRunnable, "one");
+        Thread thread2 = new Thread(tinkerWindowRunnable, "two");
+        Thread thread3 = new Thread(tinkerWindowRunnable, "three");
+        thread1.start();
+        thread2.start();
+        thread3.start();
 
-    new Thread(
-            () -> {
-              try {
-                System.out.println("name=======" + Thread.currentThread().getName());
-                Thread.sleep(1);
-              } catch (InterruptedException e) {
-                e.printStackTrace();
-              }
-            },
-            "thread-one")
-        .start();
+        new Thread(
+                () -> {
+                    try {
+                        System.out.println("name=======" + Thread.currentThread().getName());
+                        Thread.sleep(1);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                },
+                "thread-one")
+                .start();
 
-    List list = Arrays.asList(IntStream.range(1, 10));
-    System.out.println();
-  }
+        List list = Arrays.asList(IntStream.range(1, 10));
+        System.out.println();
+    }
 }

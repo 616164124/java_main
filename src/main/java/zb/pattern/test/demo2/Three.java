@@ -1,6 +1,6 @@
 package zb.pattern.test.demo2;
 
-public class Three implements ThreeInterface{
+public class Three implements ThreeInterface {
     private String three;
 
     @Override

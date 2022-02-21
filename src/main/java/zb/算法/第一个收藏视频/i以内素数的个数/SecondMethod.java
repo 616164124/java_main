@@ -2,6 +2,7 @@ package zb.算法.第一个收藏视频.i以内素数的个数;
 
 /**
  * 采用埃筛法
+ *
  * @author mikael
  */
 public class SecondMethod {

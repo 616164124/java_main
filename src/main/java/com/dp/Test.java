@@ -4,7 +4,7 @@ import java.util.concurrent.locks.LockSupport;
 
 public class Test {
     public static void main(String[] args) throws Exception {
-        Thread t = new Thread(()->{
+        Thread t = new Thread(() -> {
             System.out.println("start");
             LockSupport.park(); //一直wait
             System.out.println("continue");

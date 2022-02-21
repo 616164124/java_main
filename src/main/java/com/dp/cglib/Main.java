@@ -15,7 +15,7 @@ public class Main {
         Enhancer enhancer = new Enhancer();
         enhancer.setSuperclass(Tank.class);
         enhancer.setCallback(new TimeMethodInterceptor());
-        Tank tank = (Tank)enhancer.create();
+        Tank tank = (Tank) enhancer.create();
         tank.move();
     }
 }

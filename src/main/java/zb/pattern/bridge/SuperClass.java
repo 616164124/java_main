@@ -4,7 +4,7 @@ public class SuperClass implements SuperInterface {
     private int a;
     private String b;
 
-    public void method1(){
+    public void method1() {
         System.out.println("SuperClass...........method1");
     }
 

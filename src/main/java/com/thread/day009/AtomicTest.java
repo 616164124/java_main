@@ -5,29 +5,29 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class AtomicTest {
 
-  private static int a = 0;
+    private static final int a = 0;
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    AtomicInteger atomicInteger = new AtomicInteger();
+        AtomicInteger atomicInteger = new AtomicInteger();
 
-    for (int i = 0; i < 110; i++) {
+        for (int i = 0; i < 110; i++) {
 
-      new Thread(
-              () -> {
-                atomicInteger.getAndAdd(1);
-              })
-          .start();
+            new Thread(
+                    () -> {
+                        atomicInteger.getAndAdd(1);
+                    })
+                    .start();
+        }
+        // 线程全部结束后执行,否则输出的值,可能并不是所有线程结束后的值
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(atomicInteger.get() + "\t" + a);
+
+        // atomic
+
     }
-    // 线程全部结束后执行,否则输出的值,可能并不是所有线程结束后的值
-    try {
-      TimeUnit.SECONDS.sleep(3);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
-    System.out.println(atomicInteger.get() + "\t" + a);
-
-    // atomic
-
-  }
 }

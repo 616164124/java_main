@@ -6,7 +6,7 @@ package com.dp.observer.v3;
 
 class Child {
     private boolean cry = false;
-    private Dad d = new Dad();
+    private final Dad d = new Dad();
 
     public boolean isCry() {
         return cry;

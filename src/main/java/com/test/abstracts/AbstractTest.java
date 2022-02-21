@@ -7,32 +7,34 @@ package com.test.abstracts;
  */
 public class AbstractTest extends A {
 
-  public static void main(String[] args) {
-    A a =
-        new A() {
-          @Override
-          public boolean isError(String a) {
-            return a == "te" ? true : false;
-          }
-        };
-    a.test();
-  }
+    public static void main(String[] args) {
+        A a =
+                new A() {
+                    @Override
+                    public boolean isError(String a) {
+                        return a == "te";
+                    }
+                };
+        a.test();
+    }
 
-  @Override
-  public boolean isError(String a) {
-    return a == "t" ? true : false;
-  }
+    @Override
+    public boolean isError(String a) {
+        return a == "t";
+    }
 }
 
-/** 测试抽象类中的抽象方法的使用 */
+/**
+ * 测试抽象类中的抽象方法的使用
+ */
 abstract class A {
-  private String test_src = "test";
+    private final String test_src = "test";
 
-  public void test() {
-    if (this.isError(test_src)) {
-      System.out.println("isError!!!!");
+    public void test() {
+        if (this.isError(test_src)) {
+            System.out.println("isError!!!!");
+        }
     }
-  }
 
-  public abstract boolean isError(String a);
+    public abstract boolean isError(String a);
 }

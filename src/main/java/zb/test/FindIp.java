@@ -13,7 +13,7 @@ public class FindIp {
         File database = new File("src/main/java/zb/test/GeoLite2-City.mmdb");
         DatabaseReader reader = new DatabaseReader.Builder(database).build();
         // 指定获取到的IP地址
-        InetAddress ipAddress = InetAddress.getByName("115.192.186.180");
+        InetAddress ipAddress = InetAddress.getByName("223.167.152.77");
         // 根据ip获取请求
         CityResponse response = reader.city(ipAddress);
         // 获取国家

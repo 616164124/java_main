@@ -1,6 +1,7 @@
 package zb.算法.简单算法;
 
 
+import com.dp.Test;
 import org.checkerframework.checker.i18n.qual.LocalizableKey;
 
 public class 快速排序 {
@@ -28,12 +29,13 @@ public class 快速排序 {
         }
         System.out.println();
 
-        int[] numsss = {2, 1, 3, 4, 41, 12344, 123, 423, 1231479, 12, 231, 31324, 123141};
+        int[] numsss = {2, 111, 3, 4, 41, 12344, 123, 423, 1231479};
         n = numsss.length;
 
-        test05(numsss, 0, n - 1);
+        test04(numsss, 0, n - 1);
+        System.out.print("test04=====>");
         for (int i = 0; i < n; ++i) {
-            System.out.printf("%d ", numsss[i]);
+            System.out.printf(" %d ", numsss[i]);
         }
         System.out.println();
     }
@@ -145,9 +147,9 @@ public class 快速排序 {
         int i = left - 1, j = right + 1;
         int x = arr[left];
         while (i < j) {
-            while (x > arr[++i]) {
+            while (arr[++i] < x) {
             }
-            while (x < arr[--j]) {
+            while (arr[--j] > x) {
             }
             if (i < j) {
                 int tmp = arr[i];
@@ -159,6 +161,27 @@ public class 快速排序 {
         test06(arr, j + 1, right);
     }
 
+    public static void test04(int[] arr, int left, int right) {
+        if (arr.length == 0) {
+            return;
+        }
+        int i = left - 1, j = right + 1;
+        int x = arr[left];
+        while (i < j) {
+            while (arr[++i] < x) {
+            }
+            while (arr[--j] > x) {
+            }
+            if (i < j) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        test06(arr, i, right);
+        test06(arr, right + 1, j);
+
+    }
 
 }
 

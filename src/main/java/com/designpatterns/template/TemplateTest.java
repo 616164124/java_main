@@ -4,35 +4,39 @@ package com.designpatterns.template;
  * @author mikael
  */
 
-public class TemplateTest{
-  public static void main(String[] args) {
-      Dog dog = new Dog();
-      dog.sys();
-      dog.move();
-      //
-  }
-}
-
-
-abstract  class Animal {
-    void sys(){}
-    void move(){
-    System.out.println("animal run");
+public class TemplateTest {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.sys();
+        dog.move();
+        //
     }
 }
-class Dog extends Animal{
+
+
+abstract class Animal {
+    void sys() {
+    }
+
+    void move() {
+        System.out.println("animal run");
+    }
+}
+
+class Dog extends Animal {
     @Override
     void sys() {
-    System.out.println("dog wangwang!!!");
+        System.out.println("dog wangwang!!!");
     }
 
 }
-class Cat extends Dog{
+
+class Cat extends Dog {
 
     @Override
     void sys() {
-    System.out.println("miaomiao!!!");
-  }
+        System.out.println("miaomiao!!!");
+    }
 }
 
 

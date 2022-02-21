@@ -24,7 +24,7 @@ public class Base64EncryptionAndDecryption {
         //
         String str = "hello,base64 !''\t \n" + "ABCD";
         // 加密
-        String string = Base64.getEncoder().encodeToString(str.getBytes("utf-8"));
+        String string = Base64.getEncoder().encodeToString(str.getBytes(StandardCharsets.UTF_8));
         System.out.println("加密后 \t" + string);
         // 解密
         String s = new String(Base64.getDecoder().decode(string), StandardCharsets.UTF_8);
@@ -45,11 +45,6 @@ public class Base64EncryptionAndDecryption {
         md5.update(data);
         return md5.digest();
     }
-
-
-
-
-
 
 
 }

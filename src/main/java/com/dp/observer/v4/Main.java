@@ -6,9 +6,9 @@ package com.dp.observer.v4;
 
 class Child {
     private boolean cry = false;
-    private Dad dad = new Dad();
-    private Mum mum = new Mum();
-    private Dog dog = new Dog();
+    private final Dad dad = new Dad();
+    private final Mum mum = new Mum();
+    private final Dog dog = new Dog();
 
 
     public boolean isCry() {

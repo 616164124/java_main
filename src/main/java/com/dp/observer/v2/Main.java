@@ -20,7 +20,7 @@ class Child {
 public class Main {
     public static void main(String[] args) {
         Child child = new Child();
-        while(!child.isCry()) {
+        while (!child.isCry()) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

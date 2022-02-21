@@ -62,9 +62,9 @@ class FilterChain implements Filter {
     }
 
     public boolean doFilter(Request request, Response response, FilterChain chain) {
-        if(index == filters.size()) return false;
+        if (index == filters.size()) return false;
         Filter f = filters.get(index);
-        index ++;
+        index++;
 
         return f.doFilter(request, response, chain);
     }

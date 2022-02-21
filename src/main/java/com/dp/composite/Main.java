@@ -9,7 +9,10 @@ abstract class Node {
 
 class LeafNode extends Node {
     String content;
-    public LeafNode(String content) {this.content = content;}
+
+    public LeafNode(String content) {
+        this.content = content;
+    }
 
     @Override
     public void p() {
@@ -21,7 +24,10 @@ class BranchNode extends Node {
     List<Node> nodes = new ArrayList<>();
 
     String name;
-    public BranchNode(String name) {this.name = name;}
+
+    public BranchNode(String name) {
+        this.name = name;
+    }
 
     @Override
     public void p() {
@@ -61,11 +67,11 @@ public class Main {
     }
 
     static void tree(Node b, int depth) {
-        for(int i=0; i<depth; i++) System.out.print("--");
+        for (int i = 0; i < depth; i++) System.out.print("--");
         b.p();
 
-        if(b instanceof BranchNode) {
-            for (Node n : ((BranchNode)b).nodes) {
+        if (b instanceof BranchNode) {
+            for (Node n : ((BranchNode) b).nodes) {
                 tree(n, depth + 1);
             }
         }

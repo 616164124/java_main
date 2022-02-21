@@ -7,7 +7,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GenerateDzbh {
     public static String getChains(String content) {
-        content+="_"+ UUID.randomUUID().toString();
+        content += "_" + UUID.randomUUID();
         String[] aResult = getString(content);//将产生4组6位字符串
         for (int i = 0; i < aResult.length; i++) {
             System.out.println("[" + i + "]:" + aResult[i]);
@@ -19,7 +19,7 @@ public class GenerateDzbh {
 
     private static String[] getString(String content) {
         // 可以自定义生成 MD5 加密字符传前的混合 KEY
-        String key = "skfjfslkjiejlkjflsnklsflg"+content;
+        String key = "skfjfslkjiejlkjflsnklsflg" + content;
         // 要使用生成 URL 的字符
         String[] chars = new String[]{"a", "b", "c", "d", "e", "f", "g", "h",
                 "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",

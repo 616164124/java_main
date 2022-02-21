@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class 希尔排序 {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(shellSort(new int[]{11, 21, 7, 9, 5, 8})));
-       System.out.println(Arrays.toString(test(new int[]{11, 21, 7, 9, 5, 8})));
+        System.out.println(Arrays.toString(test(new int[]{11, 21, 7, 9, 5, 8})));
 
     }
 
@@ -25,7 +25,7 @@ public class 希尔排序 {
         return arr;
     }
 
-    public static int[] test(int[] arr){
+    public static int[] test(int[] arr) {
         int n = arr.length;
         for (int gap = n / 2; gap > 0; gap /= 2) {
             for (int i = gap; i < n; i++) {
@@ -41,7 +41,6 @@ public class 希尔排序 {
 
         return arr;
     }
-
 
 
 }

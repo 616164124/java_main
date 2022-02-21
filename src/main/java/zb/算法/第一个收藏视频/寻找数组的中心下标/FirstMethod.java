@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class FirstMethod {
     public static void main(String[] args) {
-        int[] a = {0,9, 9, 9, 9};
+        int[] a = {0, 9, 9, 9, 9};
         System.out.println(getIndex(a));
     }
 

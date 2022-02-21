@@ -21,9 +21,9 @@ public class Orika01 {
         System.out.println("orika复制对象:" + map);
         //用BeanUtils来复制对象
         User user1 = new User(45, "mu", 38);
-        UserVO map1=new UserVO();
+        UserVO map1 = new UserVO();
         BeanUtils.copyProperties(map1, user1);
-        System.out.println("map1对象："+map1);
+        System.out.println("map1对象：" + map1);
 
 
     }

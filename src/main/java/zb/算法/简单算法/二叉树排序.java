@@ -9,9 +9,9 @@ public class 二叉树排序 {
         tree.insert(1);
         tree.insert(8);
         tree.insert(3);
-        outPutTree(tree.root);
-        getMinValue(tree.root);
-        getMaxValue(tree.root);
+        outPutTree(Tree.root);
+        getMinValue(Tree.root);
+        getMaxValue(Tree.root);
     }
 
     //遍历树中的集合

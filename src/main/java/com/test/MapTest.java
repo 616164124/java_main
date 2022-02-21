@@ -20,11 +20,11 @@ public class MapTest {
         }
 
         HashMap<Object, Object> hashMap = new HashMap<>();
-        if(hashMap.isEmpty()){
+        if (hashMap.isEmpty()) {
             hashMap.put("k", "  ");
             System.out.println("empty!!!!!");
         }
-        String k =(String) hashMap.get("k").toString().trim();
+        String k = hashMap.get("k").toString().trim();
 
         hashMap.put("1231", 883);
         hashMap.put("u", 123);
