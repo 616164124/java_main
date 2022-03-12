@@ -13,12 +13,12 @@ import java.util.List;
  * @author: mikael
  * @className: algorithm
  * @packageName: dataStructure.algorithm
- * @description: 一个数组内全部组合
+ * @description: 一个数组内全部组合(相当于全排列)
  * @date: 2020-09-15
  */
 public class algorithm {
     public static void main(String[] args) {
-        String[] array = new String[]{"1", "2", "3", "a"};
+        String[] array = new String[]{"t", "c", "p", "a"};
         List<String> strings = Arrays.asList(array);
         LinkedList linkedList = new LinkedList(strings);
         System.out.println(linkedList);

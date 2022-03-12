@@ -4,6 +4,8 @@
  */
 package com.Interview;
 
+import java.sql.SQLOutput;
+
 /**
  * @version: V1.0
  * @author: mikael
@@ -18,7 +20,17 @@ public class volatileTest {
     static volatile int[] a = {1, 3};
     static volatile long b = 1L;
 
+
+    public static void test(){
+        System.out.println(".....test");
+    }
+
     public static void main(String[] args) {
+
+        new Thread(()->{
+            test();
+            System.out.println("111111111111");
+        }).start();
 
         for (int i = 0; i < 10; i++) {
             //

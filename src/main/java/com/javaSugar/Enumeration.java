@@ -21,8 +21,10 @@ enum IntegarTest {
         this.i = i;
     }
     // 抽象方法
-
     abstract void Tell();
+    public  void teach(){
+        System.out.println("IntegarTest....teach....");
+    }
 }
 
 // 字符串相匹配
@@ -107,5 +109,8 @@ public class Enumeration {
         Week.five.Tell();
         System.out.println("------------------------------------------");
         Week.values()[1].Tell();
+
+
+
     }
 }

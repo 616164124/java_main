@@ -14,10 +14,11 @@ package com.Interview;
  */
 public class StringInternTest {
     public static void main(String[] args) {
-        String s1 = "java";
+        String s1 = "jav1a";
         String s2 = "java".intern();
         String s3 = "java";
         String s4 = s3.intern();
+        Integer iii = new Integer(12);
 
         System.out.println(s1 == s1.intern());
         System.out.println(s1 == s3);

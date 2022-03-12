@@ -65,11 +65,9 @@ public class ArrayListTest {
             System.out.println(iterator.next());
         }
         System.out.println("===========2========");
-        for (Object i : arrayList) {
-            System.out.print(i);
-        }
+        for (Object i : arrayList)
         System.out.println("===========3========");
-        arrayList.forEach((cc) -> System.out.print(cc));
+        arrayList.forEach((cc) -> System.out.print(cc+" "));
     }
 }
 
