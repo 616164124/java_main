@@ -41,7 +41,7 @@ public class Tank implements Movable {
 
         //reflection 通过二进制字节码分析类的属性和方法
 
-        Movable m = (Movable)Proxy.newProxyInstance(Tank.class.getClassLoader(),
+        Movable m = (Movable) Proxy.newProxyInstance(Tank.class.getClassLoader(),
                 new Class[]{Movable.class}, //tank.class.getInterfaces()
                 new LogHander(tank)
         );
@@ -57,6 +57,7 @@ class LogHander implements InvocationHandler {
     public LogHander(Tank tank) {
         this.tank = tank;
     }
+
     //getClass.getMethods[]
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
@@ -66,7 +67,6 @@ class LogHander implements InvocationHandler {
         return o;
     }
 }
-
 
 
 interface Movable {

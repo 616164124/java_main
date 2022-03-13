@@ -5,4 +5,5 @@ package com.dao;
  * @description:
  * @date: 2020/11/09
  */
-public class Name {}
+public class Name {
+}

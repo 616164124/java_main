@@ -20,7 +20,7 @@ import java.util.Random;
  * （毕竟日志记录，时间计算是很多方法都需要的东西），这时该怎么做呢？
  * 分离代理行为与被代理对象
  * 使用jdk的动态代理
- *
+ * <p>
  * v09: 横切代码与业务逻辑代码分离 AOP
  * v10: 通过反射观察生成的代理对象
  * jdk反射生成代理必须面向接口，这是由Proxy的内部实现决定的
@@ -43,9 +43,9 @@ public class Tank implements Movable {
     public static void main(String[] args) {
         Tank tank = new Tank();
 
-        System.getProperties().put("jdk.proxy.ProxyGenerator.saveGeneratedFiles","true");
+        System.getProperties().put("jdk.proxy.ProxyGenerator.saveGeneratedFiles", "true");
 
-        Movable m = (Movable)Proxy.newProxyInstance(Tank.class.getClassLoader(),
+        Movable m = (Movable) Proxy.newProxyInstance(Tank.class.getClassLoader(),
                 new Class[]{Movable.class}, //tank.class.getInterfaces()
                 new TimeProxy(tank)
         );

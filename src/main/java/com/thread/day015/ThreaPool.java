@@ -15,30 +15,31 @@ package com.thread.day015;
  *
  * <p>工作中一个创建方式都不用,而是用 ThreadPoolExecutor 自行创建线程池 因为 以上创建中欧有一个阻塞队列 ,而阻塞对列是的界限太大
  */
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class ThreaPool {
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    //        ExecutorService executorService =Executors.newScheduledThreadPool(7);
+        //        ExecutorService executorService =Executors.newScheduledThreadPool(7);
 
-    // ExecutorService executorService = Executors.newWorkStealingPool( 7);
+        // ExecutorService executorService = Executors.newWorkStealingPool( 7);
 
-    // ExecutorService executorService = Executors.newFixedThreadPool(5);
+        // ExecutorService executorService = Executors.newFixedThreadPool(5);
 
-    // ExecutorService executorService =Executors.newSingleThreadExecutor();
+        // ExecutorService executorService =Executors.newSingleThreadExecutor();
 
-    ExecutorService executorService = Executors.newCachedThreadPool(); // 该方法的线程池会自己扩容 灵活
+        ExecutorService executorService = Executors.newCachedThreadPool(); // 该方法的线程池会自己扩容 灵活
 
-    // ExecutorService executorService1 = new ThreadPoolExecutor(7大参数); 用该方法实现为最佳
+        // ExecutorService executorService1 = new ThreadPoolExecutor(7大参数); 用该方法实现为最佳
 
-    for (int i = 0; i < 10; i++) {
-      executorService.execute(
-          () -> {
-            System.out.println(Thread.currentThread().getName() + "\t 工作");
-          });
+        for (int i = 0; i < 10; i++) {
+            executorService.execute(
+                    () -> {
+                        System.out.println(Thread.currentThread().getName() + "\t 工作");
+                    });
+        }
     }
-  }
 }

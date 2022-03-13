@@ -10,7 +10,7 @@ import java.util.UUID;
 
 
 //处理业务的handler
-public class MyServerHandler extends SimpleChannelInboundHandler<MessageProtocol>{
+public class MyServerHandler extends SimpleChannelInboundHandler<MessageProtocol> {
     private int count;
 
     @Override
@@ -39,9 +39,9 @@ public class MyServerHandler extends SimpleChannelInboundHandler<MessageProtocol
 
         String responseContent = UUID.randomUUID().toString();
         int responseLen = responseContent.getBytes(StandardCharsets.UTF_8).length;
-        byte[]  responseContent2 = responseContent.getBytes(StandardCharsets.UTF_8);
+        byte[] responseContent2 = responseContent.getBytes(StandardCharsets.UTF_8);
         //构建一个协议包
-       MessageProtocol messageProtocol = new MessageProtocol();
+        MessageProtocol messageProtocol = new MessageProtocol();
         messageProtocol.setLen(responseLen);
         messageProtocol.setContent(responseContent2);
 

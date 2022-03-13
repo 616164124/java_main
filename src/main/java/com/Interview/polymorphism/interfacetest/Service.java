@@ -9,5 +9,5 @@ package com.Interview.polymorphism.interfacetest;
  * @date: 2020-12-04
  */
 public interface Service {
-  String say(String str);
+    String say(String str);
 }

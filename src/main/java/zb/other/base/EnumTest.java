@@ -1,8 +1,9 @@
 package zb.other.base;
 
-public enum EnumTest  {
+public enum EnumTest {
     instance;
-    public void setInstance(){
+
+    public void setInstance() {
         System.out.println("EnumTest.....");
     }
 

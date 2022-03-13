@@ -9,11 +9,12 @@ import java.nio.charset.StandardCharsets;
 public class MyClientHandler extends SimpleChannelInboundHandler<MessageProtocol> {
 
     private int count;
+
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         //使用客户端发送10条数据 "今天天气冷，吃火锅" 编号
 
-        for(int i = 0; i< 5; i++) {
+        for (int i = 0; i < 5; i++) {
             String mes = "今天天气冷，吃火锅";
             byte[] content = mes.getBytes(StandardCharsets.UTF_8);
             int length = mes.getBytes(StandardCharsets.UTF_8).length;
@@ -28,7 +29,7 @@ public class MyClientHandler extends SimpleChannelInboundHandler<MessageProtocol
 
     }
 
-//    @Override
+    //    @Override
     protected void channelRead0(ChannelHandlerContext ctx, MessageProtocol msg) throws Exception {
 
         int len = msg.getLen();

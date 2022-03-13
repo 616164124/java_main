@@ -1,6 +1,6 @@
 package com.dp.factorymethod;
 
-public class Broom implements Moveable{
+public class Broom implements Moveable {
 
     @Override
     public void go() {

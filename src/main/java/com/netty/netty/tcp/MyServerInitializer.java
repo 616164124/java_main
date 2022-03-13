@@ -1,8 +1,6 @@
 package com.netty.netty.tcp;
 
 
-
-
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;

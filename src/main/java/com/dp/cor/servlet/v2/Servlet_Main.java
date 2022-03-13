@@ -60,7 +60,7 @@ class FilterChain implements Filter {
 
     public boolean doFilter(Request request, Response response) {
 
-        for(Filter f : filters ){
+        for (Filter f : filters) {
             f.doFilter(request, response);
         }
         return true;

@@ -1,7 +1,6 @@
 package com.dp.proxy.v09;
 
 
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -21,7 +20,7 @@ import java.util.Random;
  * （毕竟日志记录，计算是很多方法都需要的东西），这时该怎么做呢？
  * 分离代理行为与被代理对象
  * 使用jdk的动态代理
- *
+ * <p>
  * v09: 横切代码与业务逻辑代码分离 AOP
  */
 public class Tank implements Movable {
@@ -42,7 +41,7 @@ public class Tank implements Movable {
     public static void main(String[] args) {
         Tank tank = new Tank();
 
-        Movable m = (Movable)Proxy.newProxyInstance(Tank.class.getClassLoader(),
+        Movable m = (Movable) Proxy.newProxyInstance(Tank.class.getClassLoader(),
                 new Class[]{Movable.class}, //tank.class.getInterfaces()
                 new TimeProxy(tank)
         );

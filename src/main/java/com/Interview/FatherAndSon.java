@@ -13,38 +13,38 @@ package com.Interview;
  * @date: 2020-10-25
  */
 public class FatherAndSon {
-  public static void main(String[] args) {
-    Son son = new Son();
-  }
+    public static void main(String[] args) {
+        Son son = new Son();
+    }
 }
 
 class Father {
-  private int age;
+    private int age;
 
-  public Father() {
-    System.out.println("father Father()");
-  }
+    public Father() {
+        System.out.println("father Father()");
+    }
 
-  public Father(int age) {
-    System.out.println("father Father(int age)");
-    this.age = age;
-  }
+    public Father(int age) {
+        System.out.println("father Father(int age)");
+        this.age = age;
+    }
 }
 
 class Son extends Father {
-  private int age;
+    private int age;
 
-  public Son() {
-    System.out.println("son Son()");
-  }
+    public Son() {
+        System.out.println("son Son()");
+    }
 
-  public Son(int age) {
-    System.out.println("Son son(int age)");
-    this.age = age;
-  }
+    public Son(int age) {
+        System.out.println("Son son(int age)");
+        this.age = age;
+    }
 
-  public Son(int age, int age1) {
-    super(age);
-    this.age = age1;
-  }
+    public Son(int age, int age1) {
+        super(age);
+        this.age = age1;
+    }
 }

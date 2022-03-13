@@ -1,7 +1,8 @@
 package zb.pattern.proxy;
 
-public class ProxyObject implements AbstractObject{
-   AbstractObject object=   new TargetObject();
+public class ProxyObject implements AbstractObject {
+    AbstractObject object = new TargetObject();
+
     @Override
     public void method1() {
         object.method1();

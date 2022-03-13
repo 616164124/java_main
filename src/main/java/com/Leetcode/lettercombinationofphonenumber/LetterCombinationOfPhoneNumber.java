@@ -16,15 +16,15 @@ import java.util.List;
  * @date: 2020-09-07
  */
 public class LetterCombinationOfPhoneNumber {
-  private final List<String> res = new ArrayList<>();
-  private final String[] map = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    private final List<String> res = new ArrayList<>();
+    private final String[] map = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
-  public static void main(String[] args) {
-    String into = "23";
-  }
+    public static void main(String[] args) {
+        String into = "23";
+    }
 
-  public static List<String> dfs(String string, String[] map) {
+    public static List<String> dfs(String string, String[] map) {
 
-    return new ArrayList<>();
-  }
+        return new ArrayList<>();
+    }
 }

@@ -8,13 +8,13 @@ import java.util.List;
  * @author mikael
  */
 public class fist {
-    private static class  ListNode{
+    private static class ListNode {
         private final int val;
-        private  ListNode next;
+        private ListNode next;
 
-        public  ListNode(int val,ListNode next){
-            this.val=val;
-            this.next=next;
+        public ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
         }
     }
 
@@ -31,15 +31,15 @@ public class fist {
     }
 
     public static void main(String[] args) {
-        ListNode one = new ListNode(1,null);
-        ListNode two = new ListNode(2,one);
-        ListNode three = new ListNode(3,two);
-        ListNode four = new ListNode(4,three);
-        ListNode five = new ListNode(5,four);
+        ListNode one = new ListNode(1, null);
+        ListNode two = new ListNode(2, one);
+        ListNode three = new ListNode(3, two);
+        ListNode four = new ListNode(4, three);
+        ListNode five = new ListNode(5, four);
         ListNode listNode = reverseList(five);
         System.out.println("111");
         int i = 3;
-        System.out.println(i^5);
+        System.out.println(i ^ 5);
     }
 
 }

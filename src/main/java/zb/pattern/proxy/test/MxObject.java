@@ -1,11 +1,11 @@
 package zb.pattern.proxy.test;
 
 /**
- *  被代理的类（明星类）
+ * 被代理的类（明星类）
  */
-public class MxObject implements AbstractObject{
+public class MxObject implements AbstractObject {
 
-    public MxObject(){
+    public MxObject() {
         System.out.println("MxObject.....");
     }
 

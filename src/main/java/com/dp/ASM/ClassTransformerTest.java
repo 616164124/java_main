@@ -25,7 +25,7 @@ public class ClassTransformerTest {
                 return new MethodVisitor(ASM4, mv) {
                     @Override
                     public void visitCode() {
-                        visitMethodInsn(INVOKESTATIC, "com/mashibing/dp/ASM/TimeProxy","before", "()V", false);
+                        visitMethodInsn(INVOKESTATIC, "com/mashibing/dp/ASM/TimeProxy", "before", "()V", false);
                         super.visitCode();
                     }
                 };
@@ -42,7 +42,7 @@ public class ClassTransformerTest {
         c2.getConstructor().newInstance();
 
 
-        String path = (String)System.getProperties().get("user.dir");
+        String path = (String) System.getProperties().get("user.dir");
         File f = new File(path + "/com/mashibing/dp/ASM/");
         f.mkdirs();
 

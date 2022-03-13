@@ -15,15 +15,15 @@ import java.util.LinkedList;
  * @date: 2020-09-06
  */
 public class LinkedListTest {
-  public static void main(String[] args) {
-    LinkedList<String> strings = new LinkedList<>();
-    strings.add("123");
-    strings.add("ttttt");
-    strings.add("ssss");
-    strings.add("3");
-    System.out.println(strings);
-    System.out.println(strings.get(0));
-    System.out.println("===========1========");
-    strings.forEach(aa -> System.out.println(aa));
-  }
+    public static void main(String[] args) {
+        LinkedList<String> strings = new LinkedList<>();
+        strings.add("123");
+        strings.add("ttttt");
+        strings.add("ssss");
+        strings.add("3");
+        System.out.println(strings);
+        System.out.println(strings.get(0));
+        System.out.println("===========1========");
+        strings.forEach(aa -> System.out.println(aa));
+    }
 }

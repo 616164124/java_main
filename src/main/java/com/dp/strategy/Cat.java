@@ -10,8 +10,8 @@ public class Cat implements Comparable<Cat> {
 
     public int compareTo(Cat c) {
 
-        if(this.weight < c.weight) return -1;
-        else if(this.weight > c.weight) return 1;
+        if (this.weight < c.weight) return -1;
+        else if (this.weight > c.weight) return 1;
         else return 0;
     }
 

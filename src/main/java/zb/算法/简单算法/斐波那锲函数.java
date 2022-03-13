@@ -38,11 +38,11 @@ public class 斐波那锲函数 {
         }
     }
 
-    public static long test02( long number){
-        if(number==0||number==1){
-            return  number;
-        }else {
-            return test02(number-1)+test02(number-2);
+    public static long test02(long number) {
+        if (number == 0 || number == 1) {
+            return number;
+        } else {
+            return test02(number - 1) + test02(number - 2);
         }
     }
 }

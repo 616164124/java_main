@@ -47,9 +47,4 @@ public class Base64EncryptionAndDecryption {
     }
 
 
-
-
-
-
-
 }

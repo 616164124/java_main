@@ -2,6 +2,7 @@ package zb.算法.第一个收藏视频.删除重复数组中的重复项中的�
 
 /**
  * 数组（已进行排序过）
+ *
  * @author mikael
  */
 public class FirstMethod {
@@ -23,12 +24,12 @@ public class FirstMethod {
         return i;
     }
 
-    public static  int test1(int[] arr){
+    public static int test1(int[] arr) {
         int i = 0;
-        for(int j=0;j<arr.length;j++){
-            if(arr[j]!=arr[i]){
+        for (int j = 0; j < arr.length; j++) {
+            if (arr[j] != arr[i]) {
                 ++i;
-                arr[j]=arr[i];
+                arr[j] = arr[i];
             }
         }
         return i;

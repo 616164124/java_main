@@ -11,10 +11,11 @@ import java.nio.charset.StandardCharsets;
 public class MyClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 
     private int count;
+
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         //使用客户端发送10条数据 hello,server 编号
-        for(int i= 0; i< 10; ++i) {
+        for (int i = 0; i < 10; ++i) {
             ByteBuf buffer = Unpooled.copiedBuffer("hello,server " + i, StandardCharsets.UTF_8);
             ctx.writeAndFlush(buffer);
         }

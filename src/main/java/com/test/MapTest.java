@@ -20,7 +20,7 @@ public class MapTest {
         }
 
         HashMap<Object, Object> hashMap = new HashMap<>();
-        if(hashMap.isEmpty()){
+        if (hashMap.isEmpty()) {
             hashMap.put("k", "  ");
             System.out.println("empty!!!!!");
         }

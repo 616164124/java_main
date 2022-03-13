@@ -4,6 +4,8 @@
  */
 package com.Interview;
 
+import java.sql.SQLOutput;
+
 /**
  * @version: V1.0
  * @author: mikael
@@ -15,20 +17,30 @@ package com.Interview;
 
 // volatile修饰的变量如果是对象或数组之类的，其含义是对象获数组的地址具有可见性，但是数组或对象内部的成员改变不具备可见性：
 public class volatileTest {
-  static volatile int[] a = {1, 3};
-  static volatile long b = 1L;
+    static volatile int[] a = {1, 3};
+    static volatile long b = 1L;
 
-  public static void main(String[] args) {
 
-    for (int i = 0; i < 10; i++) {
-      //
-      new Thread(
-              () -> {
-                b++;
-                System.out.println(Thread.currentThread().getName() + "\t" + b);
-              },
-              String.valueOf(i))
-          .start();
+    public static void test(){
+        System.out.println(".....test");
     }
-  }
+
+    public static void main(String[] args) {
+
+        new Thread(()->{
+            test();
+            System.out.println("111111111111");
+        }).start();
+
+        for (int i = 0; i < 10; i++) {
+            //
+            new Thread(
+                    () -> {
+                        b++;
+                        System.out.println(Thread.currentThread().getName() + "\t" + b);
+                    },
+                    String.valueOf(i))
+                    .start();
+        }
+    }
 }

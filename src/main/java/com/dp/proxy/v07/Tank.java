@@ -12,7 +12,6 @@ import java.util.Random;
  * v06:代理有各种类型
  * 问题：如何实现代理的各种组合？继承？Decorator?
  * v07:代理的对象改成Movable类型-越来越像decorator了
- *
  */
 public class Tank implements Movable {
 

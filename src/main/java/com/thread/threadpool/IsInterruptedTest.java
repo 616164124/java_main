@@ -7,8 +7,8 @@ package com.thread.threadpool;
  */
 public class IsInterruptedTest {
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    Thread.interrupted();
-  }
+        Thread.interrupted();
+    }
 }

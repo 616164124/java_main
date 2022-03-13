@@ -29,9 +29,9 @@ public class ComputerFutureTest01 {
         }
         try {
             POOL.shutdown();
-          if( POOL.awaitTermination(1, TimeUnit.DAYS)){
-              System.out.println("====================");
-          }
+            if (POOL.awaitTermination(1, TimeUnit.DAYS)) {
+                System.out.println("====================");
+            }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -62,9 +62,9 @@ class FilterChain {
     }
 
     public void doFilter(Request request, Response response) {
-        if(index == filters.size()) return;
+        if (index == filters.size()) return;
         Filter f = filters.get(index);
-        index ++;
+        index++;
 
         f.doFilter(request, response, this);
     }

@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class InsertionTest {
     public static void main(String[] args) {
-        Integer[] a={1,2,5,2,77,11,32,787,8};
+        Integer[] a = {1, 2, 5, 2, 77, 11, 32, 787, 8};
         Insertion insertion = new Insertion();
         Insertion.sort(a);
         System.out.println(Arrays.toString(a));

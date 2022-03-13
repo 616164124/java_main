@@ -24,7 +24,7 @@ class Child {
 
     public void wakeUp() {
         cry = true;
-        for(Observer o : observers) {
+        for (Observer o : observers) {
             o.actionOnWakeUp();
         }
     }

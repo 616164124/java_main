@@ -23,8 +23,8 @@ public class Mgr07 {
     }
 
     public static void main(String[] args) {
-        for(int i=0; i<100; i++) {
-            new Thread(()->{
+        for (int i = 0; i < 100; i++) {
+            new Thread(() -> {
                 System.out.println(Mgr07.getInstance().hashCode());
             }).start();
         }

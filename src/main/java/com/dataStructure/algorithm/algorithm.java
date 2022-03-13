@@ -13,24 +13,24 @@ import java.util.List;
  * @author: mikael
  * @className: algorithm
  * @packageName: dataStructure.algorithm
- * @description: 一个数组内全部组合
+ * @description: 一个数组内全部组合(相当于全排列)
  * @date: 2020-09-15
  */
 public class algorithm {
-  public static void main(String[] args) {
-    String[] array = new String[] {"1", "2", "3","a"};
-    List<String> strings = Arrays.asList(array);
-    LinkedList linkedList = new LinkedList(strings);
-    System.out.println(linkedList);
-    System.out.println(strings + "\t" + linkedList);
-    listAll(Arrays.asList(array), "");
-  }
-
-  public static void listAll(List canditate, String prefix) {
-    System.out.println(prefix);
-    for (int i = 0; i < canditate.size(); i++) {
-      List temp = new LinkedList(canditate);
-      listAll(temp, prefix + temp.remove(i));
+    public static void main(String[] args) {
+        String[] array = new String[]{"t", "c", "p", "a"};
+        List<String> strings = Arrays.asList(array);
+        LinkedList linkedList = new LinkedList(strings);
+        System.out.println(linkedList);
+        System.out.println(strings + "\t" + linkedList);
+        listAll(Arrays.asList(array), "");
     }
-  }
+
+    public static void listAll(List canditate, String prefix) {
+        System.out.println(prefix);
+        for (int i = 0; i < canditate.size(); i++) {
+            List temp = new LinkedList(canditate);
+            listAll(temp, prefix + temp.remove(i));
+        }
+    }
 }

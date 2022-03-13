@@ -8,7 +8,7 @@ package com.dp.Iterator.v2;
 public class Main {
     public static void main(String[] args) {
         LinkedList_ list = new LinkedList_();
-        for(int i=0; i<15; i++) {
+        for (int i = 0; i < 15; i++) {
             list.add("s" + i);
         }
         System.out.println(list.size());
@@ -29,7 +29,7 @@ class LinkedList_ {
         Node n = new Node(o);
         n.next = null;
 
-        if(head == null) {
+        if (head == null) {
             head = n;
             tail = n;
         }

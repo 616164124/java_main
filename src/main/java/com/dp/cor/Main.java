@@ -97,8 +97,8 @@ class FilterChain implements Filter {
     }
 
     public boolean doFilter(Msg m) {
-        for(Filter f : filters) {
-            if(!f.doFilter(m)) return false;
+        for (Filter f : filters) {
+            if (!f.doFilter(m)) return false;
         }
 
         return true;

@@ -41,12 +41,13 @@ public class CommonUtil {
 
     /**
      * 将i和j位置上的数据互换
+     *
      * @param arr
      * @param i
      * @param j
      */
     public static void swap(int[] arr, int i, int j) {
-        if(arr==null||arr.length==0){
+        if (arr == null || arr.length == 0) {
             return;
         }
         int temp = arr[i];
@@ -56,19 +57,20 @@ public class CommonUtil {
 
     /**
      * i,j不能相等
+     *
      * @param arr
      * @param i
      * @param j
      */
-    public static void swap2(int[]arr,int i ,int j){
-        arr[i]=arr[i]^arr[j];
-        arr[j]=arr[i]^arr[j];
-        arr[i]=arr[i]^arr[j];
+    public static void swap2(int[] arr, int i, int j) {
+        arr[i] = arr[i] ^ arr[j];
+        arr[j] = arr[i] ^ arr[j];
+        arr[i] = arr[i] ^ arr[j];
     }
 
     public static void main(String[] args) {
-        int[] arr={1,23,4};
-        swap2(arr,0,2);
+        int[] arr = {1, 23, 4};
+        swap2(arr, 0, 2);
         System.out.println(Arrays.toString(arr));
     }
 }

@@ -23,7 +23,7 @@ public class Solution {
     }
 
     @Test
-    public void test01(){
+    public void test01() {
         Solution solution = new Solution();
         TreeNode treeNode = new TreeNode(10);
 

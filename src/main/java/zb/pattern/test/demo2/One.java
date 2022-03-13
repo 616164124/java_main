@@ -1,9 +1,10 @@
 package zb.pattern.test.demo2;
 
 //
-public class One implements OneInterface{
+public class One implements OneInterface {
     private String name;
-    public void  setName(){
+
+    public void setName() {
         System.out.println("class one ..setName..");
     }
 

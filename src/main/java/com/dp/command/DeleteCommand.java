@@ -3,6 +3,7 @@ package com.dp.command;
 public class DeleteCommand extends Command {
     Content c;
     String deleted;
+
     public DeleteCommand(Content c) {
         this.c = c;
     }

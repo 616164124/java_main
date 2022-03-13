@@ -27,14 +27,14 @@ class Child {
 
         wakeUpEvent event = new wakeUpEvent(System.currentTimeMillis(), "bed");
 
-        for(Observer o : observers) {
+        for (Observer o : observers) {
             o.actionOnWakeUp(event);
         }
     }
 }
 
 //事件类 fire Event
-class wakeUpEvent{
+class wakeUpEvent {
     long timestamp;
     String loc;
 
