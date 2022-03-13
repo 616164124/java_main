@@ -19,7 +19,7 @@ public class ReflexTest {
    // System.out.println(aClass == bClass);
     System.out.println(bClass == aClass1);
     // 获取jdk版本
-    Properties properties = (Properties) System.getProperties();
+    Properties properties = System.getProperties();
     System.out.println(properties);
   }
 }

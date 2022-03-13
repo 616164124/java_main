@@ -27,7 +27,7 @@ enum Singleton7 {
  * @date: 2020-10-01
  */
 public class Singleton1 {
-  private static Singleton1 singleton1 = new Singleton1();
+  private static final Singleton1 singleton1 = new Singleton1();
 
   public Singleton1() {}
 
@@ -91,7 +91,7 @@ class Singleton3 {
  * @date: 2020-10-01
  */
 class Singleton4 {
-  private static Singleton4 singleton4 = new Singleton4();
+  private static final Singleton4 singleton4 = new Singleton4();
 
   public Singleton4() {}
 

@@ -35,7 +35,7 @@ public class jdk8day004 {
     User hua = Optional.ofNullable(user).orElse(new User(88, "hua"));
     // 如果usre2 不为空,则orElse中就不会执行
     User hua2 = Optional.ofNullable(user2).orElse(new User(33, "hua33"));
-    System.out.println(hua.toString());
-    System.out.println(hua2.toString());
+    System.out.println(hua);
+    System.out.println(hua2);
   }
 }

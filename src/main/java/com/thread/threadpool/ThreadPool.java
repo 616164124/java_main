@@ -5,9 +5,9 @@ import java.util.concurrent.*;
 
 /** @author mikael */
 public class ThreadPool {
-  private ExecutorService executor = Executors.newFixedThreadPool(2);
+  private final ExecutorService executor = Executors.newFixedThreadPool(2);
     // 定义任务:
-   private static Callable<String> task = new Task();
+   private static final Callable<String> task = new Task();
   public static void main(String[] args) {
       ExecutorService executor = Executors.newFixedThreadPool(4);
       
@@ -31,7 +31,7 @@ public class ThreadPool {
 }
 
 class Thread01 implements Runnable{
-    private  Callable<String> task;
+    private final Callable<String> task;
 
 
     public Thread01(Callable<String> task) {

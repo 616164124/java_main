@@ -33,11 +33,11 @@ public class ExceptionTest {
     ExceptionTest test1 = new ExceptionTest();
     ExceptionTest test2 = new ExceptionTest();
     ExceptionTest test3 = new ExceptionTest();
-    test1.x++;  // 不应该通过类实例访问静态成员
+    x++;  // 不应该通过类实例访问静态成员
     x++;
   }
 }
 
 class Test {
-  private static int a = 100;
+  private static final int a = 100;
 }

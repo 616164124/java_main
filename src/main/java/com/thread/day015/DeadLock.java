@@ -4,8 +4,8 @@ import java.util.concurrent.TimeUnit;
 
 /** 死锁 */
 public class DeadLock implements Runnable {
-  private String locka;
-  private String lockb;
+  private final String locka;
+  private final String lockb;
 
   public DeadLock(String locka, String lockb) {
     this.locka = locka;

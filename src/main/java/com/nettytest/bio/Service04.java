@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -39,7 +40,7 @@ public class Service04 {
         InputStream inputStream = accept.getInputStream();
         int read = inputStream.read(bytes);
         if (read != -1) {
-          System.out.println(new String(bytes, 0, read, Charset.forName("utf-8")));
+          System.out.println(new String(bytes, 0, read, StandardCharsets.UTF_8));
         }
       }
 

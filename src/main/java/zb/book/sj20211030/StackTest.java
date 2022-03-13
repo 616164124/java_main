@@ -17,7 +17,7 @@ public class StackTest {
         queue.add("45");
         queue.add("45");
 
-        System.out.println(queue.toString());
+        System.out.println(queue);
         Stack<Object> stack = new Stack<>();
         stack.push("12");
         System.out.println(stack);

@@ -9,7 +9,7 @@ public class Mgr02 {
         INSTANCE = new Mgr02();
     }
 
-    private Mgr02() {};
+    private Mgr02() {}
 
     public static Mgr02 getInstance() {
         return INSTANCE;

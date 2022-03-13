@@ -40,7 +40,7 @@ public class OneThreadPlus {
 }
 
 class M {
-  private static volatile AtomicInteger atomicInteger = new AtomicInteger(0);
+  private static final AtomicInteger atomicInteger = new AtomicInteger(0);
 
   public synchronized void add() {
     atomicInteger.getAndIncrement();

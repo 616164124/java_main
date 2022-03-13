@@ -24,7 +24,7 @@ public class MapTest {
             hashMap.put("k", "  ");
             System.out.println("empty!!!!!");
         }
-        String k =(String) hashMap.get("k").toString().trim();
+        String k = hashMap.get("k").toString().trim();
 
         hashMap.put("1231", 883);
         hashMap.put("u", 123);

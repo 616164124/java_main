@@ -10,7 +10,7 @@ public class BubbleTest {
         int[] aa = {1,2,5,2,77,11,32,87876,9};
 
         Bubble bubble = new Bubble();
-            bubble.sort(a);
+            Bubble.sort(a);
         System.out.println(Arrays.toString(a));
     }
 }

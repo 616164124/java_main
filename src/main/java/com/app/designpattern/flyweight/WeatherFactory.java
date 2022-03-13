@@ -3,7 +3,7 @@ package com.app.designpattern.flyweight;
 import java.util.HashMap;
 //享元工厂
 public class WeatherFactory {
-	private HashMap<IWeather, IWeather> weathers;
+	private final HashMap<IWeather, IWeather> weathers;
 	public WeatherFactory(){
 		weathers = new HashMap<IWeather, IWeather>();
 	}

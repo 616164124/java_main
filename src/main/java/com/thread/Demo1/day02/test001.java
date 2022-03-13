@@ -1,7 +1,7 @@
 package com.thread.Demo1.day02;
 
 public class test001 {
-  private String name;
+  private final String name;
 
   public test001(String name) {
     this.name = name;

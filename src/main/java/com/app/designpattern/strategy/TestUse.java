@@ -1,6 +1,6 @@
 package com.app.designpattern.strategy;
 public class TestUse {
-	public static void main(String args[]){
+	public static void main(String[] args){
 		Object data = "数据";
 		ISaveData saveData = new SaveToRedis();
 		SaveClient client = new SaveClient(saveData);

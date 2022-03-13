@@ -3,9 +3,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 public class Folder implements Component {
-	private String name;
-	private List<Component> files;
-	private List<Component> folders;
+	private final String name;
+	private final List<Component> files;
+	private final List<Component> folders;
 	public Folder(String name){
 		this.name = name;
 		files = new ArrayList<Component>();

@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 /** 从数据库中读取信用数据，套用模型，并把结果进行记录和传输 */
 public class T15_FullGC_Problem01 {
 
-  private static ScheduledThreadPoolExecutor executor =
+  private static final ScheduledThreadPoolExecutor executor =
       new ScheduledThreadPoolExecutor(50, new ThreadPoolExecutor.DiscardOldestPolicy());
 
   public static void main(String[] args) throws Exception {

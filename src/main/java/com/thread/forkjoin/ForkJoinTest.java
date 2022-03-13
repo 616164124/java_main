@@ -41,10 +41,10 @@ public class ForkJoinTest {
 
 class SumTask extends RecursiveTask<Integer> {
 
-  private int THREHOLD = 10;
-  private int[] src;
-  private Integer left;
-  private Integer right;
+  private final int THREHOLD = 10;
+  private final int[] src;
+  private final Integer left;
+  private final Integer right;
 
   public SumTask(int[] src, Integer left, Integer right) {
     this.src = src;

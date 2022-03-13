@@ -10,7 +10,10 @@ public class 插入排序 {
 
     public static void main(String[] args) {
         int[] i = CommonUtil.randomInt(10);
-        insertSort(i);
+        System.out.println(Arrays.toString(i));
+
+//        insertSort(i);
+        test04(i);
         System.out.println(Arrays.toString(i));
     }
     

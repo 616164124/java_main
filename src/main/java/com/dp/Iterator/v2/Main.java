@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         LinkedList_ list = new LinkedList_();
         for(int i=0; i<15; i++) {
-            list.add(new String("s" + i));
+            list.add("s" + i);
         }
         System.out.println(list.size());
     }
@@ -40,7 +40,7 @@ class LinkedList_ {
     }
 
     private class Node {
-        private Object o;
+        private final Object o;
         Node next;
 
         public Node(Object o) {

@@ -15,8 +15,8 @@ package com.Interview;
  */
 public class StringInternTest {
   public static void main(String[] args) {
-    String s1 = new String("java");
-    String s2 = new String("java").intern();
+    String s1 = "java";
+    String s2 = "java".intern();
     String s3 = "java";
     String s4 = s3.intern();
 
@@ -51,6 +51,6 @@ public class StringInternTest {
     for (int i = 0; i < chars.length; ++i) {
       stringBuilder.append(chars[chars.length - i - 1]);
     }
-    System.out.println(stringBuilder.toString());
+    System.out.println(stringBuilder);
   }
 }

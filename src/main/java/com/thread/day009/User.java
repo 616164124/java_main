@@ -2,9 +2,9 @@ package com.thread.day009;
 
 public class User {
 
-  private int age;
+  private final int age;
 
-  private String name;
+  private final String name;
 
   public User(int age, String name) {
     this.age = age;

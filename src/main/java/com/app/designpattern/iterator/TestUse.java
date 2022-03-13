@@ -1,6 +1,6 @@
 package com.app.designpattern.iterator;
 public class TestUse {
-	public static void main(String args[]){
+	public static void main(String[] args){
 		//分别定义两种结构
 		MyList<String> array = new MyArrayList<String>();
 		MyList<String> link = new MyLinkedList<String>();

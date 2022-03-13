@@ -7,10 +7,10 @@ import java.util.concurrent.locks.ReentrantLock;
 /** a线程完成后,通知b线程,b线程完成后,通知c线程 */
 class conditionsFor {
   private int n = 1;
-  private Lock lock = new ReentrantLock();
-  private Condition c1 = lock.newCondition();
-  private Condition c3 = lock.newCondition();
-  private Condition c2 = lock.newCondition();
+  private final Lock lock = new ReentrantLock();
+  private final Condition c1 = lock.newCondition();
+  private final Condition c3 = lock.newCondition();
+  private final Condition c2 = lock.newCondition();
 
   public void play5() {
     lock.lock();

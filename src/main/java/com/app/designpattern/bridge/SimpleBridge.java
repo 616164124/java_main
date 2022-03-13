@@ -1,7 +1,7 @@
 package com.app.designpattern.bridge;
 //桥接模式
 public class SimpleBridge {
-	public static void main(String args[]){
+	public static void main(String[] args){
 		new LenevoComputer(new Amd()).discribe();
 		new HaseeComputer(new Intel()).discribe();
 	}

@@ -19,7 +19,7 @@ import java.util.concurrent.Executors;
 public class NettyClient {
 
     //创建线程池
-    private static ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+    private static final ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
     private static NettyClientHandler client;
     private int count = 0;

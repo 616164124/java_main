@@ -17,7 +17,7 @@ public class HashMapTest {
 
     ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap(12);
     Integer integer = new Integer(12);
-    String s = new String("123");
+    String s = "123";
 
     for (int i = 0; i < 10; i++) {
       hashMap.put(new Test01(), new Object());

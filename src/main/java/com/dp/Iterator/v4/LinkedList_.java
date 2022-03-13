@@ -24,7 +24,7 @@ class LinkedList_ implements Collection_ {
     }
 
     private class Node {
-        private Object o;
+        private final Object o;
         Node next;
 
         public Node(Object o) {

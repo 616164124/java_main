@@ -21,7 +21,6 @@ public enum PersonEnum {
     for (PersonEnum value : values) {
       //
       if (index == value.getCode()) {
-
         return value;
       }
     }

@@ -1,7 +1,7 @@
 package com.app.designpattern.abstractfactory;
 //抽象工厂模式
 public class AbstractFactory {
-	public static void main(String args[]){
+	public static void main(String[] args){
 		IFactory bigfactory = new BigFactory();
 		IFactory smallfactory = new BigFactory();
 		bigfactory.producePhone().run();

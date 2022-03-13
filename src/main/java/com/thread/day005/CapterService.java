@@ -4,7 +4,7 @@ import java.util.*;
 
 /** */
 public class CapterService {
-  private static LinkedList<Control> controler = new LinkedList<>();
+  private static final LinkedList<Control> controler = new LinkedList<>();
 
   public static void main(String[] args) {
 

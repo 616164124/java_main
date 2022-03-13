@@ -1,6 +1,6 @@
 package com.app.designpattern.chainofresponsibility;
 public class TestUse {
-	public static void main(String args[]){
+	public static void main(String[] args){
 		Handler h1,h2,h3;
 		h1 = new Handler1();
 		h2 = new Handler2();

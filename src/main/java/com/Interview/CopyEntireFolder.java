@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /** @Description: @Author: mikael */
 public class CopyEntireFolder {
-  private static String separator = File.separator;
+  private static final String separator = File.separator;
 
   // 复制文件夹
 

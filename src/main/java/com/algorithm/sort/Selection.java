@@ -5,7 +5,7 @@ package com.algorithm.sort;
  */
 public class Selection {
     //对数组a进行排序
-    public static void sort(Comparable a[]){
+    public static void sort(Comparable[] a){
         for(int i=0 ;i<a.length-1;i++){
             int minIndex=i;
             for(int j=i+1;j<a.length;j++){

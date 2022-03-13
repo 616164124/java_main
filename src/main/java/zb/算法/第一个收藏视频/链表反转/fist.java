@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class fist {
     private static class  ListNode{
-        private  int val;
+        private final int val;
         private  ListNode next;
 
         public  ListNode(int val,ListNode next){

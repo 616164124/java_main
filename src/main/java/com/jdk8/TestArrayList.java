@@ -21,7 +21,7 @@ public class TestArrayList {
   //  integers1.addAll(integers);
     System.out.println(integers1.size());
 
-    System.out.println(strings.subList(0, strings.size()).toString());
+    System.out.println(strings.subList(0, strings.size()));
 
   }
 }

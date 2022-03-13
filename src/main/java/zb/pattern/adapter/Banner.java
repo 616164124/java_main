@@ -1,7 +1,7 @@
 package zb.pattern.adapter;
 
 public class Banner {
-    private String string;
+    private final String string;
     public Banner(String string){
         this.string=string;
     }

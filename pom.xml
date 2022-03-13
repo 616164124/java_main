@@ -133,6 +133,14 @@
             <scope>compile</scope>
         </dependency>
 
+        <dependency>
+            <groupId>co.paralleluniverse</groupId>
+            <artifactId>quasar-core</artifactId>
+            <version>0.7.9</version>
+            <classifier>jdk8</classifier>
+        </dependency>
+
+
 
         <dependency>
             <groupId>com.maxmind.geoip2</groupId>

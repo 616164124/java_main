@@ -53,7 +53,7 @@ public class Deep_clone {
 class CloneTest3 implements Serializable {
   private int id;
   private String name;
-  private CloneTest2 cloneTest2;
+  private final CloneTest2 cloneTest2;
 
   public CloneTest3(int id, String name, CloneTest2 cloneTest2) {
     this.id = id;
@@ -83,7 +83,7 @@ class CloneTest3 implements Serializable {
       ObjectInputStream ois = new ObjectInputStream(bais);
       cloneTest3 = (CloneTest3) ois.readObject();
     } catch (Exception e) {
-      System.out.println(e.toString());
+      System.out.println(e);
     }
     return cloneTest3;
   }
@@ -142,7 +142,7 @@ class CloneTest3 implements Serializable {
 class CloneTest implements Cloneable {
   private int id;
   private String name;
-  private CloneTest2 cloneTest2;
+  private final CloneTest2 cloneTest2;
 
   public CloneTest(int id, String name, CloneTest2 cloneTest2) {
     this.id = id;

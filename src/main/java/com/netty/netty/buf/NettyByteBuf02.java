@@ -4,6 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @author mikael
@@ -12,7 +13,7 @@ public class NettyByteBuf02 {
     public static void main(String[] args) {
 
         //创建ByteBuf
-        ByteBuf byteBuf = Unpooled.copiedBuffer("hello,world!", Charset.forName("utf-8"));
+        ByteBuf byteBuf = Unpooled.copiedBuffer("hello,world!", StandardCharsets.UTF_8);
 
         //使用相关的方法
         if(byteBuf.hasArray()) { // true
@@ -20,7 +21,7 @@ public class NettyByteBuf02 {
             byte[] content = byteBuf.array();
 
             //将 content 转成字符串
-            System.out.println(new String(content, Charset.forName("utf-8")));
+            System.out.println(new String(content, StandardCharsets.UTF_8));
 
             System.out.println("byteBuf=" + byteBuf);
 
@@ -41,8 +42,8 @@ public class NettyByteBuf02 {
             }
 
             //按照某个范围读取
-            System.out.println(byteBuf.getCharSequence(0, 4, Charset.forName("utf-8")));
-            System.out.println(byteBuf.getCharSequence(4, 6, Charset.forName("utf-8")));
+            System.out.println(byteBuf.getCharSequence(0, 4, StandardCharsets.UTF_8));
+            System.out.println(byteBuf.getCharSequence(4, 6, StandardCharsets.UTF_8));
 
 
         }

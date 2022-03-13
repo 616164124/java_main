@@ -10,7 +10,7 @@ import io.netty.handler.codec.string.StringEncoder;
 
 public class GroupChatServer {
 
-    private int port; //监听端口
+    private final int port; //监听端口
 
 
     public GroupChatServer(int port) {

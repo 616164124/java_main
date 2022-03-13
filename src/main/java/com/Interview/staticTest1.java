@@ -12,7 +12,7 @@ class AA {
     System.out.print("A gouzhao");
   }
 
-  private static AA a = new AA(); // 执行了一次new
+  private static final AA a = new AA(); // 执行了一次new
 
   static {
     System.out.print("static");

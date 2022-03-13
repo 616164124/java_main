@@ -2,7 +2,7 @@ package com.thread.day01;
 
 public class TinkerWindow extends Thread {
   private String name;
-  private int Max = 50;
+  private final int Max = 50;
   private int index = 1;
 
   public TinkerWindow(String name) {

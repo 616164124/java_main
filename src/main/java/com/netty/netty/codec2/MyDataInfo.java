@@ -61,7 +61,7 @@ public final class MyDataInfo {
      */
     WorkerOrBuilder getWorkerOrBuilder();
 
-    public MyMessage.DataBodyCase getDataBodyCase();
+    MyMessage.DataBodyCase getDataBodyCase();
   }
   /**
    * <pre>
@@ -276,7 +276,7 @@ public final class MyDataInfo {
 
       private final int value;
 
-      private DataType(int value) {
+      DataType(int value) {
         this.value = value;
       }
 
@@ -291,7 +291,7 @@ public final class MyDataInfo {
       WORKER(3),
       DATABODY_NOT_SET(0);
       private final int value;
-      private DataBodyCase(int value) {
+      DataBodyCase(int value) {
         this.value = value;
       }
       /**
@@ -313,9 +313,9 @@ public final class MyDataInfo {
       public int getNumber() {
         return this.value;
       }
-    };
+    }
 
-    public DataBodyCase
+      public DataBodyCase
     getDataBodyCase() {
       return DataBodyCase.forNumber(
           dataBodyCase_);
@@ -688,35 +688,35 @@ public final class MyDataInfo {
 
       @Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -987,8 +987,8 @@ public final class MyDataInfo {
           dataBody_ = null;
         }
         dataBodyCase_ = 2;
-        onChanged();;
-        return studentBuilder_;
+        onChanged();
+          return studentBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1123,8 +1123,8 @@ public final class MyDataInfo {
           dataBody_ = null;
         }
         dataBodyCase_ = 3;
-        onChanged();;
-        return workerBuilder_;
+        onChanged();
+          return workerBuilder_;
       }
       @Override
       public final Builder setUnknownFields(
@@ -1587,35 +1587,35 @@ public final class MyDataInfo {
 
       @Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2227,35 +2227,35 @@ public final class MyDataInfo {
 
       @Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {

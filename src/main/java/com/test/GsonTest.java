@@ -23,7 +23,7 @@ public class GsonTest {
         System.out.println(s);
         String ss = "{\"id\":12,\"name\":\"ming\",\"age\":13}";
         //将字符串转化为对象类型
-        User o = (User) gson.fromJson(ss, User.class);
+        User o = gson.fromJson(ss, User.class);
         System.out.println("===========" + o.getName());
         //BigDecimal
         String ssss= new BigDecimal("100").multiply(new BigDecimal("0.03")).setScale(2, BigDecimal.ROUND_HALF_UP).toString();

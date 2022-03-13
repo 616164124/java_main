@@ -6,7 +6,7 @@ package com.thread.Demo1.day01;
  */
 public class msb001 {
   private int count = 10;
-  private Object object = new Object();
+  private final Object object = new Object();
 
   private void m() {
     synchronized (object) { // 相要执行｛｝下的代码先去堆中神器object的锁    object一般用this代替

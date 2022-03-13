@@ -5,7 +5,7 @@ package com.algorithm.sort;
  */
 public class Bubble {
     //对数组a进行排序
-    public static void sort(Comparable a[]){
+    public static void sort(Comparable[] a){
         for(int i=a.length-1 ;i>0;i--){
             for(int j=0;j<i;j++){
                 if(greater(a[j+1],a[j])){

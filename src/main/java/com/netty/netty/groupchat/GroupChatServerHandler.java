@@ -22,7 +22,7 @@ public class GroupChatServerHandler extends SimpleChannelInboundHandler<String> 
 
     //定义一个channle 组，管理所有的channel
     //GlobalEventExecutor.INSTANCE) 是全局的事件执行器，是一个单例
-    private static ChannelGroup  channelGroup = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
+    private static final ChannelGroup  channelGroup = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 

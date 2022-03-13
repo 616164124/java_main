@@ -1,6 +1,6 @@
 package com.app.designpattern.bridge;
 public class TestUse {
-	public static void main(String args[]){
+	public static void main(String[] args){
 		Object data = "数据";
 		ISaveData saveDataDb = new SaveToDB();
 		ISaveData saveDataFile = new SaveToFile();

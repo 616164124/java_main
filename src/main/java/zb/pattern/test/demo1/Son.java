@@ -3,7 +3,7 @@ package zb.pattern.test.demo1;
 
 public class Son extends Father implements MethodInterface{
 
-    private String ss="12";
+    private final String ss="12";
 
     public void  smethod1(){
         System.out.println("smethod1.....");

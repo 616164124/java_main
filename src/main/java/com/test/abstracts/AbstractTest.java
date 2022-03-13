@@ -12,7 +12,7 @@ public class AbstractTest extends A {
         new A() {
           @Override
           public boolean isError(String a) {
-            return a == "te" ? true : false;
+            return a == "te";
           }
         };
     a.test();
@@ -20,13 +20,13 @@ public class AbstractTest extends A {
 
   @Override
   public boolean isError(String a) {
-    return a == "t" ? true : false;
+    return a == "t";
   }
 }
 
 /** 测试抽象类中的抽象方法的使用 */
 abstract class A {
-  private String test_src = "test";
+  private final String test_src = "test";
 
   public void test() {
     if (this.isError(test_src)) {

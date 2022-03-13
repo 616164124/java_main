@@ -1,6 +1,6 @@
 package com.app.designpattern.command;
 public class TestUse {
-	public static void main(String args[]) throws Exception{
+	public static void main(String[] args) throws Exception{
 		//接收者
 		MakeFile makeFile = new MakeFile();
 		//命令

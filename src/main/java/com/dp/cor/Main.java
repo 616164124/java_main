@@ -89,7 +89,7 @@ class URLFilter implements Filter {
 }
 
 class FilterChain implements Filter {
-    private List<Filter> filters = new ArrayList<>();
+    private final List<Filter> filters = new ArrayList<>();
 
     public FilterChain add(Filter f) {
         filters.add(f);

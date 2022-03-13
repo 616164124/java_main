@@ -5,7 +5,7 @@ import java.util.*;
 /** 多个生产者,多个消费者 */
 public class CapterService3 {
 
-  private static LinkedList<Locker2> locker2s = new LinkedList<>();
+  private static final LinkedList<Locker2> locker2s = new LinkedList<>();
 
   public static void main(String[] args) {
 

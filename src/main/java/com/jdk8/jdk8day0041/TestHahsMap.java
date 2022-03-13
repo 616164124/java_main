@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class TestHahsMap {
-  private static List list=new ArrayList();
+  private static final List list=new ArrayList();
   public static void main(String[] args) {
     HashMap<Object, Object> hashMap = new HashMap<>();
     hashMap.put(12344, "fls");

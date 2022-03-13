@@ -19,9 +19,9 @@ public class ThreadLoopExecution {
   char[] chars = "abcdef".toCharArray();
   char[] chars1 = "123456".toCharArray();
   char[] chars2 = "ABCDEF".toCharArray();
-  private static Semaphore s1 = new Semaphore(1);
-  private static Semaphore s2 = new Semaphore(1);
-  private static Semaphore s3 = new Semaphore(1);
+  private static final Semaphore s1 = new Semaphore(1);
+  private static final Semaphore s2 = new Semaphore(1);
+  private static final Semaphore s3 = new Semaphore(1);
 
   Thread t1 =
       new Thread(
@@ -96,7 +96,6 @@ public class ThreadLoopExecution {
       if (System.currentTimeMillis() - l > 3) {
         System.exit(0);
       }
-      ;
     }
   }
 }

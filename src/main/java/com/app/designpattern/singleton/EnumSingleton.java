@@ -5,5 +5,5 @@ package com.app.designpattern.singleton;
  *
  */
 public enum EnumSingleton {
-	instance;
+	instance
 }

@@ -34,8 +34,7 @@ class ArrayList_ implements Collection_ {
 
         @Override
         public boolean hasNext() {
-            if(currentIndex >= index) return false;
-            return true;
+            return currentIndex < index;
         }
 
         @Override

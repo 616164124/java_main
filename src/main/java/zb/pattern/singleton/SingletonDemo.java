@@ -5,7 +5,7 @@ public class SingletonDemo {
     private int a =1000;
     public SingletonDemo(){
     }
-    private static SingletonDemo singletonDemo = new SingletonDemo();
+    private static final SingletonDemo singletonDemo = new SingletonDemo();
 
     public static SingletonDemo getInstance(){
         return singletonDemo;

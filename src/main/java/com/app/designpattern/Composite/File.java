@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 //Leaf节点
 public class File implements Component{
-	private String name;
+	private final String name;
 	public File(String name){
 		this.name = name;
 	}

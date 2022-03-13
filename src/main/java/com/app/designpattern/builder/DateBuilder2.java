@@ -1,7 +1,7 @@
 package com.app.designpattern.builder;
 //具体生成器
 public class DateBuilder2 implements IDateBuilder{
-	private MyDate myDate;
+	private final MyDate myDate;
 	public DateBuilder2(MyDate myDate){
 		this.myDate = myDate;
 	}

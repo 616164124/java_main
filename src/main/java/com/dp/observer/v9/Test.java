@@ -15,7 +15,7 @@ public class Test {
 
 class Button {
 	
-	private List<ActionListener> actionListeners = new ArrayList<ActionListener>();
+	private final List<ActionListener> actionListeners = new ArrayList<ActionListener>();
 	
 	public void buttonPressed() {
 		ActionEvent e = new ActionEvent(System.currentTimeMillis(),this);
@@ -31,7 +31,7 @@ class Button {
 }
 
 interface ActionListener {
-	public void actionPerformed(ActionEvent e);
+	void actionPerformed(ActionEvent e);
 }
 
 class MyActionListener implements ActionListener {

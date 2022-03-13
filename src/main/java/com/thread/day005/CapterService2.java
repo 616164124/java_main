@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public class CapterService2 {
 
-  private static LinkedList<Locker> lockers = new LinkedList<>();
+  private static final LinkedList<Locker> lockers = new LinkedList<>();
 
   public static void main(String[] args) {
 

@@ -1,6 +1,6 @@
 package com.app.designpattern.mediator;
 public class TestUse {
-	public static void main(String args[]){
+	public static void main(String[] args){
 		Object data = "数据";
 		PersistentDB persistentDB = new PersistentDB();
 		PersistentFile persistentFile = new PersistentFile();

@@ -56,7 +56,7 @@ public class ArrayListTest {
 
     ArrayList<Object> objects = new ArrayList<>();
     finalizeTest finalizeTest = new finalizeTest();
-     List arrayList1 = (List)arrayList;
+     List arrayList1 = arrayList;
     arrayList1.forEach((aa) -> System.out.print(aa));
     Iterator iterator = arrayList1.iterator();
     System.out.println("===============1==========");

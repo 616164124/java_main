@@ -9,7 +9,7 @@ public class Dispatch {
 	void print(ChildClass c){
 		System.out.print("子类");
 	}
-	public static void main(String args[]){
+	public static void main(String[] args){
 		FatherClass child = new ChildClass();
 		new Dispatch().print(child);
 		child.print();

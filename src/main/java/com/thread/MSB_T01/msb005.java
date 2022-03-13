@@ -15,9 +15,9 @@ public class msb005<T> {
   private final LinkedList<T> lists = new LinkedList<T>();
   private int count = 0;
 
-  private ReentrantLock lock = new ReentrantLock();
-  private Condition pro = lock.newCondition(); // 生产者
-  private Condition consumer = lock.newCondition(); // 消费者
+  private final ReentrantLock lock = new ReentrantLock();
+  private final Condition pro = lock.newCondition(); // 生产者
+  private final Condition consumer = lock.newCondition(); // 消费者
 
   public T get() {
     T t = null;

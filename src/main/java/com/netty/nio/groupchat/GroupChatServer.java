@@ -121,7 +121,7 @@ public class GroupChatServer {
                 //关闭通道
                 channel.close();
             }catch (IOException e2) {
-                e2.printStackTrace();;
+                e2.printStackTrace();
             }
         }
     }

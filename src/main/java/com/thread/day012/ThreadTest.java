@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 public class ThreadTest {
 
   public static void main(String[] args) {
-
+//10个人只做add.anInt(1)这一步
     for (int i = 0; i < 10; i++) {
       new Thread(
               () -> {
@@ -26,7 +26,7 @@ public class ThreadTest {
     }
 
     System.out.println("+++++++++++++++++++++++++++++");
-
+//一个人做了10次的 i++
     new Thread(
             () -> {
               for (int i = 0; i < 10; i++) {

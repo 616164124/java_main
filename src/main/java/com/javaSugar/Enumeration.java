@@ -15,9 +15,9 @@ enum IntegarTest {
       System.out.println("IntegarTest  two");
     }
   };
-  private int i;
+  private final int i;
 
-  private IntegarTest(int i) {
+  IntegarTest(int i) {
     this.i = i;
   }
   // 抽象方法

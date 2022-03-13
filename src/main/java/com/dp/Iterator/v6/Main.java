@@ -18,7 +18,7 @@ public class Main {
     public static void main(String[] args) {
         Collection c = new ArrayList();
         for(int i=0; i<15; i++) {
-            c.add(new String("s" + i));
+            c.add("s" + i);
         }
 
         Iterator it = c.iterator();

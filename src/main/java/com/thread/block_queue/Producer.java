@@ -19,7 +19,7 @@ import java.util.concurrent.BlockingQueue;
  */
 public class Producer implements Runnable {
   private int element = 0;
-  private BlockingQueue<Integer> blockingQueue;
+  private final BlockingQueue<Integer> blockingQueue;
 
   public Producer(BlockingQueue<Integer> blockingQueue) {
 

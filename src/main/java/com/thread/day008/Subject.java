@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Subject {
 
-  private List<Obsever> obsever = new ArrayList<>();
+  private final List<Obsever> obsever = new ArrayList<>();
   private int state;
 
   public int getState() {
