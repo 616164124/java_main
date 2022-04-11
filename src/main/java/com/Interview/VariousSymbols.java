@@ -4,6 +4,8 @@
  */
 package com.Interview;
 
+import java.math.BigDecimal;
+
 /**
  * @version: V1.0
  * @author: mikael
@@ -28,6 +30,7 @@ public class VariousSymbols {
         } else {
             System.out.println(2);
         }
+        System.out.println(2^2);
         // 三目运算   必须有返回值   booleam？表达式1 ： 表达式2 ； 其中表达式1，2  必须有值返回；
         String s = (((a >> 31) ^ (b >> 31)) == 0) ? "a,b 都是正数" : "不是都是正数";
         System.out.println(s);
@@ -44,6 +47,7 @@ public class VariousSymbols {
         System.out.println();
         // double, float类型 都不能完全精确表示出来 (2.0可以精确，2.1不能)
         // 要想完整表达用BigDecimal 来表达
+        BigDecimal bigDecimal = new BigDecimal("12.1231");
         float f = 3.1f;
         double d2 = 100.1d;
         String s5 = f * 3 == 9.3 ? "true" : "false";

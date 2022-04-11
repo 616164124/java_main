@@ -1,9 +1,14 @@
 package com.jdk8.jdk8day003;
 
+import com.dao.User;
+
 enum Type implements Print {
     A {
         @Override
         public String Print() {
+            User user = new User();
+            user.setName("yun");
+
             return "a";
         }
     },

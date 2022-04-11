@@ -11,7 +11,8 @@ public class format {
         //
         System.out.println(String.format("我是%s,你是%s,他是%s", "t", "f", "h"));
         String str = null;
-        str = String.format("Hi,%s", "王力");
+        str = String.format("Hi,%s", "王");
+        str = String.format("he,%d", 231);
         System.out.println(str);
         int i = Integer.MAX_VALUE;
         int c = Integer.MIN_VALUE;

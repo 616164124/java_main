@@ -121,6 +121,7 @@ public class 快速排序 {
     }
 
 
+
     public static void test05(int[] arr, int left, int right) {
         if (left >= right) {
             return;
@@ -183,6 +184,11 @@ public class 快速排序 {
 
     }
 
+    public static void test09(int[] arr,int left,int right){
+        if(left>right){
+
+        }
+    }
 }
 
 
