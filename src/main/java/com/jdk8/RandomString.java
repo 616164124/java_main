@@ -8,8 +8,9 @@ import java.util.concurrent.ThreadLocalRandom;
 public class RandomString {
     public static void main(String[] args) {
         //
+        int i  = ThreadLocalRandom.current().nextInt();
         long l = ThreadLocalRandom.current().nextLong();
-        int i = ThreadLocalRandom.current().nextInt();
+
         System.out.println(i);
         System.out.println(l);
     }

@@ -14,6 +14,17 @@ public class Test01 {
 
         System.out.println(new Random().nextInt(10));
         int add = add();
+        if(add>0){
+            System.out.println("add>0");
+        }else {
+            System.out.println("add<0");
+        }
+        for (int i = 0; i < 10; i++) {
+            if(i==8){
+                System.out.println("====");
+            }
+        }
+
         System.out.printf("add为 %d", add);
         System.out.println(UUID.randomUUID());
         System.out.println("jfklsjflsf");

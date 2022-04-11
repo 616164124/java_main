@@ -1,8 +1,5 @@
 package zb.thread;
 
-import org.aspectj.weaver.ast.Var;
-
-import java.util.concurrent.*;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 

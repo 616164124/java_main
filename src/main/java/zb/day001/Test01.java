@@ -15,6 +15,8 @@ public class Test01 {
                 Thread thread = new Thread(r);
                 Thread.UncaughtExceptionHandler uncaughtExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
                 thread.setUncaughtExceptionHandler(uncaughtExceptionHandler);
+
+
                 return thread;
             }
         });
