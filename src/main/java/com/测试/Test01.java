@@ -11,6 +11,10 @@ public class Test01 {
         o.put("1", "21");
         o.put("1", "21");
         o.put("1", "21");
+        Long s=new Long(12);
+        int maxValue = Integer.MAX_VALUE;
+        long maxValue1 = Long.MAX_VALUE;
+        System.out.println(maxValue+"======"+maxValue1);
 
         System.out.println(new Random().nextInt(10));
         int add = add();
@@ -24,11 +28,13 @@ public class Test01 {
                 System.out.println("====");
             }
         }
-
+        int t= (1000000+873);
+        int i = t ^ (1111111);
         System.out.printf("add为 %d", add);
         System.out.println(UUID.randomUUID());
         System.out.println("jfklsjflsf");
-
+        System.out.println(t);
+        System.out.println(5 >>1);
     }
 
     public static int add() {

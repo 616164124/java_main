@@ -1,10 +1,7 @@
 package com.thread.forkjoin;
 
 import java.util.Arrays;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.ForkJoinTask;
-import java.util.concurrent.RecursiveTask;
+import java.util.concurrent.*;
 
 /**
  * @version: V1.0
@@ -19,7 +16,7 @@ public class ForkJoinTest {
         int[] i = {1, 2, 312, 23};
         System.out.println(Arrays.toString(i));
         // 生成数组
-        int[] a = gennerateArray(5, 34);
+        int[] a = gennerateArray(150, 34);
         // System.out.println("单线程执行结果: " + ArrayUtils.sum(a));
         ForkJoinPool forkJoinPool = new ForkJoinPool();
         SumTask task = new SumTask(a, 0, a.length - 1);
@@ -39,6 +36,16 @@ public class ForkJoinTest {
     }
 }
 
+//没有返回值
+class su extends RecursiveAction{
+
+    @Override
+    protected void compute() {
+
+    }
+}
+
+//有返回值
 class SumTask extends RecursiveTask<Integer> {
 
     private final int THREHOLD = 10;
