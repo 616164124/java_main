@@ -7,6 +7,7 @@ import org.lionsoul.ip2region.Util;
 
 import java.io.File;
 import java.lang.reflect.Method;
+import java.util.concurrent.Callable;
 
 class IPUtil {
     public static String getCityInfo(String ip) {
@@ -41,7 +42,7 @@ class IPUtil {
 
             DataBlock dataBlock = null;
             if (Util.isIpAddress(ip) == false) {
-                System.out.println("Error: Invalid ip address");
+//                System.out.println("Error: Invalid ip address");
                 return "000000";
             }
 
@@ -60,6 +61,7 @@ class IPUtil {
         //111.121.211.15毕节市    119.121.211.15阳江市
         String ip = "111.121.211.15";
 
+
         IPUtil ipUtil = new IPUtil();
         System.out.println(getCityInfo(ip));
         String[] split = getCityInfo(ip).split("\\|");
@@ -71,4 +73,35 @@ class IPUtil {
         return i;
     }
 
+}
+class T01 implements Callable {
+
+    private int i0;
+
+    private int i1;
+
+    private int i2;
+
+    private int i3;
+
+    public T01(int i0, int i1, int i2, int i3) {
+        this.i0 = i0;
+        this.i1 = i1;
+        this.i2 = i2;
+        this.i3 = i3;
+    }
+//255.255.255.255
+    @Override
+    public Object call() throws Exception {
+        String ip="";
+        while (i0>=0){
+            i3--;
+            ip=i0+""+i1+""+i2+""+i3;
+            if(i3==0){
+
+            }
+            IPUtil.getCityInfo(ip);
+        }
+        return null;
+    }
 }

@@ -29,6 +29,7 @@ public class CalendarTest {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");//24小时制
         DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("yyyy/MM/dd");
 
+
         System.out.println("另一种表示形式:\t" + now1.format(formatter));
         System.out.println("另一种表示形式:\t" + now1.format(formatter2));
 
@@ -36,5 +37,8 @@ public class CalendarTest {
         for (int i = 0; i < 10; i++) {
             testHahsMap.Test();
         }
+
+
+
     }
 }

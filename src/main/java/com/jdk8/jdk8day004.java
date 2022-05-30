@@ -14,9 +14,8 @@ public class jdk8day004 {
      *
      * @param args
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         User user = null;
-
         // 判断user是否为null;
         Optional<User> user1 = Optional.ofNullable(user);
         System.out.println(user1);
@@ -32,11 +31,19 @@ public class jdk8day004 {
             // 打印出错的位置和信息
             e.printStackTrace();
         }
+        user=null;
         // 如果user 为空就new User(88, "hua") 返回
         User hua = Optional.ofNullable(user).orElse(new User(88, "hua"));
         // 如果usre2 不为空,则orElse中就不会执行
         User hua2 = Optional.ofNullable(user2).orElse(new User(33, "hua33"));
         System.out.println(hua);
         System.out.println(hua2);
+
+        user = Optional.ofNullable(user).orElseThrow(() -> new Exception("wei kong"));
+
+
+    }
+    public static void get(){
+
     }
 }
