@@ -48,9 +48,9 @@ public class StreamAPI {
         System.out.println("===========objects==============");
         Stream<User> distinct1 = objects.stream().distinct();
         distinct1.forEach((a) -> System.out.println(a.getName()));
-        // sorted
+        // 排序sorted
         System.out.println("===========objects sorted==============");
-        objects.stream().map(user -> user.getAge()).sorted().forEach(System.out::println);
+        objects.stream().map(user -> user.getAge()).sorted().forEach(System.out::print);
 
         // map(Function f) 接收 Lambda ， 将元素转换成其他形式或提取信息;接收一个函数作为参数，该函数会被应用到每个元素上，并将其映射成一个新的元素。
         // mapToDouble(ToDoubleFunction f) 接收一个函数作为参数，该函数会被应用到每个元素上，产生一个新的 DoubleStream。
@@ -82,13 +82,14 @@ public class StreamAPI {
                 .allMatch(param -> param.getAge() == 89);
 
         ArrayList<User> objects1 = new ArrayList<>();
-
+        System.out.println("***************************");
         hashMap.entrySet().stream()
                 .filter(
                         a -> {
                             return a.getValue() > 12;
                         })
                 .forEach(a -> System.out.println(a));
+        System.out.println("***************************");
         hashMap.entrySet().stream().forEach(a -> System.out.println(a));
         Set<String> keySet = hashMap.keySet();
         keySet.stream().forEach(a -> System.out.println(a));

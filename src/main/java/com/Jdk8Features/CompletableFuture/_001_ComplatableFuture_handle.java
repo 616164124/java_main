@@ -18,7 +18,7 @@ public class _001_ComplatableFuture_handle {
             @Override
             public Object get() {
                 System.out.println("123===");
-                int i = 1 / 0;
+//                int i = 1 / 0;
                 try {
                     Thread.sleep(1_000);
                 } catch (InterruptedException e) {

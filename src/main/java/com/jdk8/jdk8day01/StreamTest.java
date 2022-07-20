@@ -51,5 +51,7 @@ public class StreamTest {
         System.out.println("---------------reduce----------------");
         System.out.println(stringList.stream().reduce("", (x, y) -> x + y));
         System.out.println("sff");
+
+
     }
 }
