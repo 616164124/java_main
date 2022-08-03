@@ -1,9 +1,12 @@
 package com.Jdk8Features.CompletableFuture;
 
+
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -14,11 +17,12 @@ import java.util.function.Supplier;
  */
 public class _001_ComplatableFuture_handle {
     public static void main(String[] args) {
+
         CompletableFuture<Object> future = CompletableFuture.supplyAsync(new Supplier<Object>() {
             @Override
             public Object get() {
                 System.out.println("123===");
-//                int i = 1 / 0;
+                int i = 1 / 0;
                 try {
                     Thread.sleep(1_000);
                 } catch (InterruptedException e) {

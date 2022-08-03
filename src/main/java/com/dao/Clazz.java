@@ -1,9 +1,11 @@
 package com.dao;
 
+import java.util.UUID;
+
 /**
  * @author Mikael
  */
-public class Class {
+public class Clazz {
     private int id;
     private String className;
     private String teacherName;
