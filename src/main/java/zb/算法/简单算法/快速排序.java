@@ -1,9 +1,6 @@
 package zb.算法.简单算法;
 
 
-import com.dp.Test;
-import org.checkerframework.checker.i18n.qual.LocalizableKey;
-
 public class 快速排序 {
 
     public static void main(String[] args) {
@@ -29,18 +26,16 @@ public class 快速排序 {
         }
         System.out.println();
 
-        int[] numsss = {2, 111, 3, 4, 41, 12344, 123, 423, 1231479};
-        n = numsss.length;
-
-        test04(numsss, 0, n - 1);
-        System.out.print("test04=====>");
-        for (int i = 0; i < n; ++i) {
-            System.out.printf(" %d ", numsss[i]);
-        }
-        System.out.println();
     }
 
     //    {11,23,4,13,5123};   0, 4
+
+    /**
+     *
+     * @param nums
+     * @param left
+     * @param right
+     */
     public static void quickSort(int[] nums, int left, int right) {
         if (left >= right) {
             return;
@@ -102,22 +97,8 @@ public class 快速排序 {
     }
 
     public static void test03(int[] arr, int left, int right) {
-        if (left >= right) {
-            return;
-        }
-        int i = left - 1, j = right + 1;
-        int x = arr[left];
-        while (i < j) {
-            while (arr[++i] < x) ;
-            while (arr[--j] > x) ;
-            if (i < j) {
-                int tmp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = tmp;
-            }
-        }
-        test03(arr, left, j);
-        test03(arr, j + 1, right);
+
+
     }
 
 

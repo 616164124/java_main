@@ -1,7 +1,5 @@
 package zb.类加载.day01;
 
-import javax.xml.bind.SchemaOutputResolver;
-
 public class ClassLoadTest01 {
     public static void main(String[] args) {
         ClassLoader cl1 = ClassLoadTest01.class.getClassLoader();

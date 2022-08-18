@@ -1,7 +1,6 @@
 package com.Interview;
 
 import com.dao.User;
-import org.springframework.beans.BeanUtils;
 
 /*
  * @version: V1.0
