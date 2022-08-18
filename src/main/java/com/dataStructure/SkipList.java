@@ -3,11 +3,6 @@ package com.dataStructure;
 import java.util.*;
 
 /**
- * @author 20级三班刘宇阳
- * @create 2022/2/2
- */
-
-/**
  * 跳表类
  * @param <T> 泛型
  */

@@ -56,8 +56,9 @@ public class VectorTest {
                     }
                 });
         System.out.println(userList);
+        System.out.println("===============");
         // jkd8 新特性写法 根据 number 排序
-//    userList.stream().map(user -> user.getNumber()).sorted().forEach(System.out::print);
+        userList.stream().map(user -> user.getAge()).sorted().forEach(System.out::println);
         System.out.println(userList);
     }
 }

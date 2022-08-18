@@ -1,22 +1,16 @@
 package zb.day001;
 
-import com.thread.threadpool.ThreadPool;
-import org.aspectj.weaver.ast.Var;
-import org.jetbrains.annotations.NotNull;
 
-import java.io.UncheckedIOException;
 import java.util.concurrent.*;
 
 public class Test01 {
     public static void main(String[] args) throws Exception {
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(12, 12, 1, TimeUnit.MINUTES,new LinkedBlockingQueue<>(12), new ThreadFactory() {
             @Override
-            public Thread newThread(@NotNull Runnable r) {
+            public Thread newThread(Runnable r) {
                 Thread thread = new Thread(r);
                 Thread.UncaughtExceptionHandler uncaughtExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
                 thread.setUncaughtExceptionHandler(uncaughtExceptionHandler);
-
-
                 return thread;
             }
         });

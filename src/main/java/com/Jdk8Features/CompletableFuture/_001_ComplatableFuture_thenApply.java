@@ -26,7 +26,9 @@ public class _001_ComplatableFuture_thenApply {
                 return "null-----";
             }
         });
+
         Object o = future.get();
         System.out.println(o);
+        System.out.println("8888");
     }
 }

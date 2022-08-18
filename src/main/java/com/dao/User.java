@@ -1,7 +1,7 @@
 package com.dao;
 
 
-import org.jetbrains.annotations.NotNull;
+import com.sun.istack.internal.NotNull;
 
 import java.io.Serializable;
 
