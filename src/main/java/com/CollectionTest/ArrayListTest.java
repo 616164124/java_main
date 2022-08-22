@@ -68,6 +68,8 @@ public class ArrayListTest {
         for (Object i : arrayList)
         System.out.println("===========3========");
         arrayList.forEach((cc) -> System.out.print(cc+" "));
+
+
     }
 }
 

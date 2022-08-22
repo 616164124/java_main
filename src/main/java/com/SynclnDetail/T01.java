@@ -7,10 +7,13 @@ public class T01 {
     public static void main(String[] args) {
         Object o = new Object();
         User user = new User("hua", 12);
-        System.out.println(ClassLayout.parseClass(user.getClass()).toPrintable());
-        //System.out.println(ClassLayout.parseInstance(o).toPrintable()); // 该对象占内存多少字节
+        System.out.println(ClassLayout.parseInstance(user).toPrintable());
+        System.out.println(ClassLayout.parseInstance(o).toPrintable()); // 该对象占内存多少字节
 
+
+        System.out.println("================================");
         synchronized (o) {
+
             System.out.println(
                     ClassLayout.parseInstance(o).toPrintable()); // synchronized 的信息在markword里（看value值前后变化）
         }
