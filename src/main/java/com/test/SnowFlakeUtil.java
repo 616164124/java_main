@@ -100,7 +100,7 @@ public class SnowFlakeUtil {
         }
         System.out.println(stringBuilder + "\t" + stringBuilder2);
         SnowFlakeUtil snowFlakeUtil = new SnowFlakeUtil(3, 5);
-        System.out.println(snowFlakeUtil.getNextId());
+        System.out.println("雪花算法获得：\t"+snowFlakeUtil.getNextId());
         UUID uuid = UUID.randomUUID();
         String replace = "";
         System.out.println(System.currentTimeMillis() + "\t" + new Date().getTime() + "\t" + uuid);

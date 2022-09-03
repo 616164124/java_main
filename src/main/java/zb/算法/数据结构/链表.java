@@ -1,15 +1,15 @@
 package zb.算法.数据结构;
 
-import com.sun.mail.imap.protocol.Item;
 
-import javax.mail.FetchProfile;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author mikael
  */
 public class 链表 {
     private static class Node {
-        Item item;
+        int item;
         Node next;
     }
 
@@ -19,6 +19,13 @@ public class 链表 {
         Node three = new Node();
         one.next = two;
         two.next = three;
+
+        /***************************************************/
+        List<Integer> list = Arrays.asList(12, 12, 342, 5, 13, 3214, 513);
+        list.stream().distinct().sorted()
+                .forEach(System.out::println);
+
+
 
     }
 }
