@@ -2,6 +2,9 @@ package zb.算法.简单算法;
 
 import java.util.Arrays;
 
+/**
+ * N^2
+ */
 public class 选择排序 {
 
     public static void main(String[] args) {

@@ -1,0 +1,2 @@
+aaa	 持有a	 获取b
+bbbb	 持有b	 获取a
