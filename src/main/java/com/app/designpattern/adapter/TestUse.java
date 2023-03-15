@@ -7,6 +7,6 @@ public class TestUse {
         Target target = new ClassAdapter();
         target.playFlac("flac");
         target = new ObjectAdapter();
-        target.playFlac("flac");
+        target.playFlac("flac1");
     }
 }

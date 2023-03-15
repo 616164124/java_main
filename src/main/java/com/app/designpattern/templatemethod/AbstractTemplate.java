@@ -1,5 +1,6 @@
 package com.app.designpattern.templatemethod;
 
+
 //抽象模板
 public abstract class AbstractTemplate {
     Object data;
@@ -18,5 +19,9 @@ public abstract class AbstractTemplate {
 
     void printData() {
         System.out.println(data);
+    }
+
+    final void sya() {
+        System.out.println("AbstractTemplate==>");
     }
 }

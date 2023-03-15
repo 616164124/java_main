@@ -3,7 +3,7 @@ package com.SynclnDetail;
 import java.util.concurrent.TimeUnit;
 
 public class T01HelloVolatile {
-    volatile boolean flag = true; // 对比下有误volatile的输出情况
+    volatile boolean flag = true; // 对比下有无volatile的输出情况
 
     public static void main(String[] args) {
 

@@ -10,7 +10,7 @@ import java.util.PriorityQueue;
  */
 public class Test01 {
     public static void main(String[] args) {
-        //
+        //PriorityQueue（优先队列） 采用的是堆排序
         PriorityQueue<String> queue = new PriorityQueue<>();
         queue.add("11");
         queue.add("7");

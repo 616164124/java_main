@@ -11,6 +11,8 @@ public class Test01 {
     public static void main(String[] args) {
         Test01 test01 = new Test01();
         Map<String, String> o = new HashMap<>();
+        Map<String, String> o1 = new HashMap<>();
+        o1.get("123");
         o.put("1", "21");
         o.put("1", "21");
         o.put("1", "21");

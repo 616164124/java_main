@@ -1,7 +1,5 @@
 package com.SynclnDetail;
 
-import javassist.runtime.Inner;
-
 /**
  * 单例 volatile
  */
@@ -31,7 +29,7 @@ class T {
 
     public static T getInstance() {
         if (instance == null) {
-            synchronized (T.class) {
+            synchronized (T.class) { //防止多线程创建的情况
                 if (instance == null) {
                     instance = new T();
                 }
