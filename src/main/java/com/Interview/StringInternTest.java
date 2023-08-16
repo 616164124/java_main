@@ -18,15 +18,13 @@ public class StringInternTest {
         String s2 = "java".intern();
         String s3 = "java";
         String s4 = s3.intern();
-        Integer iii = new Integer(12);
-
         System.out.println(s1 == s1.intern());
         System.out.println(s1 == s3);
         System.out.println(s3 == s4);
         System.out.println(s3.intern() == s3);
         System.out.println("-------------------------");
 
-        String a = "java";
+        String a = "java1";
         System.out.println(a == a.intern());
         System.out.println("-------------------------");
 

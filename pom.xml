@@ -46,6 +46,14 @@
             <version>0.66.0.1</version>
         </dependency>
 
+<!--        国密加密-->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.56</version>
+        </dependency>
+
+
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
@@ -180,6 +188,17 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>27.0.1-jre</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.60</version>
         </dependency>
 
     </dependencies>

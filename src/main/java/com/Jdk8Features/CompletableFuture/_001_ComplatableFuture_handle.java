@@ -1,14 +1,9 @@
 package com.Jdk8Features.CompletableFuture;
 
 
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.BiFunction;
-import java.util.function.Function;
 import java.util.function.Supplier;
 
 /**

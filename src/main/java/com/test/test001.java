@@ -1,6 +1,8 @@
 package com.test;
 
 
+import com.dao.User;
+
 import javax.crypto.KeyGenerator;
 import java.math.BigDecimal;
 import java.security.NoSuchAlgorithmException;
@@ -10,6 +12,18 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class test001 {
     public static void main(String[] args) throws NoSuchAlgorithmException {
+
+        String t1 = "";
+        String t2 = "null";
+        if ("".equals(t2)) {
+            System.out.println("================");
+        }
+        Object o = null;
+        if (o == null) {
+            System.out.println("==============23===");
+        }
+
+
         String sss = "123|TAX";
         System.out.println(sss);
 

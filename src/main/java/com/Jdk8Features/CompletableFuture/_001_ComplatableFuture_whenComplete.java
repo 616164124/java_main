@@ -1,9 +1,7 @@
 package com.Jdk8Features.CompletableFuture;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
 
 /**
  * 跟handle类似

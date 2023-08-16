@@ -5,6 +5,8 @@ import com.google.common.hash.HashFunction;
 import com.google.common.hash.Hashing;
 
 import java.nio.charset.Charset;
+import java.util.HashSet;
+import java.util.UUID;
 
 /**
  * 生成短链
@@ -64,8 +66,17 @@ public class ShortLink {
         System.out.println(shortLink.bloom("https://www.csdn.net/tags/MtTaEg0zYmxvZwO0O0OO0O0O121hfkjdhkjashfuiehjkzfhuekhfkshf/kjfiwehfjhkjgkjlajfl"));
         String ss = "https://www.csdn.net/tags/MtTaEg0zAALREADYALREADYALREADYALREADY";
         System.out.println(ss.replaceAll("ALREADY", ""));
+        HashSet<String> strings = new HashSet<>();
+        try {
+            for (int i = 0; i < 1000000; i++) {
+                String uuid = UUID.randomUUID().toString().replace("-", "");
+                strings.add(shortLink.bloom(uuid));
+                System.out.println(uuid);
+            }
+        } catch (Exception e) {
+            System.out.println("11111111111111");
 
-        
+        }
 
     }
 
