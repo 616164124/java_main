@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class Test03 {
     public static void main(String[] args) {
-    String url ="http://localhost:8081/hscweb//djxx/csht/addDjxx.do";
+    String url ="http://localhost:8081/hscweb/djxx/csht/addDjxx.do";
         System.out.println();
         System.out.println(url.substring(0, url.indexOf("/hscweb")));
         User user = new User();

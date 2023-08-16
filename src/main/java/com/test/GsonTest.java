@@ -22,6 +22,9 @@ public class GsonTest {
         //将对象，转化为string
         String s = gson.toJson(user);
         System.out.println(s);
+        //将字符串转成user对象
+        User o1 = gson.fromJson(s, User.class);
+
         String ss = "{\"id\":12,\"name\":\"ming\",\"age\":13}";
         //将字符串转化为对象类型
         User o = gson.fromJson(ss, User.class);
@@ -51,7 +54,7 @@ public class GsonTest {
         String uuu3 = (String) map1.get("uuu3");
         System.out.println(uuu3);
 
-
+        //10之内的随机整数int
         int i1 = ThreadLocalRandom.current().nextInt(10);
         System.out.println(i1);
 

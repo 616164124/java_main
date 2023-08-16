@@ -2,6 +2,7 @@ package zb.test;
 
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
+import zb.pattern.decorator.One;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,6 +21,10 @@ public class ListTest {
         strings.add("6");
         removeList(strings, "s");
         System.out.println(strings);
+
+
+        removeList2(strings, "");
+
     }
 
     //    删除list中指定的element
@@ -33,4 +38,10 @@ public class ListTest {
         }
         return list;
     }
+
+    public static List removeList2(List list, Object element){
+
+        return null;
+    }
+
 }
