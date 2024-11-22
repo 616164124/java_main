@@ -1,11 +1,6 @@
 package com.Throwable;
 
-/**
- * Demo class
- *
- * @author keriezhang
- * @date 2016/10/31
- */
+
 public class ErrorTest {
     public static void main(String[] args) {
         try {
